@@ -1,212 +1,40 @@
-**VLSI - ALU Design**
-<a name="br2"></a> 
+# VLSI - ALU Design
 
-**Cirucit Design Details**
-<a name="br2"></a> 
+## Circuit Design Details
 
-Implemented ALU circuit includes logic gates and multiplexers for various operations
+The implemented ALU circuit includes logic gates and multiplexers for various operations controlled by select inputs. A 2:4 decoder manages operation selection, directing the 4-bit inputs by the enable line. Modules such as the adder, subtractor, comparator, and AND gate operate based on the enable signal and select inputs, ensuring accurate 4-bit addition, subtraction, comparison, and ANDing.
 
-controlled by select inputs. A 2:4 decoder manages operation selection. The 4-bit
+## Adder-Subtractor
 
-inputs are directed by the enable line, determined by select inputs. Modules (adder,
+The ALU features a fast adder and subtractor using a carry-lookahead adder, which speeds up calculations. Subtraction is performed with an XOR gate, assuming 2's complement numbers. The ALU can add or subtract four numbers at once, enhancing versatility. This is achieved using the same fast adder design and a "Mode" input, enabling a wider range of efficient calculations.
 
-subtractor, comparator, AND gate) operate based on enable signal and select inputs.
+## Comparator
 
-Output pins connect to modules for accurate results in 4-bit addition, subtraction,
+The comparator module analyzes four-bit inputs to determine if they are equal, greater, or less than each other by comparing individual bits. The output is valuable for decision-making in various applications.
 
-comparison, and ANDing. Successful design and implementation enable efficient
+## AND Block
 
-operation.
+This module performs the AND operation on each bit of the two four-bit input values.
 
+## Verilog Implementation
 
+The ALU was implemented using a modular design in Verilog, with individual modules for each circuit block. An enable block is shared for the Adder and Subtractor due to their common operation. All functions (modules) were called in the testbench, and the output was saved in a VCD file for viewing in GTKWave.
 
-<a name="br2"></a> 
+## Common Mistakes and Solutions
 
-**Adder-Subtractor**
+1. **Comparator Enable Issue**: The output for "equal to" was always 1 when the enable for the comparator was off. This was corrected by ANDing with the enable signal.
+2. **Irregular Outputs**: Pulse inputs caused confusion, and some modules were not grounded, leading to incorrect outputs.
+3. **Segmentation Fault**: Connecting multiple wires with different labels caused segmentation faults.
+4. **Overlapping Wires**: This caused errors and a series of incorrect outputs.
 
-We made a fast adder and subtractor in our ALU using a special kind of adder called a
+## Delay Analysis
 
-carry-lookahead adder. It helps the ALU work quicker by reducing the time it takes to
+A Python script was used to iteratively run and analyze the circuits, determining delays for all inputs and outputs. Delays can be caused by propagation delay, component speed, and capacitance/inductance effects, which slow down electrical signals.
 
-calculate certain things. For subtraction, we use a simple operation with an XOR gate
+## Critical Path
 
-and assume the numbers are in a specific format called 2's complement.
+The critical path in the ALU was identified by calculating the maximum delay using a Python script. The critical path, from the inputs to the output of the adder-subtractor module, represents the most complex calculations. Addressing delays in this path optimizes the overall ALU performance.
 
-We also added a feature to our ALU that lets it add or subtract four numbers at once.
+## Conclusion
 
-This makes the ALU more versatile, and we used the same fast adder design to speed
-
-up the process. The subtraction is done using an XOR gate and a "Mode" input. This
-
-improvement allows our ALU to do a wider range of calculations efficiently.
-
-
-
-<a name="br3"></a> 
-
-**Comparator**
-
-The comparator module in our ALU analyzes four-bit inputs, determining if they are equal,
-
-greater, or less than each other by comparing individual bits. Its output provides valuable
-
-information for decision-making in diverse applications.
-
-**And Block**
-
-This module performs the AND operation with each bit in the 2 four input bits.
-
-
-
-<a name="br4"></a> 
-
-**Verilog**
-
-Implemented ALU using modular design, creating individual modules for each circuit
-
-block and connecting them to complete the circuit. Shared an enable block for the Adder
-
-and Subtractor, leveraging their common operation within the same module. Called all
-
-functions (modules) in the testbench and saved the output in a vcd file for viewing in
-
-gtkwave.
-
-VLSI Final Project Report
-
-4
-
-
-
-<a name="br5"></a> 
-
-**Mistakes**
-
-When my enable for comparator is not on, my output for equal to was always 1 which I
-
-changed by anding with the enable.
-
-**Ngspice**
-
-VLSI Final Project Report
-
-5
-
-
-
-<a name="br6"></a> 
-
-**Mistakes**
-
-→ Irregular outputs caused confusion due to pulse inputs.
-
-→ Forgot to ground some modules, resulting in incorrect outputs.
-
-VLSI Final Project Report
-
-6
-
-
-
-<a name="br7"></a> 
-
-**MAGIC**
-
-VLSI Final Project Report
-
-7
-
-
-
-<a name="br8"></a> 
-
-VLSI Final Project Report
-
-8
-
-
-
-<a name="br9"></a> 
-
-**Mistakes**
-
-→Connected multiple wires of different labels which gave segmentation fault
-
-→Lot of overlapping of wires which gave errors and a series of wrong outputs
-
-**Delay Analysis**
-
-Used a Python script to iteratively run and analyze our scripts, determining delays
-
-for all inputs and outputs in the circuits. Delays in circuits can stem from factors like
-
-propagation delay, influenced by component speed, and capacitance/inductance
-
-effects, slowing down electrical signal flow.
-
-VLSI Final Project Report
-
-9
-
-
-
-<a name="br10"></a> 
-
-VLSI Final Project Report
-
-1
-
-
-
-<a name="br11"></a> 
-
-**Critical Path**
-
-Identified the critical path in our ALU by calculating the maximum delay using a Python
-
-script. The critical path, from the inputs to the output of the adder-subtractor module,
-
-represents the most complex calculations. Addressing delays in this path optimizes the
-
-overall ALU performance.
-
-**Conclusion**
-
-In conclusion, our VLSI Final Project Report underscores the successful design and
-
-implementation of the ALU. Rigorous simulations with Verilog HDL and NgSpice
-
-validated its capacity for accurate 4-bit addition, subtraction, comparison, and ANDing
-
-operations. Further, we simulated the physical layout using MAGIC. A thorough delay
-
-analysis identified the critical path in the ALU design. Addressing delays along this critical
-
-path promises to optimize the overall performance of our ALU.Overall, the successful
-
-design and implementation of the ALU demonstrate our ability tocreate a functional and
-
-efficient circuit. The ALU's ability to perform various operations accurately makes it a
-
-valuable component in digital systems.
-
-VLSI Final Project Report
-
-1
-
-
-
-<a name="br12"></a> 
-
-VLSI Final Project Report
-
-1
-
-
-
-<a name="br13"></a> 
-
-VLSI Final Project Report
-
-1
-
+The VLSI Final Project successfully designed and implemented an ALU capable of accurate 4-bit addition, subtraction, comparison, and ANDing operations. Rigorous simulations with Verilog HDL and NgSpice validated the design, and the physical layout was simulated using MAGIC. A thorough delay analysis identified the critical path, with improvements promising to enhance overall performance. This project demonstrates the ability to create a functional and efficient circuit, making the ALU a valuable component in digital systems.
