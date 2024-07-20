@@ -1,6 +1,9 @@
 **VLSI - ALU Design**
+<a name="br2"></a> 
 
 **Cirucit Design Details**
+<a name="br2"></a> 
+
 Implemented ALU circuit includes logic gates and multiplexers for various operations
 
 controlled by select inputs. A 2:4 decoder manages operation selection. The 4-bit
