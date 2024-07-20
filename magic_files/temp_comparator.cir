@@ -1,0 +1,327 @@
+* SPICE3 file created from temp_comparator.ext - technology: scmos
+
+.include TSMC_180nm.txt
+
+.param SUPPLY = 1.8
+
+.global gnd
+
+Vdd VDD gnd 'SUPPLY'
+
+V_in_a a0 gnd DC 1.8
+V_in_b a1 gnd DC 1.8
+V_in_c a2 gnd DC 1.8
+V_in_d a3 gnd DC 1.8
+
+* V_in_a a0 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 100ns)
+* V_in_b a1 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 140ns)
+* V_in_c a2 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 180ns)
+* V_in_d a3 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 100ns)
+
+V_in_e b0 gnd DC 1.8
+V_in_f b1 gnd DC 1.8
+V_in_g b2 gnd DC 0
+V_in_h b3 gnd DC 0
+
+.option scale=0.09u
+
+M1000 check0 b0 XNOR_0/a_58_n40# XNOR_0/w_44_n46# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1001 gnd XNOR_0/a_26_n67# XNOR_0/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=340 pd=256 as=110 ps=74
+M1002 check0 a0 XNOR_0/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1003 XNOR_0/a_26_n67# a0 vdd XNOR_0/w_12_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=520 ps=368
+M1004 XNOR_0/a_50_n67# XNOR_0/a_82_n70# gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 XNOR_0/a_50_n67# b0 check0 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 XNOR_0/a_26_n67# a0 gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1007 vdd b0 XNOR_0/a_82_n70# XNOR_0/w_103_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1008 XNOR_0/a_76_n40# XNOR_0/a_26_n67# check0 XNOR_0/w_44_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1009 XNOR_0/a_58_n40# a0 vdd XNOR_0/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1010 gnd b0 XNOR_0/a_82_n70# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1011 vdd XNOR_0/a_82_n70# XNOR_0/a_76_n40# XNOR_0/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1012 check1 b1 XNOR_1/a_58_n40# XNOR_1/w_44_n46# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1013 gnd XNOR_1/a_26_n67# XNOR_1/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=110 ps=74
+M1014 check1 a1 XNOR_1/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1015 XNOR_1/a_26_n67# a1 vdd XNOR_1/w_12_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1016 XNOR_1/a_50_n67# XNOR_1/a_82_n70# gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1017 XNOR_1/a_50_n67# b1 check1 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1018 XNOR_1/a_26_n67# a1 gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1019 vdd b1 XNOR_1/a_82_n70# XNOR_1/w_103_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1020 XNOR_1/a_76_n40# XNOR_1/a_26_n67# check1 XNOR_1/w_44_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1021 XNOR_1/a_58_n40# a1 vdd XNOR_1/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1022 gnd b1 XNOR_1/a_82_n70# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1023 vdd XNOR_1/a_82_n70# XNOR_1/a_76_n40# XNOR_1/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1024 check2 b2 XNOR_2/a_58_n40# XNOR_2/w_44_n46# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1025 gnd XNOR_2/a_26_n67# XNOR_2/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=110 ps=74
+M1026 check2 a2 XNOR_2/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1027 XNOR_2/a_26_n67# a2 vdd XNOR_2/w_12_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1028 XNOR_2/a_50_n67# XNOR_2/a_82_n70# gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1029 XNOR_2/a_50_n67# b2 check2 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1030 XNOR_2/a_26_n67# a2 gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1031 vdd b2 XNOR_2/a_82_n70# XNOR_2/w_103_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1032 XNOR_2/a_76_n40# XNOR_2/a_26_n67# check2 XNOR_2/w_44_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1033 XNOR_2/a_58_n40# a2 vdd XNOR_2/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1034 gnd b2 XNOR_2/a_82_n70# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1035 vdd XNOR_2/a_82_n70# XNOR_2/a_76_n40# XNOR_2/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1036 check3 b3 XNOR_3/a_58_n40# XNOR_3/w_44_n46# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1037 gnd XNOR_3/a_26_n67# XNOR_3/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=110 ps=74
+M1038 check3 a3 XNOR_3/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1039 XNOR_3/a_26_n67# a3 vdd XNOR_3/w_12_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1040 XNOR_3/a_50_n67# XNOR_3/a_82_n70# gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1041 XNOR_3/a_50_n67# b3 check3 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1042 XNOR_3/a_26_n67# a3 gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1043 vdd b3 XNOR_3/a_82_n70# XNOR_3/w_103_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1044 XNOR_3/a_76_n40# XNOR_3/a_26_n67# check3 XNOR_3/w_44_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1045 XNOR_3/a_58_n40# a3 vdd XNOR_3/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1046 gnd b3 XNOR_3/a_82_n70# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1047 vdd XNOR_3/a_82_n70# XNOR_3/a_76_n40# XNOR_3/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 a2 vdd 0.12fF
+C1 XNOR_3/w_12_n46# a3 0.06fF
+C2 XNOR_3/w_44_n46# XNOR_3/a_26_n67# 0.08fF
+C3 b2 gnd 0.46fF
+C4 XNOR_0/w_103_n46# check0 0.09fF
+C5 XNOR_1/a_82_n70# XNOR_1/a_50_n67# 0.01fF
+C6 XNOR_2/a_26_n67# gnd 0.03fF
+C7 XNOR_2/w_44_n46# vdd 0.05fF
+C8 XNOR_0/w_103_n46# b0 0.08fF
+C9 XNOR_0/w_44_n46# XNOR_0/a_82_n70# 0.18fF
+C10 XNOR_1/a_82_n70# check1 0.35fF
+C11 a1 XNOR_1/a_50_n67# 0.01fF
+C12 XNOR_0/w_44_n46# a0 0.06fF
+C13 b1 XNOR_1/a_82_n70# 0.07fF
+C14 check2 XNOR_2/a_50_n67# 0.45fF
+C15 XNOR_1/w_44_n46# check1 0.02fF
+C16 a1 b1 0.11fF
+C17 XNOR_1/a_26_n67# XNOR_1/a_82_n70# 0.13fF
+C18 b2 XNOR_2/a_50_n67# 0.01fF
+C19 XNOR_1/a_82_n70# gnd 0.05fF
+C20 XNOR_1/a_26_n67# a1 0.06fF
+C21 XNOR_1/w_44_n46# b1 0.06fF
+C22 XNOR_2/a_26_n67# XNOR_2/a_50_n67# 0.01fF
+C23 b2 check2 0.10fF
+C24 XNOR_1/w_103_n46# vdd 0.02fF
+C25 gnd XNOR_3/a_50_n67# 0.08fF
+C26 XNOR_1/w_12_n46# a1 0.06fF
+C27 XNOR_1/w_44_n46# XNOR_1/a_26_n67# 0.08fF
+C28 XNOR_2/a_26_n67# check2 0.09fF
+C29 check3 gnd 0.01fF
+C30 XNOR_3/a_82_n70# vdd 0.13fF
+C31 XNOR_2/w_103_n46# XNOR_2/a_82_n70# 0.03fF
+C32 XNOR_2/a_26_n67# b2 0.02fF
+C33 check0 vdd 0.02fF
+C34 a3 vdd 0.12fF
+C35 b3 gnd 0.46fF
+C36 b0 vdd 0.02fF
+C37 XNOR_3/a_26_n67# gnd 0.03fF
+C38 XNOR_3/w_44_n46# vdd 0.05fF
+C39 check0 XNOR_0/a_50_n67# 0.45fF
+C40 XNOR_2/w_12_n46# XNOR_2/a_26_n67# 0.03fF
+C41 XNOR_0/a_26_n67# vdd 0.11fF
+C42 XNOR_3/w_103_n46# check3 0.09fF
+C43 b0 XNOR_0/a_50_n67# 0.01fF
+C44 XNOR_0/w_103_n46# gnd 0.09fF
+C45 XNOR_0/w_12_n46# vdd 0.11fF
+C46 XNOR_3/w_103_n46# b3 0.08fF
+C47 XNOR_3/w_44_n46# XNOR_3/a_82_n70# 0.18fF
+C48 XNOR_0/a_26_n67# XNOR_0/a_50_n67# 0.01fF
+C49 b0 check0 0.10fF
+C50 XNOR_3/w_44_n46# a3 0.06fF
+C51 XNOR_2/a_82_n70# gnd 0.05fF
+C52 XNOR_0/a_26_n67# check0 0.09fF
+C53 XNOR_2/w_103_n46# vdd 0.02fF
+C54 XNOR_0/w_103_n46# XNOR_0/a_82_n70# 0.03fF
+C55 XNOR_0/a_26_n67# b0 0.02fF
+C56 check1 vdd 0.02fF
+C57 XNOR_0/w_12_n46# XNOR_0/a_26_n67# 0.03fF
+C58 XNOR_1/w_103_n46# check1 0.09fF
+C59 b1 vdd 0.02fF
+C60 XNOR_2/a_82_n70# XNOR_2/a_50_n67# 0.01fF
+C61 XNOR_1/w_103_n46# b1 0.08fF
+C62 XNOR_1/w_44_n46# XNOR_1/a_82_n70# 0.18fF
+C63 XNOR_2/a_82_n70# check2 0.35fF
+C64 a2 XNOR_2/a_50_n67# 0.01fF
+C65 XNOR_1/a_26_n67# vdd 0.11fF
+C66 gnd vdd 0.60fF
+C67 XNOR_1/w_44_n46# a1 0.06fF
+C68 XNOR_1/w_103_n46# gnd 0.09fF
+C69 b2 XNOR_2/a_82_n70# 0.07fF
+C70 XNOR_1/w_12_n46# vdd 0.11fF
+C71 check3 XNOR_3/a_50_n67# 0.45fF
+C72 XNOR_2/w_44_n46# check2 0.02fF
+C73 a2 b2 0.11fF
+C74 XNOR_2/a_26_n67# XNOR_2/a_82_n70# 0.13fF
+C75 XNOR_0/a_50_n67# gnd 0.08fF
+C76 XNOR_3/a_82_n70# gnd 0.05fF
+C77 b3 XNOR_3/a_50_n67# 0.01fF
+C78 check0 gnd 0.01fF
+C79 XNOR_2/a_26_n67# a2 0.06fF
+C80 XNOR_2/w_44_n46# b2 0.06fF
+C81 XNOR_0/a_82_n70# vdd 0.13fF
+C82 XNOR_3/w_103_n46# vdd 0.02fF
+C83 XNOR_3/a_26_n67# XNOR_3/a_50_n67# 0.01fF
+C84 b3 check3 0.10fF
+C85 a0 vdd 0.12fF
+C86 XNOR_2/w_12_n46# a2 0.06fF
+C87 XNOR_2/w_44_n46# XNOR_2/a_26_n67# 0.08fF
+C88 b0 gnd 0.46fF
+C89 XNOR_3/a_26_n67# check3 0.09fF
+C90 XNOR_0/a_82_n70# XNOR_0/a_50_n67# 0.01fF
+C91 XNOR_0/a_26_n67# gnd 0.03fF
+C92 XNOR_0/w_44_n46# vdd 0.05fF
+C93 XNOR_3/w_103_n46# XNOR_3/a_82_n70# 0.03fF
+C94 XNOR_3/a_26_n67# b3 0.02fF
+C95 check2 vdd 0.02fF
+C96 XNOR_0/a_82_n70# check0 0.35fF
+C97 a0 XNOR_0/a_50_n67# 0.01fF
+C98 b2 vdd 0.02fF
+C99 b0 XNOR_0/a_82_n70# 0.07fF
+C100 check1 XNOR_1/a_50_n67# 0.45fF
+C101 XNOR_3/w_12_n46# XNOR_3/a_26_n67# 0.03fF
+C102 XNOR_2/a_26_n67# vdd 0.11fF
+C103 XNOR_0/w_44_n46# check0 0.02fF
+C104 a0 b0 0.11fF
+C105 XNOR_0/a_26_n67# XNOR_0/a_82_n70# 0.13fF
+C106 b1 XNOR_1/a_50_n67# 0.01fF
+C107 XNOR_2/w_103_n46# gnd 0.09fF
+C108 XNOR_2/w_12_n46# vdd 0.11fF
+C109 XNOR_0/a_26_n67# a0 0.06fF
+C110 XNOR_0/w_44_n46# b0 0.06fF
+C111 XNOR_1/a_26_n67# XNOR_1/a_50_n67# 0.01fF
+C112 b1 check1 0.10fF
+C113 XNOR_1/a_50_n67# gnd 0.08fF
+C114 XNOR_0/w_12_n46# a0 0.06fF
+C115 XNOR_0/w_44_n46# XNOR_0/a_26_n67# 0.08fF
+C116 XNOR_1/a_26_n67# check1 0.09fF
+C117 check1 gnd 0.01fF
+C118 XNOR_1/a_82_n70# vdd 0.13fF
+C119 XNOR_1/w_103_n46# XNOR_1/a_82_n70# 0.03fF
+C120 XNOR_1/a_26_n67# b1 0.02fF
+C121 a1 vdd 0.12fF
+C122 b1 gnd 0.46fF
+C123 XNOR_1/a_26_n67# gnd 0.03fF
+C124 XNOR_1/w_44_n46# vdd 0.05fF
+C125 check3 vdd 0.02fF
+C126 XNOR_1/w_12_n46# XNOR_1/a_26_n67# 0.03fF
+C127 XNOR_2/w_103_n46# check2 0.09fF
+C128 b3 vdd 0.02fF
+C129 XNOR_3/a_82_n70# XNOR_3/a_50_n67# 0.01fF
+C130 XNOR_2/w_103_n46# b2 0.08fF
+C131 XNOR_2/w_44_n46# XNOR_2/a_82_n70# 0.18fF
+C132 XNOR_3/a_26_n67# vdd 0.11fF
+C133 XNOR_3/a_82_n70# check3 0.35fF
+C134 a3 XNOR_3/a_50_n67# 0.01fF
+C135 XNOR_2/w_44_n46# a2 0.06fF
+C136 XNOR_0/a_82_n70# gnd 0.05fF
+C137 XNOR_3/w_103_n46# gnd 0.09fF
+C138 XNOR_3/w_12_n46# vdd 0.11fF
+C139 b3 XNOR_3/a_82_n70# 0.07fF
+C140 XNOR_0/w_103_n46# vdd 0.02fF
+C141 XNOR_3/w_44_n46# check3 0.02fF
+C142 a3 b3 0.11fF
+C143 XNOR_3/a_26_n67# XNOR_3/a_82_n70# 0.13fF
+C144 XNOR_2/a_50_n67# gnd 0.08fF
+C145 check2 gnd 0.01fF
+C146 XNOR_3/a_26_n67# a3 0.06fF
+C147 XNOR_3/w_44_n46# b3 0.06fF
+C148 XNOR_2/a_82_n70# vdd 0.13fF
+C149 vdd Gnd 2.53fF
+C150 XNOR_3/a_50_n67# Gnd 0.41fF
+C151 gnd Gnd 3.10fF
+C152 check3 Gnd 0.94fF
+C153 XNOR_3/a_82_n70# Gnd 0.39fF
+C154 b3 Gnd 2.61fF
+C155 a3 Gnd 0.56fF
+C156 XNOR_3/a_26_n67# Gnd 0.57fF
+C157 XNOR_3/w_103_n46# Gnd 0.44fF
+C158 XNOR_3/w_44_n46# Gnd 0.90fF
+C159 XNOR_3/w_12_n46# Gnd 0.44fF
+C160 XNOR_2/a_50_n67# Gnd 0.41fF
+C161 check2 Gnd 0.93fF
+C162 XNOR_2/a_82_n70# Gnd 0.39fF
+C163 b2 Gnd 2.61fF
+C164 a2 Gnd 0.56fF
+C165 XNOR_2/a_26_n67# Gnd 0.57fF
+C166 XNOR_2/w_103_n46# Gnd 0.44fF
+C167 XNOR_2/w_44_n46# Gnd 0.90fF
+C168 XNOR_2/w_12_n46# Gnd 0.44fF
+C169 XNOR_1/a_50_n67# Gnd 0.41fF
+C170 check1 Gnd 0.85fF
+C171 XNOR_1/a_82_n70# Gnd 0.39fF
+C172 b1 Gnd 2.62fF
+C173 a1 Gnd 0.55fF
+C174 XNOR_1/a_26_n67# Gnd 0.57fF
+C175 XNOR_1/w_103_n46# Gnd 0.44fF
+C176 XNOR_1/w_44_n46# Gnd 0.90fF
+C177 XNOR_1/w_12_n46# Gnd 0.44fF
+C178 XNOR_0/a_50_n67# Gnd 0.41fF
+C179 check0 Gnd 0.75fF
+C180 XNOR_0/a_82_n70# Gnd 0.39fF
+C181 b0 Gnd 2.59fF
+C182 a0 Gnd 0.55fF
+C183 XNOR_0/a_26_n67# Gnd 0.57fF
+C184 XNOR_0/w_103_n46# Gnd 0.44fF
+C185 XNOR_0/w_44_n46# Gnd 0.90fF
+C186 XNOR_0/w_12_n46# Gnd 0.44fF
+
+.tran 1n 1000n
+
+.control
+run
+
+plot v(check0) v(check1)+2 v(check2)+4 v(check3)+6
+* v(and_out_carry)+8
+
+
+* plot v(enable_out_0/a0_out) v(enable_out_0/a1_out)+2 v(enable_out_0/a2_out)+4 v(enable_out_0/a3_out)+6 v(enable_out_0/b0_out)+8 v(enable_out_0/b1_out)+10 v(enable_out_0/b2_out)+12 v(enable_out_0/b3_out)+14
+
+
+* v(a2)+4 v(a3)+6 v(b0)+8 v(b1)+10 v(b2)+12 v(b3)+14  
+* v(s0)+16 v(s1)+18
+.end
+.endc

@@ -1,0 +1,101 @@
+.include TSMC_180nm.txt
+
+.param SUPPLY = 1.8
+
+.global gnd
+
+Vdd VDD gnd 'SUPPLY'
+.option scale=0.09u
+
+V_in_a a gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 210ns)
+V_in_b b gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 140ns)
+
+M1000 a_1_n32# a_n3_n18# gnd Gnd CMOSN w=4 l=2
++  ad=28 pd=22 as=80 ps=72
+M1001 vdd b a_1_7# w_n12_0# CMOSP w=4 l=2
++  ad=160 pd=144 as=28 ps=22
+M1002 vdd b a_160_n59# w_147_n66# CMOSP w=4 l=2
++  ad=0 pd=0 as=28 ps=22
+M1003 a_160_n59# a_1_7# vdd w_147_n66# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1004 out a_160_n59# a_310_n23# Gnd CMOSN w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1005 vdd a_1_7# a_164_88# w_151_81# CMOSP w=4 l=2
++  ad=0 pd=0 as=28 ps=22
+M1006 a_310_n23# a_164_88# gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 a_1_7# a_n3_n18# vdd w_n12_0# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1008 out a_164_88# vdd w_297_9# CMOSP w=4 l=2
++  ad=28 pd=22 as=0 ps=0
+M1009 a_164_88# a_1_7# a_164_49# Gnd CMOSN w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1010 a_160_n59# b a_160_n98# Gnd CMOSN w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1011 a_160_n98# a_1_7# gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1012 a_164_88# a_n3_n18# vdd w_151_81# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1013 a_164_49# a_n3_n18# gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1014 a_1_7# b a_1_n32# Gnd CMOSN w=4 l=2
++  ad=28 pd=22 as=0 ps=0
+M1015 vdd a_160_n59# out w_297_9# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 vdd w_n12_0# 0.12fF
+C1 b gnd 0.31fF
+C2 vdd out 0.10fF
+C3 out gnd 0.04fF
+C4 w_151_81# a_1_7# 0.07fF
+C5 w_151_81# a_n3_n18# 0.07fF
+C6 b w_147_n66# 0.07fF
+C7 a_164_88# vdd 0.19fF
+C8 a_164_88# gnd 0.09fF
+C9 b w_n12_0# 0.07fF
+C10 vdd w_297_9# 0.12fF
+C11 vdd a_160_n59# 0.35fF
+C12 a_160_n59# gnd 0.10fF
+C13 vdd w_151_81# 0.12fF
+C14 a_1_7# a_n3_n18# 2.10fF
+C15 a_160_n59# w_147_n66# 0.03fF
+C16 b a_160_n59# 0.13fF
+C17 w_297_9# out 0.03fF
+C18 a_160_n59# out 0.13fF
+C19 vdd a_1_7# 0.17fF
+C20 vdd a_n3_n18# 0.12fF
+C21 a_1_7# gnd 0.23fF
+C22 a_164_88# w_297_9# 0.07fF
+C23 a_164_88# a_160_n59# 1.85fF
+C24 w_147_n66# a_1_7# 0.07fF
+C25 a_160_n59# w_297_9# 0.07fF
+C26 a_164_88# w_151_81# 0.03fF
+C27 b a_1_7# 2.17fF
+C28 b a_n3_n18# 0.59fF
+C29 w_n12_0# a_1_7# 0.03fF
+C30 w_n12_0# a_n3_n18# 0.07fF
+C31 vdd w_147_n66# 0.13fF
+C32 a_164_88# a_1_7# 0.13fF
+C33 b Gnd 1.35fF
+C34 out Gnd 0.18fF
+C35 a_160_n59# Gnd 1.01fF
+C36 gnd Gnd 9.85fF
+C37 a_164_88# Gnd 1.04fF
+C38 vdd Gnd 9.63fF
+C39 a_1_7# Gnd 1.95fF
+C40 a_n3_n18# Gnd 1.40fF
+C41 w_147_n66# Gnd 0.65fF
+C42 w_297_9# Gnd 0.65fF
+C43 w_n12_0# Gnd 0.65fF
+C44 w_151_81# Gnd 0.65fF
+
+.tran 1n 1000n
+
+.control
+run
+* set color0 = rgb:f/f/e
+* set color1 = white
+plot v(a) v(b)+2 v(out)+4
+* plot v(OUT_FINAL)/
+* hardcopy image.ps v(node_a) v(node_b)+2 v(node_out)+4
+.end
+.endc

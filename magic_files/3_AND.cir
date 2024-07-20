@@ -1,0 +1,52 @@
+* SPICE3 file created from 3_AND.ext - technology: scmos
+.include TSMC_180nm.txt
+
+.param SUPPLY = 1.8
+
+.global gnd
+
+Vdd VDD gnd 'SUPPLY'
+
+V_in_a a gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 140ns)
+V_in_b b gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 140ns)
+V_in_c c gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 150ns)
+.option scale=0.09u
+
+M1000 a_n33_15# a vdd w_n48_8# CMOSP w=108 l=27
++  ad=34992 pd=1080 as=23976 ps=1008
+M1001 out a_n33_15# gnd Gnd CMOSN w=36 l=18
++  ad=1620 pd=162 as=12636 ps=612
+M1002 vdd b a_n33_15# w_n48_8# CMOSP w=108 l=27
++  ad=0 pd=0 as=0 ps=0
+M1003 a_n11_n66# b a_n32_n66# Gnd CMOSN w=153 l=27
++  ad=26163 pd=648 as=24786 ps=630
+M1004 a_n32_n66# a gnd Gnd CMOSN w=153 l=27
++  ad=0 pd=0 as=0 ps=0
+M1005 a_n33_15# c a_n11_n66# Gnd CMOSN w=153 l=27
++  ad=20655 pd=576 as=0 ps=0
+M1006 out a_n33_15# vdd w_41_5# CMOSP w=36 l=18
++  ad=1620 pd=162 as=0 ps=0
+M1007 a_n33_15# c vdd w_n48_8# CMOSP w=108 l=27
++  ad=0 pd=0 as=0 ps=0
+
+.tran 1n 1000n
+
+* .measure tran trise0 
+* + TRIG v(A) VAL = 'SUPPLY/2' FALL =1
+* + TARG v(OUT) VAL = 'SUPPLY/2' RISE =1 
+
+* .measure tran tfall0
+* + TRIG v(A) VAL = 'SUPPLY/2' RISE =1 
+* + TARG v(OUT) VAL = 'SUPPLY/2' FALL=1
+
+* .measure tran tpd_a_b0 param = '(trise0 + tfall0)/2' goal = 0
+
+.control
+run
+* set color0 = rgb:f/f/e
+* set color1 = white
+plot v(a) v(b)+2 v(c)+4 v(out)+8
+* plot v(OUT_FINAL)/
+* hardcopy image.ps v(node_a) v(node_b)+2 v(node_out)+4
+.end
+.endc

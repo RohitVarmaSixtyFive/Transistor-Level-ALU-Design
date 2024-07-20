@@ -1,0 +1,96 @@
+* SPICE3 file created from XNOR.ext - technology: scmos
+
+.include TSMC_180nm.txt
+
+
+.param SUPPLY = 1.8
+
+
+.global GND
+
+Vdd VDD GND 'SUPPLY'
+
+V_in_A a GND PULSE(0 1.8 0ns 100ps 100ps 60ns 120ns)
+V_in_B B GND PULSE(1.8 0 0ns 100ps 100ps 300ns 600ns)
+
+.option scale=0.09u
+
+M1000 out b a_58_n40# w_44_n46# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1001 gnd a_26_n67# a_50_n67# Gnd CMOSN w=5 l=2
++  ad=85 pd=64 as=110 ps=74
+M1002 out a a_50_n67# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1003 a_26_n67# a vdd w_12_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=130 ps=92
+M1004 a_50_n67# a_82_n70# gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 a_50_n67# b out Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 a_26_n67# a gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1007 vdd b a_82_n70# w_103_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1008 a_76_n40# a_26_n67# out w_44_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1009 a_58_n40# a vdd w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1010 gnd b a_82_n70# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1011 vdd a_82_n70# a_76_n40# w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 out a_50_n67# 0.45fF
+C1 w_12_n46# a 0.06fF
+C2 a_50_n67# a_82_n70# 0.01fF
+C3 out a_82_n70# 0.35fF
+C4 a_50_n67# a 0.01fF
+C5 gnd a_26_n67# 0.03fF
+C6 out w_103_n46# 0.12fF
+C7 a_82_n70# w_103_n46# 0.03fF
+C8 a_26_n67# b 0.02fF
+C9 vdd w_44_n46# 0.05fF
+C10 a_26_n67# w_44_n46# 0.08fF
+C11 gnd a_50_n67# 0.08fF
+C12 gnd a_82_n70# 0.05fF
+C13 a_50_n67# b 0.01fF
+C14 out b 0.10fF
+C15 b a_82_n70# 0.07fF
+C16 out w_44_n46# 0.02fF
+C17 a b 0.11fF
+C18 b w_103_n46# 0.08fF
+C19 a_82_n70# w_44_n46# 0.18fF
+C20 a_26_n67# vdd 0.11fF
+C21 a w_44_n46# 0.06fF
+C22 w_12_n46# vdd 0.03fF
+C23 w_12_n46# a_26_n67# 0.03fF
+C24 gnd b 0.33fF
+C25 a_50_n67# a_26_n67# 0.01fF
+C26 out vdd 0.02fF
+C27 vdd a_82_n70# 0.13fF
+C28 out a_26_n67# 0.09fF
+C29 a_26_n67# a_82_n70# 0.13fF
+C30 b w_44_n46# 0.06fF
+C31 vdd w_103_n46# 0.02fF
+C32 a_26_n67# a 0.06fF
+C33 a_50_n67# Gnd 0.25fF
+C34 gnd Gnd 0.26fF
+C35 out Gnd 0.09fF
+C36 a_82_n70# Gnd 0.39fF
+C37 b Gnd 0.20fF
+C38 vdd Gnd 0.22fF
+C39 a Gnd 0.49fF
+C40 a_26_n67# Gnd 0.57fF
+C41 w_103_n46# Gnd 0.44fF
+C42 w_44_n46# Gnd 0.53fF
+C43 w_12_n46# Gnd 0.44fF
+
+
+.tran 1n 1000n
+
+.control
+run
+
+plot v(A) v(B)+2 v(OUT)+4
+
+.end
+.endc

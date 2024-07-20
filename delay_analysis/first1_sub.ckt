@@ -1,0 +1,3111 @@
+* SPICE3 file created from main.ext - technology: scmos
+
+.include TSMC_180nm.txt
+
+.param SUPPLY = 1.8
+
+.global gnd
+
+Vdd VDD gnd 'SUPPLY'
+
+* V_in_a a0 gnd DC 1.8
+* V_in_b a1 gnd DC 1.8
+* V_in_c a2 gnd DC 1.8
+* V_in_d a3 gnd DC 1.8
+
+V_in_a a0 gnd PULSE(0 1.8 0ns 100ps 100ps 60ns 120ns)
+V_in_b a1 gnd PULSE(0 1.8 0ns 100ps 100ps 60ns 120ns)
+V_in_c a2 gnd PULSE(0 1.8 0ns 100ps 100ps 60ns 120ns)
+V_in_d a3 gnd PULSE(0 1.8 0ns 100ps 100ps 60ns 120ns)
+
+V_in_e b0 gnd DC 0
+V_in_f b1 gnd DC 0
+V_in_g b2 gnd DC 0
+V_in_h b3 gnd DC 0
+
+* V_in_e b0 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 140ns)
+* V_in_f b1 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 100ns)
+* V_in_g b2 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 200ns)
+* V_in_h b3 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 180ns)
+
+V_in_i s0 gnd DC 1.8
+V_in_j s1 gnd DC 0
+.option scale=0.09u
+
+M1000 aluand_0/AND_0/a_n33_15# aluand_0/a0 vdd aluand_0/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=14686 ps=7116
+M1001 and_out0 aluand_0/AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=9911 ps=5014
+M1002 aluand_0/AND_0/a_n32_n66# aluand_0/a0 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1003 aluand_0/AND_0/a_n33_15# aluand_0/b0 aluand_0/AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1004 vdd aluand_0/b0 aluand_0/AND_0/a_n33_15# aluand_0/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1005 and_out0 aluand_0/AND_0/a_n33_15# vdd aluand_0/AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1006 vdd aluand_0/b3 aluand_0/a_24_n333# aluand_0/w_9_n340# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1007 aluand_0/a_25_n31# aluand_0/b1 aluand_0/a_26_n112# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=170 ps=54
+M1008 vdd aluand_0/b1 aluand_0/a_25_n31# aluand_0/w_10_n38# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1009 and_out1 aluand_0/a_25_n31# vdd aluand_0/w_99_n41# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1010 aluand_0/a_26_n112# aluand_0/a1 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1011 aluand_0/a_24_n182# aluand_0/a2 vdd aluand_0/w_9_n189# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1012 aluand_0/a_25_n31# aluand_0/a1 vdd aluand_0/w_10_n38# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1013 aluand_0/a_24_n182# aluand_0/b2 aluand_0/a_25_n263# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=170 ps=54
+M1014 aluand_0/a_24_n333# aluand_0/a3 vdd aluand_0/w_9_n340# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1015 and_out2 aluand_0/a_24_n182# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1016 aluand_0/a_25_n263# aluand_0/a2 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1017 aluand_0/a_24_n333# aluand_0/b3 aluand_0/a_25_n414# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=170 ps=54
+M1018 and_out3 aluand_0/a_24_n333# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1019 and_out2 aluand_0/a_24_n182# vdd aluand_0/w_98_n192# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1020 aluand_0/a_25_n414# aluand_0/a3 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1021 vdd aluand_0/b2 aluand_0/a_24_n182# aluand_0/w_9_n189# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1022 and_out1 aluand_0/a_25_n31# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1023 and_out3 aluand_0/a_24_n333# vdd aluand_0/w_98_n343# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1024 AND_0/a_n33_15# comparator_0/equal_to AND_0/a_n42_15# AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=212 ps=98
+M1025 equal_to AND_0/a_n33_15# AND_0/a_n43_n66# Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=156 ps=68
+M1026 AND_0/a_n32_n66# comparator_0/equal_to AND_0/a_n43_n66# Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1027 AND_0/a_n33_15# a_315_n1959# AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1028 AND_0/a_n42_15# a_315_n1959# AND_0/a_n33_15# AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1029 equal_to AND_0/a_n33_15# AND_0/a_n42_15# AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1030 adder_subtractor_0/full_adder_0/AND_0/a_n33_15# enable_out_0/a0_out vdd adder_subtractor_0/full_adder_0/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1031 adder_subtractor_0/full_adder_0/m1_123_n251# adder_subtractor_0/full_adder_0/AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1032 adder_subtractor_0/full_adder_0/AND_0/a_n32_n66# enable_out_0/a0_out gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1033 adder_subtractor_0/full_adder_0/AND_0/a_n33_15# adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1034 vdd adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/AND_0/a_n33_15# adder_subtractor_0/full_adder_0/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1035 adder_subtractor_0/full_adder_0/m1_123_n251# adder_subtractor_0/full_adder_0/AND_0/a_n33_15# vdd adder_subtractor_0/full_adder_0/AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1036 adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# adder_subtractor_0/full_adder_0/a_281_n143# gnd Gnd CMOSN w=4 l=2
++  ad=40 pd=28 as=0 ps=0
+M1037 adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_22# adder_subtractor_0/full_adder_0/a_281_n143# vdd adder_subtractor_0/full_adder_0/2_input_OR_0/w_n23_15# CMOSP w=4 l=2
++  ad=40 pd=28 as=0 ps=0
+M1038 adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# vdd adder_subtractor_0/full_adder_0/2_input_OR_0/w_30_15# CMOSP w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1039 adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# gnd Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1040 gnd adder_subtractor_0/full_adder_0/m1_123_n251# adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1041 adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# adder_subtractor_0/full_adder_0/m1_123_n251# adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_22# adder_subtractor_0/full_adder_0/2_input_OR_0/w_n23_15# CMOSP w=4 l=2
++  ad=36 pd=26 as=0 ps=0
+M1042 adder_subtractor_0/full_adder_0/XOR_0/a_26_n11# adder_subtractor_0/m2_140_53# gnd Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=0 ps=0
+M1043 gnd adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# adder_subtractor_0/full_adder_0/XOR_0/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1044 adder_subtractor_0/full_adder_0/a_177_n131# enable_out_0/a0_out adder_subtractor_0/full_adder_0/XOR_0/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1045 adder_subtractor_0/full_adder_0/a_177_n131# adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# adder_subtractor_0/full_adder_0/XOR_0/a_34_16# adder_subtractor_0/full_adder_0/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1046 adder_subtractor_0/full_adder_0/XOR_0/a_26_n11# adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# adder_subtractor_0/full_adder_0/a_177_n131# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1047 vdd adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/XOR_0/a_52_16# adder_subtractor_0/full_adder_0/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=30 ps=22
+M1048 adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# enable_out_0/a0_out vdd adder_subtractor_0/full_adder_0/XOR_0/w_n12_10# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1049 adder_subtractor_0/full_adder_0/XOR_0/a_34_16# enable_out_0/a0_out vdd adder_subtractor_0/full_adder_0/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1050 gnd adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1051 vdd adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# adder_subtractor_0/full_adder_0/XOR_0/w_79_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1052 adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# enable_out_0/a0_out gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1053 adder_subtractor_0/full_adder_0/XOR_0/a_52_16# adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# adder_subtractor_0/full_adder_0/a_177_n131# adder_subtractor_0/full_adder_0/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1054 gnd d1_decoder_wala adder_subtractor_0/full_adder_0/a_280_n59# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1055 vdd d1_decoder_wala adder_subtractor_0/full_adder_0/a_194_n116# adder_subtractor_0/full_adder_0/w_179_n123# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1056 vdd d1_decoder_wala adder_subtractor_0/full_adder_0/a_292_n24# adder_subtractor_0/full_adder_0/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=30 ps=22
+M1057 adder_subtractor_0/full_adder_0/a_292_n24# adder_subtractor_0/full_adder_0/a_242_n51# as0 adder_subtractor_0/full_adder_0/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=40 ps=26
+M1058 adder_subtractor_0/full_adder_0/a_194_n116# adder_subtractor_0/full_adder_0/a_177_n131# vdd adder_subtractor_0/full_adder_0/w_179_n123# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1059 adder_subtractor_0/full_adder_0/a_274_n24# adder_subtractor_0/full_adder_0/a_177_n131# vdd adder_subtractor_0/full_adder_0/w_260_n30# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1060 adder_subtractor_0/full_adder_0/a_195_n197# adder_subtractor_0/full_adder_0/a_177_n131# gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1061 adder_subtractor_0/full_adder_0/a_266_n51# d1_decoder_wala gnd Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=0 ps=0
+M1062 as0 adder_subtractor_0/full_adder_0/a_280_n59# adder_subtractor_0/full_adder_0/a_274_n24# adder_subtractor_0/full_adder_0/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1063 adder_subtractor_0/full_adder_0/a_281_n143# adder_subtractor_0/full_adder_0/a_194_n116# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1064 gnd adder_subtractor_0/full_adder_0/a_242_n51# adder_subtractor_0/full_adder_0/a_266_n51# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1065 as0 adder_subtractor_0/full_adder_0/a_177_n131# adder_subtractor_0/full_adder_0/a_266_n51# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1066 adder_subtractor_0/full_adder_0/a_194_n116# d1_decoder_wala adder_subtractor_0/full_adder_0/a_195_n197# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1067 adder_subtractor_0/full_adder_0/a_242_n51# adder_subtractor_0/full_adder_0/a_177_n131# vdd adder_subtractor_0/full_adder_0/w_228_n30# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1068 vdd d1_decoder_wala adder_subtractor_0/full_adder_0/a_280_n59# adder_subtractor_0/full_adder_0/w_319_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1069 adder_subtractor_0/full_adder_0/a_266_n51# adder_subtractor_0/full_adder_0/a_280_n59# as0 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1070 adder_subtractor_0/full_adder_0/a_281_n143# adder_subtractor_0/full_adder_0/a_194_n116# vdd adder_subtractor_0/full_adder_0/w_268_n126# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1071 adder_subtractor_0/full_adder_0/a_242_n51# adder_subtractor_0/full_adder_0/a_177_n131# gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1072 adder_subtractor_0/full_adder_1/AND_0/a_n33_15# enable_out_0/a1_out vdd adder_subtractor_0/full_adder_1/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1073 adder_subtractor_0/full_adder_1/m1_123_n251# adder_subtractor_0/full_adder_1/AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1074 adder_subtractor_0/full_adder_1/AND_0/a_n32_n66# enable_out_0/a1_out gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1075 adder_subtractor_0/full_adder_1/AND_0/a_n33_15# adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1076 vdd adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/AND_0/a_n33_15# adder_subtractor_0/full_adder_1/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1077 adder_subtractor_0/full_adder_1/m1_123_n251# adder_subtractor_0/full_adder_1/AND_0/a_n33_15# vdd adder_subtractor_0/full_adder_1/AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1078 adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# adder_subtractor_0/full_adder_1/a_281_n143# gnd Gnd CMOSN w=4 l=2
++  ad=40 pd=28 as=0 ps=0
+M1079 adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_22# adder_subtractor_0/full_adder_1/a_281_n143# vdd adder_subtractor_0/full_adder_1/2_input_OR_0/w_n23_15# CMOSP w=4 l=2
++  ad=40 pd=28 as=0 ps=0
+M1080 adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# vdd adder_subtractor_0/full_adder_1/2_input_OR_0/w_30_15# CMOSP w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1081 adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# gnd Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1082 gnd adder_subtractor_0/full_adder_1/m1_123_n251# adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1083 adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# adder_subtractor_0/full_adder_1/m1_123_n251# adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_22# adder_subtractor_0/full_adder_1/2_input_OR_0/w_n23_15# CMOSP w=4 l=2
++  ad=36 pd=26 as=0 ps=0
+M1084 adder_subtractor_0/full_adder_1/XOR_0/a_26_n11# adder_subtractor_0/a_60_n49# gnd Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=0 ps=0
+M1085 gnd adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# adder_subtractor_0/full_adder_1/XOR_0/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1086 adder_subtractor_0/full_adder_1/a_177_n131# enable_out_0/a1_out adder_subtractor_0/full_adder_1/XOR_0/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1087 adder_subtractor_0/full_adder_1/a_177_n131# adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# adder_subtractor_0/full_adder_1/XOR_0/a_34_16# adder_subtractor_0/full_adder_1/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1088 adder_subtractor_0/full_adder_1/XOR_0/a_26_n11# adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# adder_subtractor_0/full_adder_1/a_177_n131# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1089 vdd adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/XOR_0/a_52_16# adder_subtractor_0/full_adder_1/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=30 ps=22
+M1090 adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# enable_out_0/a1_out vdd adder_subtractor_0/full_adder_1/XOR_0/w_n12_10# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1091 adder_subtractor_0/full_adder_1/XOR_0/a_34_16# enable_out_0/a1_out vdd adder_subtractor_0/full_adder_1/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1092 gnd adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1093 vdd adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# adder_subtractor_0/full_adder_1/XOR_0/w_79_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1094 adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# enable_out_0/a1_out gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1095 adder_subtractor_0/full_adder_1/XOR_0/a_52_16# adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# adder_subtractor_0/full_adder_1/a_177_n131# adder_subtractor_0/full_adder_1/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1096 gnd adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/a_280_n59# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1097 vdd adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/a_194_n116# adder_subtractor_0/full_adder_1/w_179_n123# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1098 vdd adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/a_292_n24# adder_subtractor_0/full_adder_1/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=30 ps=22
+M1099 adder_subtractor_0/full_adder_1/a_292_n24# adder_subtractor_0/full_adder_1/a_242_n51# as1 adder_subtractor_0/full_adder_1/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=40 ps=26
+M1100 adder_subtractor_0/full_adder_1/a_194_n116# adder_subtractor_0/full_adder_1/a_177_n131# vdd adder_subtractor_0/full_adder_1/w_179_n123# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1101 adder_subtractor_0/full_adder_1/a_274_n24# adder_subtractor_0/full_adder_1/a_177_n131# vdd adder_subtractor_0/full_adder_1/w_260_n30# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1102 adder_subtractor_0/full_adder_1/a_195_n197# adder_subtractor_0/full_adder_1/a_177_n131# gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1103 adder_subtractor_0/full_adder_1/a_266_n51# adder_subtractor_0/m1_791_n39# gnd Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=0 ps=0
+M1104 as1 adder_subtractor_0/full_adder_1/a_280_n59# adder_subtractor_0/full_adder_1/a_274_n24# adder_subtractor_0/full_adder_1/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1105 adder_subtractor_0/full_adder_1/a_281_n143# adder_subtractor_0/full_adder_1/a_194_n116# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1106 gnd adder_subtractor_0/full_adder_1/a_242_n51# adder_subtractor_0/full_adder_1/a_266_n51# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1107 as1 adder_subtractor_0/full_adder_1/a_177_n131# adder_subtractor_0/full_adder_1/a_266_n51# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1108 adder_subtractor_0/full_adder_1/a_194_n116# adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/a_195_n197# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1109 adder_subtractor_0/full_adder_1/a_242_n51# adder_subtractor_0/full_adder_1/a_177_n131# vdd adder_subtractor_0/full_adder_1/w_228_n30# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1110 vdd adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/a_280_n59# adder_subtractor_0/full_adder_1/w_319_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1111 adder_subtractor_0/full_adder_1/a_266_n51# adder_subtractor_0/full_adder_1/a_280_n59# as1 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1112 adder_subtractor_0/full_adder_1/a_281_n143# adder_subtractor_0/full_adder_1/a_194_n116# vdd adder_subtractor_0/full_adder_1/w_268_n126# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1113 adder_subtractor_0/full_adder_1/a_242_n51# adder_subtractor_0/full_adder_1/a_177_n131# gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1114 adder_subtractor_0/full_adder_2/AND_0/a_n33_15# enable_out_0/a2_out vdd adder_subtractor_0/full_adder_2/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1115 adder_subtractor_0/full_adder_2/m1_123_n251# adder_subtractor_0/full_adder_2/AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1116 adder_subtractor_0/full_adder_2/AND_0/a_n32_n66# enable_out_0/a2_out gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1117 adder_subtractor_0/full_adder_2/AND_0/a_n33_15# adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1118 vdd adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/AND_0/a_n33_15# adder_subtractor_0/full_adder_2/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1119 adder_subtractor_0/full_adder_2/m1_123_n251# adder_subtractor_0/full_adder_2/AND_0/a_n33_15# vdd adder_subtractor_0/full_adder_2/AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1120 adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# adder_subtractor_0/full_adder_2/a_281_n143# gnd Gnd CMOSN w=4 l=2
++  ad=40 pd=28 as=0 ps=0
+M1121 adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_22# adder_subtractor_0/full_adder_2/a_281_n143# vdd adder_subtractor_0/full_adder_2/2_input_OR_0/w_n23_15# CMOSP w=4 l=2
++  ad=40 pd=28 as=0 ps=0
+M1122 adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# vdd adder_subtractor_0/full_adder_2/2_input_OR_0/w_30_15# CMOSP w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1123 adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# gnd Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1124 gnd adder_subtractor_0/full_adder_2/m1_123_n251# adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1125 adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# adder_subtractor_0/full_adder_2/m1_123_n251# adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_22# adder_subtractor_0/full_adder_2/2_input_OR_0/w_n23_15# CMOSP w=4 l=2
++  ad=36 pd=26 as=0 ps=0
+M1126 adder_subtractor_0/full_adder_2/XOR_0/a_26_n11# adder_subtractor_0/a_61_n128# gnd Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=0 ps=0
+M1127 gnd adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# adder_subtractor_0/full_adder_2/XOR_0/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1128 adder_subtractor_0/full_adder_2/a_177_n131# enable_out_0/a2_out adder_subtractor_0/full_adder_2/XOR_0/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1129 adder_subtractor_0/full_adder_2/a_177_n131# adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# adder_subtractor_0/full_adder_2/XOR_0/a_34_16# adder_subtractor_0/full_adder_2/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1130 adder_subtractor_0/full_adder_2/XOR_0/a_26_n11# adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# adder_subtractor_0/full_adder_2/a_177_n131# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1131 vdd adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/XOR_0/a_52_16# adder_subtractor_0/full_adder_2/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=30 ps=22
+M1132 adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# enable_out_0/a2_out vdd adder_subtractor_0/full_adder_2/XOR_0/w_n12_10# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1133 adder_subtractor_0/full_adder_2/XOR_0/a_34_16# enable_out_0/a2_out vdd adder_subtractor_0/full_adder_2/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1134 gnd adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1135 vdd adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# adder_subtractor_0/full_adder_2/XOR_0/w_79_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1136 adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# enable_out_0/a2_out gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1137 adder_subtractor_0/full_adder_2/XOR_0/a_52_16# adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# adder_subtractor_0/full_adder_2/a_177_n131# adder_subtractor_0/full_adder_2/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1138 gnd adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/a_280_n59# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1139 vdd adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/a_194_n116# adder_subtractor_0/full_adder_2/w_179_n123# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1140 vdd adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/a_292_n24# adder_subtractor_0/full_adder_2/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=30 ps=22
+M1141 adder_subtractor_0/full_adder_2/a_292_n24# adder_subtractor_0/full_adder_2/a_242_n51# as2 adder_subtractor_0/full_adder_2/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=40 ps=26
+M1142 adder_subtractor_0/full_adder_2/a_194_n116# adder_subtractor_0/full_adder_2/a_177_n131# vdd adder_subtractor_0/full_adder_2/w_179_n123# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1143 adder_subtractor_0/full_adder_2/a_274_n24# adder_subtractor_0/full_adder_2/a_177_n131# vdd adder_subtractor_0/full_adder_2/w_260_n30# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1144 adder_subtractor_0/full_adder_2/a_195_n197# adder_subtractor_0/full_adder_2/a_177_n131# gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1145 adder_subtractor_0/full_adder_2/a_266_n51# adder_subtractor_0/m1_794_n436# gnd Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=0 ps=0
+M1146 as2 adder_subtractor_0/full_adder_2/a_280_n59# adder_subtractor_0/full_adder_2/a_274_n24# adder_subtractor_0/full_adder_2/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1147 adder_subtractor_0/full_adder_2/a_281_n143# adder_subtractor_0/full_adder_2/a_194_n116# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1148 gnd adder_subtractor_0/full_adder_2/a_242_n51# adder_subtractor_0/full_adder_2/a_266_n51# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1149 as2 adder_subtractor_0/full_adder_2/a_177_n131# adder_subtractor_0/full_adder_2/a_266_n51# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1150 adder_subtractor_0/full_adder_2/a_194_n116# adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/a_195_n197# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1151 adder_subtractor_0/full_adder_2/a_242_n51# adder_subtractor_0/full_adder_2/a_177_n131# vdd adder_subtractor_0/full_adder_2/w_228_n30# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1152 vdd adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/a_280_n59# adder_subtractor_0/full_adder_2/w_319_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1153 adder_subtractor_0/full_adder_2/a_266_n51# adder_subtractor_0/full_adder_2/a_280_n59# as2 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1154 adder_subtractor_0/full_adder_2/a_281_n143# adder_subtractor_0/full_adder_2/a_194_n116# vdd adder_subtractor_0/full_adder_2/w_268_n126# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1155 adder_subtractor_0/full_adder_2/a_242_n51# adder_subtractor_0/full_adder_2/a_177_n131# gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1156 adder_subtractor_0/full_adder_3/AND_0/a_n33_15# enable_out_0/a3_out vdd adder_subtractor_0/full_adder_3/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1157 adder_subtractor_0/full_adder_3/m1_123_n251# adder_subtractor_0/full_adder_3/AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1158 adder_subtractor_0/full_adder_3/AND_0/a_n32_n66# enable_out_0/a3_out gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1159 adder_subtractor_0/full_adder_3/AND_0/a_n33_15# adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1160 vdd adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/AND_0/a_n33_15# adder_subtractor_0/full_adder_3/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1161 adder_subtractor_0/full_adder_3/m1_123_n251# adder_subtractor_0/full_adder_3/AND_0/a_n33_15# vdd adder_subtractor_0/full_adder_3/AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1162 adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# adder_subtractor_0/full_adder_3/a_281_n143# gnd Gnd CMOSN w=4 l=2
++  ad=40 pd=28 as=0 ps=0
+M1163 adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_22# adder_subtractor_0/full_adder_3/a_281_n143# vdd adder_subtractor_0/full_adder_3/2_input_OR_0/w_n23_15# CMOSP w=4 l=2
++  ad=40 pd=28 as=0 ps=0
+M1164 adder_subtractor_0/m1_787_n1256# adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# vdd adder_subtractor_0/full_adder_3/2_input_OR_0/w_30_15# CMOSP w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1165 adder_subtractor_0/m1_787_n1256# adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# gnd Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1166 gnd adder_subtractor_0/full_adder_3/m1_123_n251# adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1167 adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# adder_subtractor_0/full_adder_3/m1_123_n251# adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_22# adder_subtractor_0/full_adder_3/2_input_OR_0/w_n23_15# CMOSP w=4 l=2
++  ad=36 pd=26 as=0 ps=0
+M1168 adder_subtractor_0/full_adder_3/XOR_0/a_26_n11# adder_subtractor_0/a_62_n205# gnd Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=0 ps=0
+M1169 gnd adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# adder_subtractor_0/full_adder_3/XOR_0/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1170 adder_subtractor_0/full_adder_3/a_177_n131# enable_out_0/a3_out adder_subtractor_0/full_adder_3/XOR_0/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1171 adder_subtractor_0/full_adder_3/a_177_n131# adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# adder_subtractor_0/full_adder_3/XOR_0/a_34_16# adder_subtractor_0/full_adder_3/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1172 adder_subtractor_0/full_adder_3/XOR_0/a_26_n11# adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# adder_subtractor_0/full_adder_3/a_177_n131# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1173 vdd adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/XOR_0/a_52_16# adder_subtractor_0/full_adder_3/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=30 ps=22
+M1174 adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# enable_out_0/a3_out vdd adder_subtractor_0/full_adder_3/XOR_0/w_n12_10# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1175 adder_subtractor_0/full_adder_3/XOR_0/a_34_16# enable_out_0/a3_out vdd adder_subtractor_0/full_adder_3/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1176 gnd adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1177 vdd adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# adder_subtractor_0/full_adder_3/XOR_0/w_79_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1178 adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# enable_out_0/a3_out gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1179 adder_subtractor_0/full_adder_3/XOR_0/a_52_16# adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# adder_subtractor_0/full_adder_3/a_177_n131# adder_subtractor_0/full_adder_3/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1180 gnd adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/a_280_n59# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1181 vdd adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/a_194_n116# adder_subtractor_0/full_adder_3/w_179_n123# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1182 vdd adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/a_292_n24# adder_subtractor_0/full_adder_3/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=30 ps=22
+M1183 adder_subtractor_0/full_adder_3/a_292_n24# adder_subtractor_0/full_adder_3/a_242_n51# as3 adder_subtractor_0/full_adder_3/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=40 ps=26
+M1184 adder_subtractor_0/full_adder_3/a_194_n116# adder_subtractor_0/full_adder_3/a_177_n131# vdd adder_subtractor_0/full_adder_3/w_179_n123# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1185 adder_subtractor_0/full_adder_3/a_274_n24# adder_subtractor_0/full_adder_3/a_177_n131# vdd adder_subtractor_0/full_adder_3/w_260_n30# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1186 adder_subtractor_0/full_adder_3/a_195_n197# adder_subtractor_0/full_adder_3/a_177_n131# gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1187 adder_subtractor_0/full_adder_3/a_266_n51# adder_subtractor_0/m1_787_n831# gnd Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=0 ps=0
+M1188 as3 adder_subtractor_0/full_adder_3/a_280_n59# adder_subtractor_0/full_adder_3/a_274_n24# adder_subtractor_0/full_adder_3/w_260_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1189 adder_subtractor_0/full_adder_3/a_281_n143# adder_subtractor_0/full_adder_3/a_194_n116# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1190 gnd adder_subtractor_0/full_adder_3/a_242_n51# adder_subtractor_0/full_adder_3/a_266_n51# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1191 as3 adder_subtractor_0/full_adder_3/a_177_n131# adder_subtractor_0/full_adder_3/a_266_n51# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1192 adder_subtractor_0/full_adder_3/a_194_n116# adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/a_195_n197# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1193 adder_subtractor_0/full_adder_3/a_242_n51# adder_subtractor_0/full_adder_3/a_177_n131# vdd adder_subtractor_0/full_adder_3/w_228_n30# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1194 vdd adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/a_280_n59# adder_subtractor_0/full_adder_3/w_319_n30# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1195 adder_subtractor_0/full_adder_3/a_266_n51# adder_subtractor_0/full_adder_3/a_280_n59# as3 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1196 adder_subtractor_0/full_adder_3/a_281_n143# adder_subtractor_0/full_adder_3/a_194_n116# vdd adder_subtractor_0/full_adder_3/w_268_n126# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1197 adder_subtractor_0/full_adder_3/a_242_n51# adder_subtractor_0/full_adder_3/a_177_n131# gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1198 adder_subtractor_0/XOR_0/a_26_n11# enable_out_0/b0_out gnd Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=0 ps=0
+M1199 gnd adder_subtractor_0/XOR_0/a_2_n11# adder_subtractor_0/XOR_0/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1200 adder_subtractor_0/m2_140_53# d1_decoder_wala adder_subtractor_0/XOR_0/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1201 adder_subtractor_0/m2_140_53# adder_subtractor_0/XOR_0/a_40_n19# adder_subtractor_0/XOR_0/a_34_16# adder_subtractor_0/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1202 adder_subtractor_0/XOR_0/a_26_n11# adder_subtractor_0/XOR_0/a_40_n19# adder_subtractor_0/m2_140_53# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1203 vdd enable_out_0/b0_out adder_subtractor_0/XOR_0/a_52_16# adder_subtractor_0/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=30 ps=22
+M1204 adder_subtractor_0/XOR_0/a_2_n11# d1_decoder_wala vdd adder_subtractor_0/XOR_0/w_n12_10# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1205 adder_subtractor_0/XOR_0/a_34_16# d1_decoder_wala vdd adder_subtractor_0/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1206 gnd enable_out_0/b0_out adder_subtractor_0/XOR_0/a_40_n19# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1207 vdd enable_out_0/b0_out adder_subtractor_0/XOR_0/a_40_n19# adder_subtractor_0/XOR_0/w_79_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1208 adder_subtractor_0/XOR_0/a_2_n11# d1_decoder_wala gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1209 adder_subtractor_0/XOR_0/a_52_16# adder_subtractor_0/XOR_0/a_2_n11# adder_subtractor_0/m2_140_53# adder_subtractor_0/XOR_0/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1210 adder_subtractor_0/XOR_1/a_26_n11# d1_decoder_wala gnd Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=0 ps=0
+M1211 gnd adder_subtractor_0/XOR_1/a_2_n11# adder_subtractor_0/XOR_1/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1212 as_carry adder_subtractor_0/m1_787_n1256# adder_subtractor_0/XOR_1/a_26_n11# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1213 as_carry adder_subtractor_0/XOR_1/a_40_n19# adder_subtractor_0/XOR_1/a_34_16# adder_subtractor_0/XOR_1/w_20_10# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1214 adder_subtractor_0/XOR_1/a_26_n11# adder_subtractor_0/XOR_1/a_40_n19# as_carry Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1215 vdd d1_decoder_wala adder_subtractor_0/XOR_1/a_52_16# adder_subtractor_0/XOR_1/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=30 ps=22
+M1216 adder_subtractor_0/XOR_1/a_2_n11# adder_subtractor_0/m1_787_n1256# vdd adder_subtractor_0/XOR_1/w_n12_10# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1217 adder_subtractor_0/XOR_1/a_34_16# adder_subtractor_0/m1_787_n1256# vdd adder_subtractor_0/XOR_1/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1218 gnd d1_decoder_wala adder_subtractor_0/XOR_1/a_40_n19# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1219 vdd d1_decoder_wala adder_subtractor_0/XOR_1/a_40_n19# adder_subtractor_0/XOR_1/w_79_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1220 adder_subtractor_0/XOR_1/a_2_n11# adder_subtractor_0/m1_787_n1256# gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1221 adder_subtractor_0/XOR_1/a_52_16# adder_subtractor_0/XOR_1/a_2_n11# as_carry adder_subtractor_0/XOR_1/w_20_10# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1222 adder_subtractor_0/a_78_n22# adder_subtractor_0/a_28_n49# adder_subtractor_0/a_60_n49# adder_subtractor_0/w_46_n28# CMOSP w=5 l=2
++  ad=30 pd=22 as=40 ps=26
+M1223 adder_subtractor_0/a_61_n101# d1_decoder_wala vdd adder_subtractor_0/w_47_n107# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1224 adder_subtractor_0/a_28_n49# d1_decoder_wala gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1225 adder_subtractor_0/a_53_n128# enable_out_0/b2_out gnd Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=0 ps=0
+M1226 adder_subtractor_0/a_60_n22# d1_decoder_wala vdd adder_subtractor_0/w_46_n28# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1227 adder_subtractor_0/a_30_n205# d1_decoder_wala gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1228 adder_subtractor_0/a_79_n101# adder_subtractor_0/a_29_n128# adder_subtractor_0/a_61_n128# adder_subtractor_0/w_47_n107# CMOSP w=5 l=2
++  ad=30 pd=22 as=40 ps=26
+M1229 vdd enable_out_0/b2_out adder_subtractor_0/a_67_n136# adder_subtractor_0/w_106_n107# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1230 adder_subtractor_0/a_54_n205# adder_subtractor_0/a_68_n213# adder_subtractor_0/a_62_n205# Gnd CMOSN w=5 l=2
++  ad=110 pd=74 as=30 ps=22
+M1231 adder_subtractor_0/a_62_n178# d1_decoder_wala vdd adder_subtractor_0/w_48_n184# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1232 vdd enable_out_0/b1_out adder_subtractor_0/a_78_n22# adder_subtractor_0/w_46_n28# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1233 adder_subtractor_0/a_54_n205# enable_out_0/b3_out gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1234 adder_subtractor_0/a_60_n49# adder_subtractor_0/a_66_n57# adder_subtractor_0/a_60_n22# adder_subtractor_0/w_46_n28# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1235 adder_subtractor_0/a_29_n128# d1_decoder_wala vdd adder_subtractor_0/w_15_n107# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1236 adder_subtractor_0/a_61_n128# adder_subtractor_0/a_67_n136# adder_subtractor_0/a_61_n101# adder_subtractor_0/w_47_n107# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1237 gnd enable_out_0/b1_out adder_subtractor_0/a_66_n57# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1238 adder_subtractor_0/a_28_n49# d1_decoder_wala vdd adder_subtractor_0/w_14_n28# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1239 vdd enable_out_0/b2_out adder_subtractor_0/a_79_n101# adder_subtractor_0/w_47_n107# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1240 adder_subtractor_0/a_80_n178# adder_subtractor_0/a_30_n205# adder_subtractor_0/a_62_n205# adder_subtractor_0/w_48_n184# CMOSP w=5 l=2
++  ad=30 pd=22 as=40 ps=26
+M1241 vdd enable_out_0/b3_out adder_subtractor_0/a_68_n213# adder_subtractor_0/w_107_n184# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1242 adder_subtractor_0/a_62_n205# d1_decoder_wala adder_subtractor_0/a_54_n205# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1243 gnd adder_subtractor_0/a_28_n49# adder_subtractor_0/a_52_n49# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=110 ps=74
+M1244 adder_subtractor_0/a_61_n128# d1_decoder_wala adder_subtractor_0/a_53_n128# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1245 adder_subtractor_0/a_60_n49# d1_decoder_wala adder_subtractor_0/a_52_n49# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1246 gnd adder_subtractor_0/a_29_n128# adder_subtractor_0/a_53_n128# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1247 gnd enable_out_0/b2_out adder_subtractor_0/a_67_n136# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1248 adder_subtractor_0/a_52_n49# enable_out_0/b1_out gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1249 adder_subtractor_0/a_30_n205# d1_decoder_wala vdd adder_subtractor_0/w_16_n184# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1250 adder_subtractor_0/a_62_n205# adder_subtractor_0/a_68_n213# adder_subtractor_0/a_62_n178# adder_subtractor_0/w_48_n184# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1251 adder_subtractor_0/a_52_n49# adder_subtractor_0/a_66_n57# adder_subtractor_0/a_60_n49# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1252 vdd enable_out_0/b1_out adder_subtractor_0/a_66_n57# adder_subtractor_0/w_105_n28# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1253 adder_subtractor_0/a_29_n128# d1_decoder_wala gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1254 vdd enable_out_0/b3_out adder_subtractor_0/a_80_n178# adder_subtractor_0/w_48_n184# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1255 gnd adder_subtractor_0/a_30_n205# adder_subtractor_0/a_54_n205# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1256 gnd enable_out_0/b3_out adder_subtractor_0/a_68_n213# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1257 adder_subtractor_0/a_53_n128# adder_subtractor_0/a_67_n136# adder_subtractor_0/a_61_n128# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1258 enable_out_0/AND_0/a_n33_15# a0 vdd enable_out_0/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1259 enable_out_0/a0_out enable_out_0/AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1260 enable_out_0/AND_0/a_n32_n66# a0 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1261 enable_out_0/AND_0/a_n33_15# m1_431_497# enable_out_0/AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1262 vdd m1_431_497# enable_out_0/AND_0/a_n33_15# enable_out_0/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1263 enable_out_0/a0_out enable_out_0/AND_0/a_n33_15# vdd enable_out_0/AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1264 enable_out_0/a_4_n349# m1_431_497# enable_out_0/a_5_n430# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=170 ps=54
+M1265 enable_out_0/b3_out enable_out_0/a_n9_n1160# vdd enable_out_0/w_65_n1170# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1266 enable_out_0/a3_out enable_out_0/a_4_n349# vdd enable_out_0/w_78_n359# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1267 vdd m1_431_497# enable_out_0/a_n10_n1001# enable_out_0/w_n25_n1008# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1268 enable_out_0/a_n1_n764# b0 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1269 enable_out_0/b1_out enable_out_0/a_n7_n841# vdd enable_out_0/w_67_n851# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1270 enable_out_0/a_n9_n1082# b2 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1271 enable_out_0/a_n2_n683# b0 vdd enable_out_0/w_n17_n690# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1272 vdd m1_431_497# enable_out_0/a_12_n31# enable_out_0/w_n3_n38# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1273 enable_out_0/a_12_n31# m1_431_497# enable_out_0/a_13_n112# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=170 ps=54
+M1274 enable_out_0/a_n2_n683# m1_431_497# enable_out_0/a_n1_n764# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1275 enable_out_0/a_n9_n1160# b3 vdd enable_out_0/w_n24_n1167# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1276 vdd m1_431_497# enable_out_0/a_7_n189# enable_out_0/w_n8_n196# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1277 enable_out_0/a_n6_n922# b1 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1278 enable_out_0/a_n10_n1001# b2 vdd enable_out_0/w_n25_n1008# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1279 enable_out_0/a_13_n112# a1 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1280 vdd m1_431_497# enable_out_0/a_4_n349# enable_out_0/w_n11_n356# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1281 enable_out_0/b0_out enable_out_0/a_n2_n683# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1282 enable_out_0/a_7_n189# a2 vdd enable_out_0/w_n8_n196# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1283 enable_out_0/a_n7_n841# b1 vdd enable_out_0/w_n22_n848# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1284 vdd m1_431_497# enable_out_0/a_n9_n1160# enable_out_0/w_n24_n1167# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1285 enable_out_0/a_n7_n841# m1_431_497# enable_out_0/a_n6_n922# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1286 enable_out_0/a_4_n349# a3 vdd enable_out_0/w_n11_n356# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1287 enable_out_0/a2_out enable_out_0/a_7_n189# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1288 enable_out_0/b0_out enable_out_0/a_n2_n683# vdd enable_out_0/w_72_n693# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1289 vdd m1_431_497# enable_out_0/a_n2_n683# enable_out_0/w_n17_n690# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1290 enable_out_0/a_n10_n1001# m1_431_497# enable_out_0/a_n9_n1082# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1291 enable_out_0/a_12_n31# a1 vdd enable_out_0/w_n3_n38# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1292 enable_out_0/a1_out enable_out_0/a_12_n31# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1293 enable_out_0/b2_out enable_out_0/a_n10_n1001# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1294 enable_out_0/a2_out enable_out_0/a_7_n189# vdd enable_out_0/w_81_n199# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1295 enable_out_0/a_8_n270# a2 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1296 enable_out_0/a_5_n430# a3 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1297 enable_out_0/b3_out enable_out_0/a_n9_n1160# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1298 enable_out_0/a3_out enable_out_0/a_4_n349# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1299 enable_out_0/a_n8_n1241# b3 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1300 enable_out_0/a_n9_n1160# m1_431_497# enable_out_0/a_n8_n1241# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1301 enable_out_0/a1_out enable_out_0/a_12_n31# vdd enable_out_0/w_86_n41# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1302 enable_out_0/b1_out enable_out_0/a_n7_n841# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1303 enable_out_0/b2_out enable_out_0/a_n10_n1001# vdd enable_out_0/w_64_n1011# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1304 vdd m1_431_497# enable_out_0/a_n7_n841# enable_out_0/w_n22_n848# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1305 enable_out_0/a_7_n189# m1_431_497# enable_out_0/a_8_n270# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1306 2_input_OR_0/a_n7_n12# decoder_0/d0 gnd Gnd CMOSN w=4 l=2
++  ad=40 pd=28 as=0 ps=0
+M1307 2_input_OR_0/a_n7_22# decoder_0/d0 vdd 2_input_OR_0/w_n23_15# CMOSP w=4 l=2
++  ad=40 pd=28 as=0 ps=0
+M1308 m1_431_497# 2_input_OR_0/a_n7_n12# vdd 2_input_OR_0/w_30_15# CMOSP w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1309 m1_431_497# 2_input_OR_0/a_n7_n12# gnd Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1310 gnd d1_decoder_wala 2_input_OR_0/a_n7_n12# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1311 2_input_OR_0/a_n7_n12# d1_decoder_wala 2_input_OR_0/a_n7_22# 2_input_OR_0/w_n23_15# CMOSP w=4 l=2
++  ad=36 pd=26 as=0 ps=0
+M1312 enable_out_1/AND_0/a_n33_15# a0 vdd enable_out_1/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1313 comparator_0/a0 enable_out_1/AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1314 enable_out_1/AND_0/a_n32_n66# a0 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1315 enable_out_1/AND_0/a_n33_15# decoder_0/d2 enable_out_1/AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1316 vdd decoder_0/d2 enable_out_1/AND_0/a_n33_15# enable_out_1/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1317 comparator_0/a0 enable_out_1/AND_0/a_n33_15# vdd enable_out_1/AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1318 enable_out_1/a_4_n349# decoder_0/d2 enable_out_1/a_5_n430# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=170 ps=54
+M1319 comparator_0/b3 enable_out_1/a_n9_n1160# vdd enable_out_1/w_65_n1170# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1320 comparator_0/a3 enable_out_1/a_4_n349# vdd enable_out_1/w_78_n359# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1321 vdd decoder_0/d2 enable_out_1/a_n10_n1001# enable_out_1/w_n25_n1008# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1322 enable_out_1/a_n1_n764# b0 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1323 comparator_0/b1 enable_out_1/a_n7_n841# vdd enable_out_1/w_67_n851# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1324 enable_out_1/a_n9_n1082# b2 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1325 enable_out_1/a_n2_n683# b0 vdd enable_out_1/w_n17_n690# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1326 vdd decoder_0/d2 enable_out_1/a_12_n31# enable_out_1/w_n3_n38# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1327 enable_out_1/a_12_n31# decoder_0/d2 enable_out_1/a_13_n112# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=170 ps=54
+M1328 enable_out_1/a_n2_n683# decoder_0/d2 enable_out_1/a_n1_n764# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1329 enable_out_1/a_n9_n1160# b3 vdd enable_out_1/w_n24_n1167# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1330 vdd decoder_0/d2 enable_out_1/a_7_n189# enable_out_1/w_n8_n196# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1331 enable_out_1/a_n6_n922# b1 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1332 enable_out_1/a_n10_n1001# b2 vdd enable_out_1/w_n25_n1008# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1333 enable_out_1/a_13_n112# a1 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1334 vdd decoder_0/d2 enable_out_1/a_4_n349# enable_out_1/w_n11_n356# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1335 comparator_0/b0 enable_out_1/a_n2_n683# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1336 enable_out_1/a_7_n189# m1_789_856# vdd enable_out_1/w_n8_n196# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1337 enable_out_1/a_n7_n841# b1 vdd enable_out_1/w_n22_n848# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1338 vdd decoder_0/d2 enable_out_1/a_n9_n1160# enable_out_1/w_n24_n1167# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1339 enable_out_1/a_n7_n841# decoder_0/d2 enable_out_1/a_n6_n922# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1340 enable_out_1/a_4_n349# a3 vdd enable_out_1/w_n11_n356# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1341 comparator_0/a2 enable_out_1/a_7_n189# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1342 comparator_0/b0 enable_out_1/a_n2_n683# vdd enable_out_1/w_72_n693# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1343 vdd decoder_0/d2 enable_out_1/a_n2_n683# enable_out_1/w_n17_n690# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1344 enable_out_1/a_n10_n1001# decoder_0/d2 enable_out_1/a_n9_n1082# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1345 enable_out_1/a_12_n31# a1 vdd enable_out_1/w_n3_n38# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1346 comparator_0/a1 enable_out_1/a_12_n31# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1347 comparator_0/b2 enable_out_1/a_n10_n1001# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1348 comparator_0/a2 enable_out_1/a_7_n189# vdd enable_out_1/w_81_n199# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1349 enable_out_1/a_8_n270# m1_789_856# gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1350 enable_out_1/a_5_n430# a3 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1351 comparator_0/b3 enable_out_1/a_n9_n1160# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1352 comparator_0/a3 enable_out_1/a_4_n349# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1353 enable_out_1/a_n8_n1241# b3 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1354 enable_out_1/a_n9_n1160# decoder_0/d2 enable_out_1/a_n8_n1241# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1355 comparator_0/a1 enable_out_1/a_12_n31# vdd enable_out_1/w_86_n41# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1356 comparator_0/b1 enable_out_1/a_n7_n841# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1357 comparator_0/b2 enable_out_1/a_n10_n1001# vdd enable_out_1/w_64_n1011# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1358 vdd decoder_0/d2 enable_out_1/a_n7_n841# enable_out_1/w_n22_n848# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1359 enable_out_1/a_7_n189# decoder_0/d2 enable_out_1/a_8_n270# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1360 enable_out_2/AND_0/a_n33_15# a0 vdd enable_out_2/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1361 aluand_0/a0 enable_out_2/AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1362 enable_out_2/AND_0/a_n32_n66# a0 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1363 enable_out_2/AND_0/a_n33_15# decoder_0/d3 enable_out_2/AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1364 vdd decoder_0/d3 enable_out_2/AND_0/a_n33_15# enable_out_2/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1365 aluand_0/a0 enable_out_2/AND_0/a_n33_15# vdd enable_out_2/AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1366 enable_out_2/a_4_n349# decoder_0/d3 enable_out_2/a_5_n430# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=170 ps=54
+M1367 aluand_0/a3 enable_out_2/a_n9_n1160# vdd enable_out_2/w_65_n1170# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1368 aluand_0/b3 enable_out_2/a_4_n349# vdd enable_out_2/w_78_n359# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1369 vdd decoder_0/d3 enable_out_2/a_n10_n1001# enable_out_2/w_n25_n1008# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1370 enable_out_2/a_n1_n764# b0 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1371 aluand_0/a1 enable_out_2/a_n7_n841# vdd enable_out_2/w_67_n851# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1372 enable_out_2/a_n9_n1082# b2 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1373 enable_out_2/a_n2_n683# b0 vdd enable_out_2/w_n17_n690# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1374 vdd decoder_0/d3 enable_out_2/a_12_n31# enable_out_2/w_n3_n38# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1375 enable_out_2/a_12_n31# decoder_0/d3 enable_out_2/a_13_n112# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=170 ps=54
+M1376 enable_out_2/a_n2_n683# decoder_0/d3 enable_out_2/a_n1_n764# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1377 enable_out_2/a_n9_n1160# b3 vdd enable_out_2/w_n24_n1167# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1378 vdd decoder_0/d3 enable_out_2/a_7_n189# enable_out_2/w_n8_n196# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1379 enable_out_2/a_n6_n922# b1 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1380 enable_out_2/a_n10_n1001# b2 vdd enable_out_2/w_n25_n1008# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1381 enable_out_2/a_13_n112# a1 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1382 vdd decoder_0/d3 enable_out_2/a_4_n349# enable_out_2/w_n11_n356# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1383 aluand_0/b0 enable_out_2/a_n2_n683# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1384 enable_out_2/a_7_n189# m1_789_856# vdd enable_out_2/w_n8_n196# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1385 enable_out_2/a_n7_n841# b1 vdd enable_out_2/w_n22_n848# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1386 vdd decoder_0/d3 enable_out_2/a_n9_n1160# enable_out_2/w_n24_n1167# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1387 enable_out_2/a_n7_n841# decoder_0/d3 enable_out_2/a_n6_n922# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1388 enable_out_2/a_4_n349# a3 vdd enable_out_2/w_n11_n356# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1389 aluand_0/b2 enable_out_2/a_7_n189# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1390 aluand_0/b0 enable_out_2/a_n2_n683# vdd enable_out_2/w_72_n693# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1391 vdd decoder_0/d3 enable_out_2/a_n2_n683# enable_out_2/w_n17_n690# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1392 enable_out_2/a_n10_n1001# decoder_0/d3 enable_out_2/a_n9_n1082# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1393 enable_out_2/a_12_n31# a1 vdd enable_out_2/w_n3_n38# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1394 aluand_0/b1 enable_out_2/a_12_n31# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1395 aluand_0/a2 enable_out_2/a_n10_n1001# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1396 aluand_0/b2 enable_out_2/a_7_n189# vdd enable_out_2/w_81_n199# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1397 enable_out_2/a_8_n270# m1_789_856# gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1398 enable_out_2/a_5_n430# a3 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1399 aluand_0/a3 enable_out_2/a_n9_n1160# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1400 aluand_0/b3 enable_out_2/a_4_n349# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1401 enable_out_2/a_n8_n1241# b3 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1402 enable_out_2/a_n9_n1160# decoder_0/d3 enable_out_2/a_n8_n1241# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1403 aluand_0/b1 enable_out_2/a_12_n31# vdd enable_out_2/w_86_n41# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1404 aluand_0/a1 enable_out_2/a_n7_n841# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1405 aluand_0/a2 enable_out_2/a_n10_n1001# vdd enable_out_2/w_64_n1011# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1406 vdd decoder_0/d3 enable_out_2/a_n7_n841# enable_out_2/w_n22_n848# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1407 enable_out_2/a_7_n189# decoder_0/d3 enable_out_2/a_8_n270# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1408 comparator_0/5_AND_0/a_35_n66# comparator_0/check3 comparator_0/5_AND_0/a_11_n66# Gnd CMOSN w=17 l=3
++  ad=323 pd=72 as=357 ps=76
+M1409 vdd comparator_0/check3 comparator_0/5_AND_0/in comparator_0/5_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=528 ps=160
+M1410 comparator_0/5_AND_0/in comparator_0/a0 vdd comparator_0/5_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1411 comparator_0/4_OR_0/a comparator_0/5_AND_0/in vdd comparator_0/5_AND_0/w_130_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1412 vdd comparator_0/b0_not comparator_0/5_AND_0/in comparator_0/5_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1413 comparator_0/5_AND_0/a_n11_n66# comparator_0/b0_not comparator_0/5_AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=323 pd=72 as=306 ps=70
+M1414 comparator_0/5_AND_0/in comparator_0/check4 vdd comparator_0/5_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1415 comparator_0/5_AND_0/a_n32_n66# comparator_0/a0 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1416 comparator_0/5_AND_0/a_11_n66# comparator_0/check2 comparator_0/5_AND_0/a_n11_n66# Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1417 comparator_0/5_AND_0/in comparator_0/check2 vdd comparator_0/5_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1418 comparator_0/4_OR_0/a comparator_0/5_AND_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1419 comparator_0/5_AND_0/in comparator_0/check4 comparator_0/5_AND_0/a_35_n66# Gnd CMOSN w=17 l=3
++  ad=136 pd=50 as=0 ps=0
+M1420 comparator_0/equal_to comparator_0/4_AND_0/a_n33_15# vdd comparator_0/4_AND_0/w_94_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1421 comparator_0/equal_to comparator_0/4_AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1422 comparator_0/4_AND_0/a_n33_15# comparator_0/check1 comparator_0/4_AND_0/a_11_n66# Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=357 ps=76
+M1423 vdd comparator_0/check1 comparator_0/4_AND_0/a_n33_15# comparator_0/4_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=432 ps=120
+M1424 comparator_0/4_AND_0/a_n33_15# comparator_0/check4 vdd comparator_0/4_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1425 vdd comparator_0/check3 comparator_0/4_AND_0/a_n33_15# comparator_0/4_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1426 comparator_0/4_AND_0/a_n11_n66# comparator_0/check3 comparator_0/4_AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=323 pd=72 as=306 ps=70
+M1427 comparator_0/4_AND_0/a_n32_n66# comparator_0/check4 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1428 comparator_0/4_AND_0/a_11_n66# comparator_0/check2 comparator_0/4_AND_0/a_n11_n66# Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1429 comparator_0/4_AND_0/a_n33_15# comparator_0/check2 vdd comparator_0/4_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1430 comparator_0/4_OR_0/d comparator_0/4_AND_1/a_n33_15# vdd comparator_0/4_AND_1/w_94_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1431 comparator_0/4_OR_0/d comparator_0/4_AND_1/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1432 comparator_0/4_AND_1/a_n33_15# comparator_0/check4 comparator_0/4_AND_1/a_11_n66# Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=357 ps=76
+M1433 vdd comparator_0/check4 comparator_0/4_AND_1/a_n33_15# comparator_0/4_AND_1/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=432 ps=120
+M1434 comparator_0/4_AND_1/a_n33_15# comparator_0/a1 vdd comparator_0/4_AND_1/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1435 vdd comparator_0/b1_not comparator_0/4_AND_1/a_n33_15# comparator_0/4_AND_1/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1436 comparator_0/4_AND_1/a_n11_n66# comparator_0/b1_not comparator_0/4_AND_1/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=323 pd=72 as=306 ps=70
+M1437 comparator_0/4_AND_1/a_n32_n66# comparator_0/a1 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1438 comparator_0/4_AND_1/a_11_n66# comparator_0/check3 comparator_0/4_AND_1/a_n11_n66# Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1439 comparator_0/4_AND_1/a_n33_15# comparator_0/check3 vdd comparator_0/4_AND_1/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1440 comparator_0/3_AND_0/a_n33_15# comparator_0/a2 vdd comparator_0/3_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=432 pd=120 as=0 ps=0
+M1441 comparator_0/4_OR_0/c comparator_0/3_AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1442 vdd comparator_0/b2_not comparator_0/3_AND_0/a_n33_15# comparator_0/3_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1443 comparator_0/3_AND_0/a_n11_n66# comparator_0/b2_not comparator_0/3_AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=323 pd=72 as=306 ps=70
+M1444 comparator_0/3_AND_0/a_n32_n66# comparator_0/a2 gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1445 comparator_0/3_AND_0/a_n33_15# comparator_0/check4 comparator_0/3_AND_0/a_n11_n66# Gnd CMOSN w=17 l=3
++  ad=255 pd=64 as=0 ps=0
+M1446 comparator_0/4_OR_0/c comparator_0/3_AND_0/a_n33_15# vdd comparator_0/3_AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1447 comparator_0/3_AND_0/a_n33_15# comparator_0/check4 vdd comparator_0/3_AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1448 comparator_0/AND_0/a_n33_15# comparator_0/b3_not vdd comparator_0/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1449 comparator_0/4_OR_0/b comparator_0/AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1450 comparator_0/AND_0/a_n32_n66# comparator_0/b3_not gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1451 comparator_0/AND_0/a_n33_15# comparator_0/a3 comparator_0/AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1452 vdd comparator_0/a3 comparator_0/AND_0/a_n33_15# comparator_0/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1453 comparator_0/4_OR_0/b comparator_0/AND_0/a_n33_15# vdd comparator_0/AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1454 gnd comparator_0/4_OR_0/c comparator_0/4_OR_0/in Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=88 ps=68
+M1455 comparator_0/4_OR_0/in comparator_0/4_OR_0/d comparator_0/4_OR_0/a_7_9# comparator_0/4_OR_0/w_n30_3# CMOSP w=4 l=2
++  ad=20 pd=18 as=32 ps=24
+M1456 comparator_0/4_OR_0/in comparator_0/4_OR_0/b gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1457 comparator_0/greater_than comparator_0/4_OR_0/in gnd Gnd CMOSN w=6 l=2
++  ad=42 pd=26 as=0 ps=0
+M1458 comparator_0/4_OR_0/in comparator_0/4_OR_0/d gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1459 comparator_0/4_OR_0/a_n5_9# comparator_0/4_OR_0/b comparator_0/4_OR_0/a_n16_9# comparator_0/4_OR_0/w_n30_3# CMOSP w=4 l=2
++  ad=40 pd=28 as=36 ps=26
+M1460 comparator_0/greater_than comparator_0/4_OR_0/in vdd comparator_0/4_OR_0/w_66_4# CMOSP w=6 l=2
++  ad=42 pd=26 as=0 ps=0
+M1461 comparator_0/4_OR_0/a_7_9# comparator_0/4_OR_0/c comparator_0/4_OR_0/a_n5_9# comparator_0/4_OR_0/w_n30_3# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1462 comparator_0/4_OR_0/a_n16_9# comparator_0/4_OR_0/a vdd comparator_0/4_OR_0/w_n30_3# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1463 gnd comparator_0/4_OR_0/a comparator_0/4_OR_0/in Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1464 comparator_0/check1 comparator_0/b0 comparator_0/XNOR_0/a_58_n40# comparator_0/XNOR_0/w_44_n46# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1465 gnd comparator_0/a2_not comparator_0/XNOR_0/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=110 ps=74
+M1466 comparator_0/check1 comparator_0/a0 comparator_0/XNOR_0/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1467 comparator_0/a2_not comparator_0/a0 vdd comparator_0/XNOR_0/w_12_n46# CMOSP w=5 l=2
++  ad=60 pd=44 as=0 ps=0
+M1468 comparator_0/XNOR_0/a_50_n67# comparator_0/b0_not gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1469 comparator_0/XNOR_0/a_50_n67# comparator_0/b0 comparator_0/check1 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1470 comparator_0/a2_not comparator_0/a0 gnd Gnd CMOSN w=5 l=2
++  ad=60 pd=44 as=0 ps=0
+M1471 vdd comparator_0/b0 comparator_0/b0_not comparator_0/XNOR_0/w_103_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1472 comparator_0/XNOR_0/a_76_n40# comparator_0/a2_not comparator_0/check1 comparator_0/XNOR_0/w_44_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1473 comparator_0/XNOR_0/a_58_n40# comparator_0/a0 vdd comparator_0/XNOR_0/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1474 gnd comparator_0/b0 comparator_0/b0_not Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1475 vdd comparator_0/b0_not comparator_0/XNOR_0/a_76_n40# comparator_0/XNOR_0/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1476 comparator_0/check2 comparator_0/b1 comparator_0/XNOR_1/a_58_n40# comparator_0/XNOR_1/w_44_n46# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1477 gnd comparator_0/a1_not comparator_0/XNOR_1/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=110 ps=74
+M1478 comparator_0/check2 comparator_0/a1 comparator_0/XNOR_1/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1479 comparator_0/a1_not comparator_0/a1 vdd comparator_0/XNOR_1/w_12_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1480 comparator_0/XNOR_1/a_50_n67# comparator_0/b1_not gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1481 comparator_0/XNOR_1/a_50_n67# comparator_0/b1 comparator_0/check2 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1482 comparator_0/a1_not comparator_0/a1 gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1483 vdd comparator_0/b1 comparator_0/b1_not comparator_0/XNOR_1/w_103_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1484 comparator_0/XNOR_1/a_76_n40# comparator_0/a1_not comparator_0/check2 comparator_0/XNOR_1/w_44_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1485 comparator_0/XNOR_1/a_58_n40# comparator_0/a1 vdd comparator_0/XNOR_1/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1486 gnd comparator_0/b1 comparator_0/b1_not Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1487 vdd comparator_0/b1_not comparator_0/XNOR_1/a_76_n40# comparator_0/XNOR_1/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1488 comparator_0/check3 comparator_0/b2 comparator_0/XNOR_2/a_58_n40# comparator_0/XNOR_2/w_44_n46# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1489 gnd comparator_0/a2_not comparator_0/XNOR_2/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=110 ps=74
+M1490 comparator_0/check3 comparator_0/a2 comparator_0/XNOR_2/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1491 comparator_0/a2_not comparator_0/a2 vdd comparator_0/XNOR_2/w_12_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1492 comparator_0/XNOR_2/a_50_n67# comparator_0/b2_not gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1493 comparator_0/XNOR_2/a_50_n67# comparator_0/b2 comparator_0/check3 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1494 comparator_0/a2_not comparator_0/a2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1495 vdd comparator_0/b2 comparator_0/b2_not comparator_0/XNOR_2/w_103_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1496 comparator_0/XNOR_2/a_76_n40# comparator_0/a2_not comparator_0/check3 comparator_0/XNOR_2/w_44_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1497 comparator_0/XNOR_2/a_58_n40# comparator_0/a2 vdd comparator_0/XNOR_2/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1498 gnd comparator_0/b2 comparator_0/b2_not Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1499 vdd comparator_0/b2_not comparator_0/XNOR_2/a_76_n40# comparator_0/XNOR_2/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1500 comparator_0/check4 comparator_0/b3 comparator_0/XNOR_3/a_58_n40# comparator_0/XNOR_3/w_44_n46# CMOSP w=5 l=2
++  ad=40 pd=26 as=30 ps=22
+M1501 gnd comparator_0/a3_not comparator_0/XNOR_3/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=110 ps=74
+M1502 comparator_0/check4 comparator_0/a3 comparator_0/XNOR_3/a_50_n67# Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1503 comparator_0/a3_not comparator_0/a3 vdd comparator_0/XNOR_3/w_12_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1504 comparator_0/XNOR_3/a_50_n67# comparator_0/b3_not gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1505 comparator_0/XNOR_3/a_50_n67# comparator_0/b3 comparator_0/check4 Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1506 comparator_0/a3_not comparator_0/a3 gnd Gnd CMOSN w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1507 vdd comparator_0/b3 comparator_0/b3_not comparator_0/XNOR_3/w_103_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1508 comparator_0/XNOR_3/a_76_n40# comparator_0/a3_not comparator_0/check4 comparator_0/XNOR_3/w_44_n46# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1509 comparator_0/XNOR_3/a_58_n40# comparator_0/a3 vdd comparator_0/XNOR_3/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1510 gnd comparator_0/b3 comparator_0/b3_not Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=25 ps=20
+M1511 vdd comparator_0/b3_not comparator_0/XNOR_3/a_76_n40# comparator_0/XNOR_3/w_44_n46# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1512 vdd comparator_0/a2_not comparator_0/a_267_n739# comparator_0/w_252_n747# CMOSP w=12 l=3
++  ad=0 pd=0 as=432 ps=120
+M1513 comparator_0/a_562_n657# comparator_0/a_354_n727# comparator_0/a_550_n657# comparator_0/w_525_n664# CMOSP w=4 l=2
++  ad=32 pd=24 as=40 ps=28
+M1514 comparator_0/a_247_n576# comparator_0/check3 comparator_0/a_291_n500# Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=357 ps=76
+M1515 comparator_0/a_268_n663# comparator_0/check4 gnd Gnd CMOSN w=17 l=3
++  ad=306 pd=70 as=0 ps=0
+M1516 comparator_0/a_267_n739# comparator_0/check4 vdd comparator_0/w_252_n747# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1517 comparator_0/a_550_n657# comparator_0/a_353_n895# comparator_0/a_539_n657# comparator_0/w_525_n664# CMOSP w=4 l=2
++  ad=0 pd=0 as=36 ps=26
+M1518 comparator_0/a_228_n398# comparator_0/check2 vdd comparator_0/w_213_n406# CMOSP w=12 l=3
++  ad=528 pd=160 as=0 ps=0
+M1519 gnd comparator_0/a_404_n386# comparator_0/a_532_n617# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=88 ps=68
+M1520 vdd comparator_0/b1 comparator_0/a_247_n576# comparator_0/w_232_n584# CMOSP w=12 l=3
++  ad=0 pd=0 as=432 ps=120
+M1521 vdd comparator_0/a2_not comparator_0/a_228_n398# comparator_0/w_213_n406# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1522 comparator_0/a_289_n663# comparator_0/a2_not comparator_0/a_268_n663# Gnd CMOSN w=17 l=3
++  ad=323 pd=72 as=0 ps=0
+M1523 vdd comparator_0/check4 comparator_0/a_228_n398# comparator_0/w_213_n406# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1524 comparator_0/a_247_n576# comparator_0/a1_not vdd comparator_0/w_232_n584# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1525 comparator_0/a_228_n398# comparator_0/b0 vdd comparator_0/w_213_n406# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1526 comparator_0/a_404_n386# comparator_0/a_228_n398# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1527 comparator_0/a_532_n617# comparator_0/a_387_n564# gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1528 comparator_0/a_353_n895# comparator_0/a_266_n907# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1529 comparator_0/a_229_n322# comparator_0/b0 gnd Gnd CMOSN w=17 l=3
++  ad=306 pd=70 as=0 ps=0
+M1530 vdd comparator_0/b3 comparator_0/a_266_n907# comparator_0/w_251_n915# CMOSP w=12 l=3
++  ad=0 pd=0 as=132 ps=46
+M1531 comparator_0/a_404_n386# comparator_0/a_228_n398# vdd comparator_0/w_391_n392# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1532 comparator_0/a_353_n895# comparator_0/a_266_n907# vdd comparator_0/w_340_n901# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1533 comparator_0/a_272_n322# comparator_0/check3 comparator_0/a_250_n322# Gnd CMOSN w=17 l=3
++  ad=357 pd=76 as=323 ps=72
+M1534 comparator_0/a_248_n500# comparator_0/a1_not gnd Gnd CMOSN w=17 l=3
++  ad=306 pd=70 as=0 ps=0
+M1535 comparator_0/a_267_n739# comparator_0/b2 comparator_0/a_289_n663# Gnd CMOSN w=17 l=3
++  ad=255 pd=64 as=0 ps=0
+M1536 comparator_0/a_296_n322# comparator_0/check4 comparator_0/a_272_n322# Gnd CMOSN w=17 l=3
++  ad=323 pd=72 as=0 ps=0
+M1537 comparator_0/a_250_n322# comparator_0/a2_not comparator_0/a_229_n322# Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1538 gnd comparator_0/a_354_n727# comparator_0/a_532_n617# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1539 comparator_0/less_than comparator_0/a_532_n617# gnd Gnd CMOSN w=6 l=2
++  ad=42 pd=26 as=0 ps=0
+M1540 vdd comparator_0/check3 comparator_0/a_247_n576# comparator_0/w_232_n584# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1541 comparator_0/a_354_n727# comparator_0/a_267_n739# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1542 comparator_0/a_291_n500# comparator_0/check4 comparator_0/a_269_n500# Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=323 ps=72
+M1543 comparator_0/a_532_n617# comparator_0/a_353_n895# gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1544 comparator_0/a_539_n657# comparator_0/a_404_n386# vdd comparator_0/w_525_n664# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1545 comparator_0/a_266_n907# comparator_0/b3 comparator_0/a_267_n831# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=170 ps=54
+M1546 comparator_0/a_269_n500# comparator_0/b1 comparator_0/a_248_n500# Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1547 comparator_0/a_247_n576# comparator_0/check4 vdd comparator_0/w_232_n584# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1548 comparator_0/a_387_n564# comparator_0/a_247_n576# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1549 comparator_0/a_354_n727# comparator_0/a_267_n739# vdd comparator_0/w_341_n733# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1550 comparator_0/a_228_n398# comparator_0/check3 vdd comparator_0/w_213_n406# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1551 comparator_0/a_532_n617# comparator_0/a_387_n564# comparator_0/a_562_n657# comparator_0/w_525_n664# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1552 comparator_0/less_than comparator_0/a_532_n617# vdd comparator_0/w_621_n666# CMOSP w=6 l=2
++  ad=42 pd=26 as=0 ps=0
+M1553 comparator_0/a_267_n831# comparator_0/a3_not gnd Gnd CMOSN w=17 l=3
++  ad=0 pd=0 as=0 ps=0
+M1554 comparator_0/a_228_n398# comparator_0/check2 comparator_0/a_296_n322# Gnd CMOSN w=17 l=3
++  ad=136 pd=50 as=0 ps=0
+M1555 comparator_0/a_267_n739# comparator_0/b2 vdd comparator_0/w_252_n747# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1556 comparator_0/a_266_n907# comparator_0/a3_not vdd comparator_0/w_251_n915# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1557 comparator_0/a_387_n564# comparator_0/a_247_n576# vdd comparator_0/w_374_n570# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1558 decoder_0/AND_0/a_n33_15# decoder_0/m1_n33_33# vdd decoder_0/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1559 decoder_0/d0 decoder_0/AND_0/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1560 decoder_0/AND_0/a_n32_n66# decoder_0/m1_n33_33# gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1561 decoder_0/AND_0/a_n33_15# decoder_0/m1_n34_n16# decoder_0/AND_0/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1562 vdd decoder_0/m1_n34_n16# decoder_0/AND_0/a_n33_15# decoder_0/AND_0/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1563 decoder_0/d0 decoder_0/AND_0/a_n33_15# vdd decoder_0/AND_0/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1564 decoder_0/AND_1/a_n33_15# decoder_0/m1_n34_n16# vdd decoder_0/AND_1/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1565 d1_decoder_wala decoder_0/AND_1/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1566 decoder_0/AND_1/a_n32_n66# decoder_0/m1_n34_n16# gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1567 decoder_0/AND_1/a_n33_15# s0 decoder_0/AND_1/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1568 vdd s0 decoder_0/AND_1/a_n33_15# decoder_0/AND_1/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1569 d1_decoder_wala decoder_0/AND_1/a_n33_15# vdd decoder_0/AND_1/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1570 decoder_0/AND_2/a_n33_15# decoder_0/m1_n33_33# vdd decoder_0/AND_2/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1571 decoder_0/d2 decoder_0/AND_2/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1572 decoder_0/AND_2/a_n32_n66# decoder_0/m1_n33_33# gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1573 decoder_0/AND_2/a_n33_15# s1 decoder_0/AND_2/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1574 vdd s1 decoder_0/AND_2/a_n33_15# decoder_0/AND_2/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1575 decoder_0/d2 decoder_0/AND_2/a_n33_15# vdd decoder_0/AND_2/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1576 decoder_0/AND_3/a_n33_15# s0 vdd decoder_0/AND_3/w_n48_8# CMOSP w=12 l=3
++  ad=132 pd=46 as=0 ps=0
+M1577 decoder_0/d3 decoder_0/AND_3/a_n33_15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1578 decoder_0/AND_3/a_n32_n66# s0 gnd Gnd CMOSN w=17 l=3
++  ad=170 pd=54 as=0 ps=0
+M1579 decoder_0/AND_3/a_n33_15# s1 decoder_0/AND_3/a_n32_n66# Gnd CMOSN w=17 l=3
++  ad=238 pd=62 as=0 ps=0
+M1580 vdd s1 decoder_0/AND_3/a_n33_15# decoder_0/AND_3/w_n48_8# CMOSP w=12 l=3
++  ad=0 pd=0 as=0 ps=0
+M1581 decoder_0/d3 decoder_0/AND_3/a_n33_15# vdd decoder_0/AND_3/w_41_5# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1582 decoder_0/m1_n34_n16# s1 vdd decoder_0/NOT_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1583 decoder_0/m1_n34_n16# s1 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1584 decoder_0/m1_n33_33# s0 vdd decoder_0/NOT_1/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1585 decoder_0/m1_n33_33# s0 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+C0 comparator_0/4_OR_0/a comparator_0/4_OR_0/w_n30_3# 0.06fF
+C1 adder_subtractor_0/full_adder_0/w_228_n30# adder_subtractor_0/full_adder_0/a_242_n51# 0.03fF
+C2 adder_subtractor_0/a_60_n49# adder_subtractor_0/w_46_n28# 0.02fF
+C3 comparator_0/a0 comparator_0/b0 0.53fF
+C4 m1_789_856# decoder_0/d2 1.34fF
+C5 enable_out_0/a3_out gnd 0.04fF
+C6 adder_subtractor_0/full_adder_3/a_177_n131# adder_subtractor_0/full_adder_3/w_228_n30# 0.06fF
+C7 adder_subtractor_0/full_adder_2/XOR_0/w_79_10# adder_subtractor_0/full_adder_2/a_177_n131# 0.12fF
+C8 enable_out_0/a2_out d1_decoder_wala 0.11fF
+C9 enable_out_1/w_n17_n690# b0 0.11fF
+C10 vdd adder_subtractor_0/w_48_n184# 0.05fF
+C11 adder_subtractor_0/full_adder_0/w_260_n30# as0 0.02fF
+C12 adder_subtractor_0/full_adder_3/XOR_0/w_20_10# vdd 0.05fF
+C13 adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# adder_subtractor_0/full_adder_2/XOR_0/a_26_n11# 0.01fF
+C14 adder_subtractor_0/full_adder_1/XOR_0/w_20_10# adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# 0.06fF
+C15 comparator_0/5_AND_0/in gnd 0.13fF
+C16 adder_subtractor_0/full_adder_0/a_242_n51# adder_subtractor_0/full_adder_0/a_266_n51# 0.01fF
+C17 adder_subtractor_0/full_adder_0/w_179_n123# adder_subtractor_0/full_adder_0/a_194_n116# 0.03fF
+C18 adder_subtractor_0/full_adder_0/a_280_n59# as0 0.34fF
+C19 vdd comparator_0/XNOR_0/w_103_n46# 0.02fF
+C20 adder_subtractor_0/XOR_0/w_n12_10# d1_decoder_wala 0.06fF
+C21 adder_subtractor_0/full_adder_3/a_177_n131# adder_subtractor_0/full_adder_3/a_266_n51# 0.01fF
+C22 adder_subtractor_0/full_adder_3/w_319_n30# adder_subtractor_0/full_adder_3/a_280_n59# 0.03fF
+C23 adder_subtractor_0/full_adder_2/a_177_n131# adder_subtractor_0/full_adder_2/w_179_n123# 0.11fF
+C24 enable_out_1/w_81_n199# enable_out_1/a_7_n189# 0.06fF
+C25 vdd b3 0.31fF
+C26 comparator_0/a1_not comparator_0/a2_not 1.85fF
+C27 adder_subtractor_0/m1_787_n1256# adder_subtractor_0/XOR_1/a_26_n11# 0.01fF
+C28 adder_subtractor_0/full_adder_2/w_260_n30# adder_subtractor_0/full_adder_2/a_242_n51# 0.08fF
+C29 adder_subtractor_0/full_adder_1/a_177_n131# adder_subtractor_0/full_adder_1/XOR_0/a_26_n11# 0.45fF
+C30 enable_out_0/w_n8_n196# gnd 0.18fF
+C31 enable_out_0/w_n17_n690# gnd 0.14fF
+C32 adder_subtractor_0/full_adder_3/w_319_n30# vdd 0.02fF
+C33 vdd decoder_0/m1_n34_n16# 0.07fF
+C34 2_input_OR_0/w_n23_15# decoder_0/d0 0.07fF
+C35 adder_subtractor_0/full_adder_3/a_281_n143# gnd 0.04fF
+C36 comparator_0/a0 comparator_0/check4 0.42fF
+C37 comparator_0/a1 comparator_0/check3 0.10fF
+C38 aluand_0/AND_0/w_n48_8# aluand_0/a0 0.11fF
+C39 adder_subtractor_0/full_adder_0/XOR_0/w_n12_10# adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# 0.03fF
+C40 2_input_OR_0/w_n23_15# vdd 0.03fF
+C41 adder_subtractor_0/full_adder_2/w_319_n30# as2 0.12fF
+C42 adder_subtractor_0/full_adder_2/a_242_n51# adder_subtractor_0/full_adder_2/a_280_n59# 0.02fF
+C43 adder_subtractor_0/full_adder_2/2_input_OR_0/w_30_15# vdd 0.03fF
+C44 adder_subtractor_0/full_adder_1/AND_0/a_n33_15# gnd 0.12fF
+C45 adder_subtractor_0/full_adder_0/AND_0/w_n48_8# adder_subtractor_0/m2_140_53# 0.11fF
+C46 a0 m1_789_856# 0.43fF
+C47 adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/XOR_0/a_26_n11# 0.01fF
+C48 adder_subtractor_0/full_adder_0/XOR_0/w_79_10# vdd 0.02fF
+C49 enable_out_0/w_n8_n196# enable_out_0/a_7_n189# 0.03fF
+C50 adder_subtractor_0/w_105_n28# gnd 0.09fF
+C51 adder_subtractor_0/full_adder_0/XOR_0/w_20_10# adder_subtractor_0/full_adder_0/a_177_n131# 0.02fF
+C52 adder_subtractor_0/full_adder_1/a_281_n143# adder_subtractor_0/full_adder_1/m1_123_n251# 0.52fF
+C53 aluand_0/AND_0/a_n33_15# vdd 0.16fF
+C54 vdd adder_subtractor_0/full_adder_3/a_194_n116# 0.05fF
+C55 adder_subtractor_0/full_adder_2/w_268_n126# adder_subtractor_0/full_adder_2/a_194_n116# 0.06fF
+C56 adder_subtractor_0/full_adder_1/w_260_n30# adder_subtractor_0/full_adder_1/a_280_n59# 0.06fF
+C57 adder_subtractor_0/full_adder_1/a_242_n51# vdd 0.11fF
+C58 vdd enable_out_2/w_81_n199# 0.05fF
+C59 adder_subtractor_0/full_adder_0/a_177_n131# vdd 0.19fF
+C60 AND_0/a_n42_15# equal_to 0.07fF
+C61 adder_subtractor_0/full_adder_1/AND_0/w_n48_8# adder_subtractor_0/full_adder_1/AND_0/a_n33_15# 0.03fF
+C62 comparator_0/5_AND_0/w_n48_8# comparator_0/check4 0.11fF
+C63 adder_subtractor_0/full_adder_2/2_input_OR_0/w_30_15# adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# 0.06fF
+C64 adder_subtractor_0/full_adder_1/a_242_n51# as1 0.09fF
+C65 decoder_0/AND_3/a_n33_15# decoder_0/AND_3/w_41_5# 0.06fF
+C66 comparator_0/3_AND_0/w_n48_8# comparator_0/b2_not 0.11fF
+C67 vdd enable_out_2/w_n25_n1008# 0.05fF
+C68 adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# gnd 0.03fF
+C69 b0 a1 0.34fF
+C70 comparator_0/a3_not comparator_0/b3 0.16fF
+C71 comparator_0/XNOR_3/w_103_n46# comparator_0/b3_not 0.03fF
+C72 m1_431_497# enable_out_0/a_n2_n683# 0.12fF
+C73 comparator_0/a0 gnd 0.05fF
+C74 decoder_0/d3 enable_out_2/w_n3_n38# 0.11fF
+C75 comparator_0/b3_not comparator_0/check4 0.35fF
+C76 comparator_0/a3 comparator_0/XNOR_3/a_50_n67# 0.01fF
+C77 enable_out_0/w_n11_n356# gnd 0.17fF
+C78 vdd comparator_0/w_252_n747# 0.05fF
+C79 enable_out_1/a_n10_n1001# decoder_0/d2 0.12fF
+C80 comparator_0/check4 comparator_0/a_247_n576# 0.21fF
+C81 comparator_0/w_391_n392# comparator_0/a_404_n386# 0.03fF
+C82 vdd enable_out_1/w_n3_n38# 0.05fF
+C83 adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# gnd 0.13fF
+C84 adder_subtractor_0/full_adder_0/a_266_n51# d1_decoder_wala 0.01fF
+C85 adder_subtractor_0/m1_787_n1256# vdd 0.03fF
+C86 comparator_0/check1 comparator_0/XNOR_0/w_103_n46# 0.12fF
+C87 comparator_0/w_374_n570# comparator_0/a_247_n576# 0.06fF
+C88 vdd enable_out_1/w_72_n693# 0.14fF
+C89 a_315_n1959# decoder_0/d2 0.07fF
+C90 comparator_0/a1_not comparator_0/b1 0.15fF
+C91 comparator_0/XNOR_1/w_103_n46# comparator_0/b1_not 0.03fF
+C92 comparator_0/b0 comparator_0/a2_not 0.16fF
+C93 vdd decoder_0/d2 0.09fF
+C94 adder_subtractor_0/full_adder_2/AND_0/w_n48_8# gnd 0.14fF
+C95 enable_out_0/a1_out enable_out_0/b3_out 0.10fF
+C96 decoder_0/d0 decoder_0/AND_0/w_41_5# 0.03fF
+C97 comparator_0/a_387_n564# comparator_0/a_532_n617# 0.35fF
+C98 comparator_0/4_OR_0/d comparator_0/4_OR_0/in 0.35fF
+C99 enable_out_2/a_n9_n1160# gnd 0.18fF
+C100 enable_out_1/w_n24_n1167# b3 0.11fF
+C101 comparator_0/w_525_n664# comparator_0/a_353_n895# 0.07fF
+C102 comparator_0/b0_not comparator_0/check3 0.30fF
+C103 comparator_0/b1_not comparator_0/check2 0.35fF
+C104 comparator_0/a1 comparator_0/XNOR_1/a_50_n67# 0.01fF
+C105 a3 b2 0.54fF
+C106 b0 b1 8.08fF
+C107 vdd decoder_0/AND_0/w_41_5# 0.14fF
+C108 comparator_0/b3_not gnd 0.41fF
+C109 adder_subtractor_0/full_adder_0/2_input_OR_0/w_30_15# vdd 0.03fF
+C110 adder_subtractor_0/full_adder_1/a_266_n51# gnd 0.08fF
+C111 vdd comparator_0/XNOR_2/w_44_n46# 0.05fF
+C112 adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/XOR_0/a_26_n11# 0.01fF
+C113 adder_subtractor_0/full_adder_3/AND_0/w_41_5# adder_subtractor_0/full_adder_3/AND_0/a_n33_15# 0.06fF
+C114 adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/XOR_0/w_20_10# 0.08fF
+C115 aluand_0/w_9_n340# vdd 0.05fF
+C116 comparator_0/a_247_n576# gnd 0.13fF
+C117 m1_431_497# a3 1.38fF
+C118 comparator_0/4_OR_0/b comparator_0/4_OR_0/in 0.06fF
+C119 adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/a_242_n51# 0.13fF
+C120 adder_subtractor_0/full_adder_1/2_input_OR_0/w_30_15# vdd 0.03fF
+C121 decoder_0/d3 gnd 0.04fF
+C122 comparator_0/w_340_n901# comparator_0/a_266_n907# 0.06fF
+C123 comparator_0/a_354_n727# gnd 0.13fF
+C124 b3 a1 0.67fF
+C125 adder_subtractor_0/a_62_n205# adder_subtractor_0/a_54_n205# 0.45fF
+C126 adder_subtractor_0/full_adder_0/w_319_n30# vdd 0.02fF
+C127 comparator_0/a2_not comparator_0/check4 0.46fF
+C128 comparator_0/b2 comparator_0/b3 0.10fF
+C129 enable_out_1/w_n8_n196# gnd 0.18fF
+C130 adder_subtractor_0/XOR_0/a_26_n11# adder_subtractor_0/XOR_0/a_2_n11# 0.01fF
+C131 enable_out_0/a3_out adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# 0.06fF
+C132 enable_out_0/AND_0/w_n48_8# gnd 0.22fF
+C133 adder_subtractor_0/w_47_n107# enable_out_0/b2_out 0.08fF
+C134 adder_subtractor_0/XOR_1/a_2_n11# adder_subtractor_0/XOR_1/a_40_n19# 0.02fF
+C135 adder_subtractor_0/XOR_1/w_79_10# d1_decoder_wala 0.08fF
+C136 adder_subtractor_0/full_adder_0/a_177_n131# adder_subtractor_0/full_adder_0/w_260_n30# 0.06fF
+C137 enable_out_1/w_n17_n690# decoder_0/d2 0.11fF
+C138 aluand_0/a0 enable_out_2/AND_0/w_41_5# 0.03fF
+C139 enable_out_0/w_67_n851# enable_out_0/a_n7_n841# 0.06fF
+C140 d1_decoder_wala as_carry 0.11fF
+C141 adder_subtractor_0/m2_140_53# adder_subtractor_0/XOR_0/a_40_n19# 0.34fF
+C142 adder_subtractor_0/full_adder_0/a_177_n131# adder_subtractor_0/full_adder_0/a_280_n59# 0.11fF
+C143 enable_out_0/a0_out adder_subtractor_0/full_adder_0/XOR_0/w_n12_10# 0.06fF
+C144 decoder_0/AND_0/w_n48_8# decoder_0/m1_n33_33# 0.11fF
+C145 adder_subtractor_0/full_adder_0/a_194_n116# vdd 0.05fF
+C146 enable_out_0/a2_out adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# 0.11fF
+C147 enable_out_1/w_81_n199# comparator_0/a2 0.03fF
+C148 d1_decoder_wala adder_subtractor_0/w_15_n107# 0.06fF
+C149 adder_subtractor_0/a_60_n49# enable_out_0/a1_out 1.08fF
+C150 adder_subtractor_0/full_adder_0/AND_0/w_41_5# vdd 0.05fF
+C151 and_out1 vdd 0.07fF
+C152 aluand_0/b3 enable_out_2/w_78_n359# 0.03fF
+C153 adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# 0.07fF
+C154 comparator_0/b0 comparator_0/b1 0.17fF
+C155 vdd enable_out_0/a_n10_n1001# 0.16fF
+C156 adder_subtractor_0/full_adder_3/AND_0/w_n48_8# adder_subtractor_0/full_adder_3/AND_0/a_n33_15# 0.03fF
+C157 m1_431_497# 2_input_OR_0/w_30_15# 0.03fF
+C158 adder_subtractor_0/full_adder_0/m1_123_n251# gnd 0.49fF
+C159 enable_out_0/w_72_n693# enable_out_0/a_n2_n683# 0.06fF
+C160 b1 b3 0.65fF
+C161 comparator_0/a2_not gnd 0.36fF
+C162 adder_subtractor_0/a_53_n128# enable_out_0/b2_out 0.01fF
+C163 enable_out_1/w_n24_n1167# decoder_0/d2 0.11fF
+C164 enable_out_0/w_n22_n848# m1_431_497# 0.11fF
+C165 enable_out_0/b0_out d1_decoder_wala 0.14fF
+C166 comparator_0/equal_to gnd 0.21fF
+C167 enable_out_0/a_12_n31# enable_out_0/w_n3_n38# 0.03fF
+C168 aluand_0/b2 gnd 0.04fF
+C169 adder_subtractor_0/w_14_n28# adder_subtractor_0/a_28_n49# 0.03fF
+C170 decoder_0/m1_n33_33# gnd 0.18fF
+C171 adder_subtractor_0/full_adder_0/2_input_OR_0/w_30_15# adder_subtractor_0/m1_791_n39# 0.03fF
+C172 comparator_0/5_AND_0/w_n48_8# comparator_0/5_AND_0/in 0.08fF
+C173 vdd comparator_0/a1 0.20fF
+C174 enable_out_0/a_n7_n841# gnd 0.18fF
+C175 adder_subtractor_0/full_adder_3/2_input_OR_0/w_30_15# adder_subtractor_0/m1_787_n1256# 0.03fF
+C176 enable_out_1/w_n3_n38# a1 0.11fF
+C177 enable_out_2/w_n11_n356# a3 0.11fF
+C178 enable_out_1/w_65_n1170# enable_out_1/a_n9_n1160# 0.06fF
+C179 adder_subtractor_0/full_adder_3/m1_123_n251# adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# 0.20fF
+C180 adder_subtractor_0/a_62_n205# gnd 0.26fF
+C181 comparator_0/a1 comparator_0/a3 0.14fF
+C182 comparator_0/XNOR_2/w_103_n46# comparator_0/b2 0.08fF
+C183 comparator_0/XNOR_2/w_44_n46# comparator_0/b2_not 0.18fF
+C184 adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/a_242_n51# 0.13fF
+C185 adder_subtractor_0/full_adder_3/a_281_n143# adder_subtractor_0/full_adder_3/w_268_n126# 0.03fF
+C186 vdd s0 0.08fF
+C187 vdd enable_out_2/a_n7_n841# 0.17fF
+C188 enable_out_2/w_n17_n690# enable_out_2/a_n2_n683# 0.03fF
+C189 a1 decoder_0/d2 1.69fF
+C190 adder_subtractor_0/w_106_n107# adder_subtractor_0/a_67_n136# 0.03fF
+C191 comparator_0/5_AND_0/w_130_5# comparator_0/4_OR_0/a 0.03fF
+C192 comparator_0/b1 comparator_0/check4 0.50fF
+C193 comparator_0/a2_not comparator_0/XNOR_2/a_50_n67# 0.01fF
+C194 comparator_0/b2 comparator_0/check3 0.10fF
+C195 adder_subtractor_0/a_68_n213# enable_out_0/b3_out 0.07fF
+C196 adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/w_260_n30# 0.08fF
+C197 adder_subtractor_0/XOR_1/w_20_10# adder_subtractor_0/XOR_1/a_40_n19# 0.06fF
+C198 enable_out_2/w_67_n851# enable_out_2/a_n7_n841# 0.06fF
+C199 adder_subtractor_0/full_adder_1/m1_123_n251# gnd 0.52fF
+C200 s1 decoder_0/AND_2/a_n33_15# 0.12fF
+C201 adder_subtractor_0/w_16_n184# adder_subtractor_0/a_30_n205# 0.03fF
+C202 adder_subtractor_0/full_adder_2/a_280_n59# gnd 0.13fF
+C203 adder_subtractor_0/m2_140_53# gnd 0.26fF
+C204 comparator_0/check2 comparator_0/w_213_n406# 0.11fF
+C205 and_out3 gnd 0.04fF
+C206 enable_out_1/w_n3_n38# enable_out_1/a_12_n31# 0.03fF
+C207 adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/a_280_n59# 0.07fF
+C208 vdd enable_out_0/b3_out 0.15fF
+C209 comparator_0/XNOR_0/w_103_n46# comparator_0/b0 0.08fF
+C210 comparator_0/XNOR_0/w_44_n46# comparator_0/b0_not 0.18fF
+C211 adder_subtractor_0/a_29_n128# adder_subtractor_0/a_67_n136# 0.02fF
+C212 adder_subtractor_0/full_adder_3/m1_123_n251# adder_subtractor_0/full_adder_3/2_input_OR_0/w_n23_15# 0.07fF
+C213 adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# 0.02fF
+C214 aluand_0/w_98_n343# aluand_0/a_24_n333# 0.06fF
+C215 vdd adder_subtractor_0/w_106_n107# 0.02fF
+C216 comparator_0/4_OR_0/a comparator_0/4_OR_0/in 0.06fF
+C217 enable_out_2/a_7_n189# gnd 0.18fF
+C218 enable_out_1/a_12_n31# decoder_0/d2 0.12fF
+C219 adder_subtractor_0/full_adder_0/w_319_n30# adder_subtractor_0/full_adder_0/a_280_n59# 0.03fF
+C220 comparator_0/3_AND_0/w_n48_8# comparator_0/check4 0.11fF
+C221 enable_out_0/a_12_n31# m1_431_497# 0.12fF
+C222 enable_out_0/AND_0/a_n33_15# gnd 0.82fF
+C223 adder_subtractor_0/XOR_0/a_2_n11# adder_subtractor_0/XOR_0/w_20_10# 0.08fF
+C224 adder_subtractor_0/full_adder_3/a_177_n131# adder_subtractor_0/full_adder_3/a_242_n51# 0.06fF
+C225 adder_subtractor_0/full_adder_3/AND_0/a_n33_15# vdd 0.05fF
+C226 b0 gnd 0.01fF
+C227 comparator_0/b1 gnd 0.55fF
+C228 adder_subtractor_0/a_60_n49# adder_subtractor_0/a_66_n57# 0.34fF
+C229 enable_out_0/b2_out gnd 0.47fF
+C230 adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/XOR_0/a_26_n11# 0.01fF
+C231 vdd comparator_0/XNOR_0/w_12_n46# 0.11fF
+C232 b1 decoder_0/d2 1.75fF
+C233 adder_subtractor_0/a_30_n205# adder_subtractor_0/a_68_n213# 0.02fF
+C234 adder_subtractor_0/m1_787_n1256# adder_subtractor_0/XOR_1/a_2_n11# 0.06fF
+C235 enable_out_0/b0_out adder_subtractor_0/XOR_0/w_79_10# 0.08fF
+C236 adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# vdd 0.05fF
+C237 adder_subtractor_0/full_adder_2/a_177_n131# adder_subtractor_0/full_adder_2/w_260_n30# 0.06fF
+C238 adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# adder_subtractor_0/full_adder_1/a_177_n131# 0.09fF
+C239 comparator_0/5_AND_0/w_n48_8# comparator_0/a0 0.11fF
+C240 a0 a1 0.70fF
+C241 enable_out_1/w_n25_n1008# b2 0.11fF
+C242 vdd adder_subtractor_0/a_29_n128# 0.11fF
+C243 vdd aluand_0/a2 0.07fF
+C244 vdd comparator_0/b0_not 0.20fF
+C245 adder_subtractor_0/full_adder_3/w_228_n30# vdd 0.03fF
+C246 adder_subtractor_0/full_adder_2/a_177_n131# adder_subtractor_0/full_adder_2/a_280_n59# 0.11fF
+C247 adder_subtractor_0/full_adder_1/XOR_0/w_79_10# vdd 0.02fF
+C248 enable_out_1/w_n11_n356# enable_out_1/a_4_n349# 0.03fF
+C249 adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# 0.13fF
+C250 comparator_0/4_AND_0/w_n48_8# comparator_0/check2 0.11fF
+C251 vdd adder_subtractor_0/a_30_n205# 0.11fF
+C252 adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# adder_subtractor_0/full_adder_1/m1_123_n251# 0.20fF
+C253 comparator_0/a0 comparator_0/b3_not 0.11fF
+C254 comparator_0/a1 comparator_0/b2_not 0.11fF
+C255 adder_subtractor_0/XOR_1/a_40_n19# gnd 0.13fF
+C256 adder_subtractor_0/a_62_n205# enable_out_0/a3_out 1.10fF
+C257 adder_subtractor_0/full_adder_1/a_177_n131# vdd 0.19fF
+C258 adder_subtractor_0/XOR_0/w_20_10# vdd 0.05fF
+C259 adder_subtractor_0/full_adder_3/a_280_n59# adder_subtractor_0/full_adder_3/a_266_n51# 0.01fF
+C260 comparator_0/3_AND_0/w_n48_8# gnd 0.13fF
+C261 enable_out_1/w_72_n693# enable_out_1/a_n2_n683# 0.06fF
+C262 comparator_0/4_AND_0/a_n33_15# comparator_0/check2 0.21fF
+C263 enable_out_1/a_4_n349# gnd 0.18fF
+C264 adder_subtractor_0/full_adder_0/XOR_0/w_n12_10# vdd 0.03fF
+C265 aluand_0/AND_0/w_41_5# and_out0 0.03fF
+C266 comparator_0/check2 comparator_0/check3 3.76fF
+C267 enable_out_1/a_n2_n683# decoder_0/d2 0.12fF
+C268 adder_subtractor_0/full_adder_0/XOR_0/w_79_10# adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# 0.03fF
+C269 aluand_0/b0 vdd 0.07fF
+C270 adder_subtractor_0/full_adder_1/w_179_n123# vdd 0.05fF
+C271 adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/AND_0/a_n33_15# 0.12fF
+C272 vdd enable_out_2/w_86_n41# 0.05fF
+C273 adder_subtractor_0/a_60_n49# vdd 0.47fF
+C274 vdd comparator_0/4_AND_1/w_94_5# 0.05fF
+C275 m1_431_497# a2 0.16fF
+C276 enable_out_0/w_72_n693# enable_out_0/b0_out 0.03fF
+C277 adder_subtractor_0/XOR_0/w_n12_10# adder_subtractor_0/XOR_0/a_2_n11# 0.03fF
+C278 decoder_0/m1_n34_n16# decoder_0/AND_0/w_n48_8# 0.11fF
+C279 vdd comparator_0/a3_not 0.71fF
+C280 adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# adder_subtractor_0/full_adder_0/a_177_n131# 0.34fF
+C281 decoder_0/d3 decoder_0/AND_3/w_41_5# 0.03fF
+C282 as2 adder_subtractor_0/full_adder_2/a_266_n51# 0.45fF
+C283 vdd enable_out_2/w_n22_n848# 0.05fF
+C284 a0 b1 15.57fF
+C285 AND_0/a_n33_15# AND_0/w_41_5# 0.06fF
+C286 comparator_0/XNOR_3/w_44_n46# comparator_0/b3 0.06fF
+C287 comparator_0/a3_not comparator_0/a3 0.15fF
+C288 enable_out_0/a2_out enable_out_0/w_81_n199# 0.03fF
+C289 vdd comparator_0/4_OR_0/d 0.08fF
+C290 enable_out_1/w_72_n693# comparator_0/b0 0.03fF
+C291 vdd enable_out_1/AND_0/w_n48_8# 0.05fF
+C292 enable_out_0/a2_out vdd 0.25fF
+C293 d1_decoder_wala enable_out_0/b1_out 0.07fF
+C294 adder_subtractor_0/full_adder_0/a_242_n51# d1_decoder_wala 0.13fF
+C295 b3 gnd 0.01fF
+C296 vdd comparator_0/w_525_n664# 0.09fF
+C297 decoder_0/d3 enable_out_2/a_n9_n1160# 0.12fF
+C298 comparator_0/w_213_n406# comparator_0/a_228_n398# 0.08fF
+C299 vdd enable_out_2/AND_0/w_n48_8# 0.05fF
+C300 adder_subtractor_0/w_46_n28# enable_out_0/b1_out 0.08fF
+C301 m1_789_856# a3 0.29fF
+C302 vdd comparator_0/4_OR_0/b 0.10fF
+C303 decoder_0/m1_n34_n16# gnd 0.27fF
+C304 comparator_0/check4 comparator_0/XNOR_3/a_50_n67# 0.45fF
+C305 adder_subtractor_0/m1_787_n1256# adder_subtractor_0/XOR_1/w_20_10# 0.06fF
+C306 adder_subtractor_0/XOR_0/w_n12_10# vdd 0.03fF
+C307 enable_out_0/a3_out enable_out_0/b2_out 0.09fF
+C308 vdd enable_out_1/a_n9_n1160# 0.15fF
+C309 comparator_0/XNOR_1/w_44_n46# comparator_0/b1 0.06fF
+C310 comparator_0/a1_not comparator_0/a1 0.20fF
+C311 comparator_0/a0 comparator_0/a2_not 0.15fF
+C312 vdd enable_out_1/w_78_n359# 0.05fF
+C313 enable_out_0/a0_out enable_out_0/AND_0/w_41_5# 0.03fF
+C314 comparator_0/check4 comparator_0/w_252_n747# 0.11fF
+C315 enable_out_1/w_78_n359# comparator_0/a3 0.03fF
+C316 comparator_0/4_OR_0/d comparator_0/4_OR_0/c 0.02fF
+C317 comparator_0/check1 comparator_0/b0_not 0.35fF
+C318 comparator_0/b3 comparator_0/a_266_n907# 0.12fF
+C319 comparator_0/b0_not comparator_0/b2_not 0.08fF
+C320 enable_out_0/w_n3_n38# m1_431_497# 0.11fF
+C321 adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# 0.13fF
+C322 adder_subtractor_0/full_adder_1/a_242_n51# gnd 0.03fF
+C323 vdd decoder_0/AND_0/a_n33_15# 0.13fF
+C324 2_input_OR_0/w_n23_15# 2_input_OR_0/a_n7_n12# 0.03fF
+C325 adder_subtractor_0/full_adder_2/a_281_n143# vdd 0.08fF
+C326 adder_subtractor_0/full_adder_0/a_177_n131# gnd 0.18fF
+C327 enable_out_1/w_64_n1011# enable_out_1/a_n10_n1001# 0.06fF
+C328 comparator_0/a_353_n895# comparator_0/a_532_n617# 0.06fF
+C329 adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/a_177_n131# 0.33fF
+C330 decoder_0/AND_3/w_n48_8# s0 0.11fF
+C331 comparator_0/w_340_n901# comparator_0/a_353_n895# 0.03fF
+C332 comparator_0/check2 comparator_0/XNOR_1/a_50_n67# 0.45fF
+C333 adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/AND_0/a_n33_15# 0.12fF
+C334 aluand_0/w_9_n189# vdd 0.05fF
+C335 vdd enable_out_2/w_65_n1170# 0.13fF
+C336 enable_out_0/w_n17_n690# b0 0.11fF
+C337 comparator_0/4_OR_0/w_n30_3# comparator_0/4_OR_0/in 0.04fF
+C338 comparator_0/4_OR_0/b comparator_0/4_OR_0/c 0.13fF
+C339 adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/w_179_n123# 0.11fF
+C340 enable_out_0/a1_out enable_out_0/b0_out 0.09fF
+C341 comparator_0/XNOR_3/a_50_n67# gnd 0.08fF
+C342 adder_subtractor_0/m1_791_n39# adder_subtractor_0/a_60_n49# 0.13fF
+C343 vdd enable_out_1/w_64_n1011# 0.08fF
+C344 vdd comparator_0/b2 0.09fF
+C345 adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# 0.07fF
+C346 aluand_0/a_25_n31# vdd 0.16fF
+C347 comparator_0/a_267_n739# gnd 0.64fF
+C348 vdd enable_out_0/a_n2_n683# 0.22fF
+C349 comparator_0/w_252_n747# gnd 0.13fF
+C350 vdd enable_out_0/w_65_n1170# 0.13fF
+C351 comparator_0/a2_not comparator_0/b3_not 0.09fF
+C352 comparator_0/b2 comparator_0/a3 0.22fF
+C353 enable_out_0/a1_out adder_subtractor_0/full_adder_1/XOR_0/w_n12_10# 0.06fF
+C354 adder_subtractor_0/full_adder_0/w_228_n30# vdd 0.03fF
+C355 enable_out_1/w_n3_n38# gnd 0.33fF
+C356 enable_out_0/a3_out adder_subtractor_0/full_adder_3/XOR_0/w_20_10# 0.06fF
+C357 adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# vdd 0.11fF
+C358 adder_subtractor_0/full_adder_0/a_177_n131# adder_subtractor_0/full_adder_0/XOR_0/a_26_n11# 0.45fF
+C359 enable_out_1/w_n11_n356# decoder_0/d2 0.11fF
+C360 comparator_0/check3 comparator_0/a_228_n398# 0.19fF
+C361 decoder_0/d2 decoder_0/AND_2/w_41_5# 0.03fF
+C362 m1_431_497# b2 0.36fF
+C363 adder_subtractor_0/m1_787_n1256# gnd 0.07fF
+C364 enable_out_0/a1_out adder_subtractor_0/a_61_n128# 0.12fF
+C365 adder_subtractor_0/full_adder_1/AND_0/w_41_5# vdd 0.05fF
+C366 decoder_0/d2 gnd 0.06fF
+C367 d1_decoder_wala m1_431_497# 0.19fF
+C368 comparator_0/check3 comparator_0/w_232_n584# 0.11fF
+C369 d1_decoder_wala adder_subtractor_0/w_46_n28# 0.06fF
+C370 as_carry adder_subtractor_0/XOR_1/a_26_n11# 0.45fF
+C371 adder_subtractor_0/XOR_0/a_26_n11# adder_subtractor_0/XOR_0/a_40_n19# 0.01fF
+C372 adder_subtractor_0/full_adder_2/w_268_n126# vdd 0.05fF
+C373 aluand_0/a_24_n333# vdd 0.16fF
+C374 comparator_0/b0 comparator_0/a1 0.20fF
+C375 adder_subtractor_0/full_adder_2/a_281_n143# adder_subtractor_0/full_adder_2/2_input_OR_0/w_n23_15# 0.09fF
+C376 enable_out_1/w_n24_n1167# enable_out_1/a_n9_n1160# 0.03fF
+C377 adder_subtractor_0/full_adder_2/m1_123_n251# vdd 0.07fF
+C378 as2 vdd 0.14fF
+C379 adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# vdd 0.02fF
+C380 adder_subtractor_0/full_adder_1/2_input_OR_0/w_30_15# adder_subtractor_0/m1_794_n436# 0.03fF
+C381 vdd comparator_0/XNOR_1/w_103_n46# 0.02fF
+C382 adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/a_177_n131# 0.33fF
+C383 adder_subtractor_0/full_adder_2/m1_123_n251# adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# 0.20fF
+C384 comparator_0/4_AND_1/w_n48_8# comparator_0/a1 0.11fF
+C385 enable_out_0/w_n25_n1008# enable_out_0/a_n10_n1001# 0.03fF
+C386 comparator_0/a1_not comparator_0/a3_not 0.10fF
+C387 vdd comparator_0/4_OR_0/a 0.21fF
+C388 vdd comparator_0/check2 0.16fF
+C389 adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/w_179_n123# 0.11fF
+C390 a0 gnd 0.13fF
+C391 comparator_0/4_AND_0/w_94_5# comparator_0/equal_to 0.03fF
+C392 s0 decoder_0/AND_1/a_n33_15# 0.12fF
+C393 adder_subtractor_0/w_47_n107# adder_subtractor_0/a_29_n128# 0.08fF
+C394 adder_subtractor_0/full_adder_2/XOR_0/a_26_n11# gnd 0.08fF
+C395 decoder_0/NOT_0/w_n9_1# s1 0.06fF
+C396 comparator_0/a1 comparator_0/check4 0.46fF
+C397 comparator_0/b2 comparator_0/b2_not 0.07fF
+C398 adder_subtractor_0/full_adder_3/XOR_0/w_20_10# adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# 0.08fF
+C399 decoder_0/d3 enable_out_2/a_7_n189# 0.12fF
+C400 vdd adder_subtractor_0/XOR_1/w_79_10# 0.02fF
+C401 enable_out_2/w_n22_n848# b1 0.11fF
+C402 comparator_0/b1 comparator_0/a_247_n576# 0.23fF
+C403 vdd enable_out_0/AND_0/w_41_5# 0.05fF
+C404 enable_out_0/b0_out adder_subtractor_0/XOR_0/a_2_n11# 0.13fF
+C405 adder_subtractor_0/full_adder_3/XOR_0/w_79_10# adder_subtractor_0/full_adder_3/a_177_n131# 0.12fF
+C406 adder_subtractor_0/full_adder_3/2_input_OR_0/w_n23_15# vdd 0.03fF
+C407 enable_out_0/w_64_n1011# enable_out_0/b2_out 0.03fF
+C408 adder_subtractor_0/a_54_n205# enable_out_0/b3_out 0.01fF
+C409 and_out1 gnd 0.04fF
+C410 vdd enable_out_1/a_7_n189# 0.23fF
+C411 decoder_0/d3 b0 0.93fF
+C412 vdd as_carry 0.02fF
+C413 enable_out_0/a_n10_n1001# gnd 0.18fF
+C414 adder_subtractor_0/full_adder_2/m1_123_n251# adder_subtractor_0/full_adder_2/2_input_OR_0/w_n23_15# 0.07fF
+C415 enable_out_0/AND_0/w_n48_8# enable_out_0/AND_0/a_n33_15# 0.03fF
+C416 adder_subtractor_0/XOR_0/a_26_n11# gnd 0.08fF
+C417 adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# adder_subtractor_0/full_adder_3/XOR_0/a_26_n11# 0.01fF
+C418 adder_subtractor_0/full_adder_2/XOR_0/w_20_10# adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# 0.06fF
+C419 AND_0/w_n48_8# AND_0/a_n42_15# 0.05fF
+C420 aluand_0/w_99_n41# and_out1 0.03fF
+C421 aluand_0/w_9_n340# aluand_0/b3 0.11fF
+C422 adder_subtractor_0/full_adder_1/2_input_OR_0/w_30_15# adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# 0.06fF
+C423 vdd adder_subtractor_0/w_15_n107# 0.03fF
+C424 adder_subtractor_0/full_adder_3/m1_123_n251# d1_decoder_wala 1.85fF
+C425 vdd enable_out_2/a_n10_n1001# 0.16fF
+C426 comparator_0/b0 comparator_0/b0_not 0.07fF
+C427 vdd 2_input_OR_0/w_30_15# 0.03fF
+C428 adder_subtractor_0/a_29_n128# adder_subtractor_0/a_53_n128# 0.01fF
+C429 adder_subtractor_0/full_adder_1/XOR_0/w_n12_10# adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# 0.03fF
+C430 adder_subtractor_0/full_adder_3/a_177_n131# adder_subtractor_0/full_adder_3/w_179_n123# 0.11fF
+C431 enable_out_1/w_67_n851# comparator_0/b1 0.03fF
+C432 adder_subtractor_0/a_61_n128# adder_subtractor_0/a_67_n136# 0.34fF
+C433 comparator_0/a1 gnd 0.04fF
+C434 vdd enable_out_0/w_n22_n848# 0.05fF
+C435 adder_subtractor_0/a_60_n49# adder_subtractor_0/a_28_n49# 0.09fF
+C436 decoder_0/AND_2/w_n48_8# decoder_0/m1_n33_33# 0.11fF
+C437 adder_subtractor_0/full_adder_2/a_177_n131# adder_subtractor_0/full_adder_2/XOR_0/a_26_n11# 0.45fF
+C438 adder_subtractor_0/full_adder_1/XOR_0/w_20_10# adder_subtractor_0/full_adder_1/a_177_n131# 0.02fF
+C439 a2 m1_789_856# 0.13fF
+C440 enable_out_0/b0_out vdd 0.20fF
+C441 adder_subtractor_0/full_adder_3/w_260_n30# adder_subtractor_0/full_adder_3/a_242_n51# 0.08fF
+C442 enable_out_0/a1_out enable_out_0/b1_out 0.09fF
+C443 s0 gnd 0.12fF
+C444 enable_out_2/a_n7_n841# gnd 0.18fF
+C445 adder_subtractor_0/full_adder_0/a_280_n59# adder_subtractor_0/full_adder_0/a_266_n51# 0.01fF
+C446 adder_subtractor_0/a_60_n49# adder_subtractor_0/a_52_n49# 0.45fF
+C447 adder_subtractor_0/a_30_n205# adder_subtractor_0/a_54_n205# 0.01fF
+C448 adder_subtractor_0/XOR_0/a_40_n19# adder_subtractor_0/XOR_0/w_20_10# 0.06fF
+C449 adder_subtractor_0/full_adder_3/w_319_n30# as3 0.12fF
+C450 adder_subtractor_0/full_adder_3/a_242_n51# adder_subtractor_0/full_adder_3/a_280_n59# 0.02fF
+C451 adder_subtractor_0/full_adder_1/XOR_0/w_n12_10# vdd 0.03fF
+C452 adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/XOR_0/w_20_10# 0.08fF
+C453 comparator_0/AND_0/w_n48_8# comparator_0/AND_0/a_n33_15# 0.03fF
+C454 comparator_0/b0 comparator_0/a3_not 0.10fF
+C455 comparator_0/b1 comparator_0/a2_not 0.11fF
+C456 comparator_0/a1_not comparator_0/b2 1.39fF
+C457 aluand_0/w_10_n38# aluand_0/a1 0.11fF
+C458 adder_subtractor_0/full_adder_3/w_268_n126# adder_subtractor_0/full_adder_3/a_194_n116# 0.06fF
+C459 adder_subtractor_0/full_adder_3/a_242_n51# vdd 0.11fF
+C460 adder_subtractor_0/full_adder_2/w_260_n30# adder_subtractor_0/full_adder_2/a_280_n59# 0.06fF
+C461 adder_subtractor_0/a_61_n128# vdd 0.20fF
+C462 aluand_0/a0 aluand_0/b0 0.44fF
+C463 comparator_0/check1 comparator_0/check2 0.18fF
+C464 aluand_0/AND_0/w_n48_8# aluand_0/AND_0/a_n33_15# 0.03fF
+C465 comparator_0/check2 comparator_0/b2_not 0.09fF
+C466 comparator_0/b0_not comparator_0/check4 0.10fF
+C467 comparator_0/b1_not comparator_0/check3 0.40fF
+C468 enable_out_0/b3_out gnd 0.44fF
+C469 aluand_0/AND_0/w_41_5# vdd 0.05fF
+C470 adder_subtractor_0/full_adder_1/w_228_n30# adder_subtractor_0/full_adder_1/a_242_n51# 0.03fF
+C471 adder_subtractor_0/full_adder_3/2_input_OR_0/w_30_15# adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# 0.06fF
+C472 adder_subtractor_0/full_adder_2/a_242_n51# as2 0.09fF
+C473 adder_subtractor_0/full_adder_1/w_260_n30# vdd 0.05fF
+C474 adder_subtractor_0/full_adder_0/AND_0/w_41_5# adder_subtractor_0/full_adder_0/AND_0/a_n33_15# 0.06fF
+C475 vdd decoder_0/AND_1/w_n48_8# 0.05fF
+C476 enable_out_1/w_n22_n848# enable_out_1/a_n7_n841# 0.03fF
+C477 adder_subtractor_0/w_106_n107# gnd 0.13fF
+C478 vdd comparator_0/XNOR_3/w_44_n46# 0.05fF
+C479 vdd aluand_0/a3 0.07fF
+C480 decoder_0/d3 b3 1.37fF
+C481 aluand_0/b0 enable_out_2/w_72_n693# 0.03fF
+C482 adder_subtractor_0/full_adder_1/w_260_n30# as1 0.02fF
+C483 adder_subtractor_0/full_adder_1/a_280_n59# vdd 0.05fF
+C484 a3 a1 0.34fF
+C485 vdd enable_out_2/w_n17_n690# 0.05fF
+C486 adder_subtractor_0/full_adder_3/AND_0/a_n33_15# gnd 0.12fF
+C487 comparator_0/XNOR_3/w_44_n46# comparator_0/a3 0.06fF
+C488 vdd decoder_0/NOT_1/w_n9_1# 0.17fF
+C489 m1_431_497# enable_out_0/a_4_n349# 0.12fF
+C490 enable_out_0/a_12_n31# vdd 0.23fF
+C491 adder_subtractor_0/full_adder_1/a_242_n51# adder_subtractor_0/full_adder_1/a_266_n51# 0.01fF
+C492 adder_subtractor_0/full_adder_1/w_179_n123# adder_subtractor_0/full_adder_1/a_194_n116# 0.03fF
+C493 adder_subtractor_0/full_adder_1/a_280_n59# as1 0.34fF
+C494 comparator_0/4_AND_1/w_94_5# comparator_0/4_AND_1/a_n33_15# 0.06fF
+C495 adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# gnd 0.13fF
+C496 vdd comparator_0/a_387_n564# 0.08fF
+C497 comparator_0/a3_not comparator_0/check4 0.09fF
+C498 adder_subtractor_0/full_adder_0/w_179_n123# d1_decoder_wala 0.11fF
+C499 enable_out_0/w_65_n1170# enable_out_0/a_n9_n1160# 0.06fF
+C500 adder_subtractor_0/a_29_n128# gnd 0.03fF
+C501 vdd comparator_0/w_232_n584# 0.08fF
+C502 aluand_0/a2 gnd 0.04fF
+C503 comparator_0/b0_not gnd 0.05fF
+C504 vdd enable_out_1/AND_0/a_n33_15# 0.23fF
+C505 vdd comparator_0/a_532_n617# 0.09fF
+C506 comparator_0/b3_not comparator_0/XNOR_3/a_50_n67# 0.01fF
+C507 vdd comparator_0/4_OR_0/w_n30_3# 0.09fF
+C508 enable_out_1/w_n25_n1008# enable_out_1/a_n10_n1001# 0.03fF
+C509 adder_subtractor_0/a_30_n205# gnd 0.03fF
+C510 vdd comparator_0/w_340_n901# 0.05fF
+C511 comparator_0/w_525_n664# comparator_0/a_404_n386# 0.06fF
+C512 comparator_0/XNOR_1/w_44_n46# comparator_0/a1 0.06fF
+C513 vdd enable_out_1/w_81_n199# 0.05fF
+C514 adder_subtractor_0/full_adder_1/a_177_n131# gnd 0.39fF
+C515 decoder_0/d3 enable_out_2/w_n25_n1008# 0.11fF
+C516 enable_out_0/a1_out d1_decoder_wala 0.11fF
+C517 vdd comparator_0/a_266_n907# 0.05fF
+C518 vdd enable_out_2/w_n24_n1167# 0.05fF
+C519 enable_out_0/a_12_n31# enable_out_0/w_86_n41# 0.06fF
+C520 adder_subtractor_0/m1_787_n1256# adder_subtractor_0/XOR_1/w_n12_10# 0.06fF
+C521 adder_subtractor_0/a_62_n205# adder_subtractor_0/w_48_n184# 0.02fF
+C522 enable_out_0/a0_out d1_decoder_wala 0.30fF
+C523 aluand_0/b0 gnd 0.04fF
+C524 comparator_0/b0 comparator_0/b2 0.18fF
+C525 comparator_0/a1_not comparator_0/check2 0.09fF
+C526 vdd enable_out_1/w_n25_n1008# 0.05fF
+C527 enable_out_1/AND_0/w_41_5# enable_out_1/AND_0/a_n33_15# 0.06fF
+C528 adder_subtractor_0/a_66_n57# enable_out_0/b1_out 0.07fF
+C529 adder_subtractor_0/full_adder_3/a_266_n51# gnd 0.08fF
+C530 m1_789_856# b2 0.47fF
+C531 a3 b1 0.69fF
+C532 adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/XOR_0/w_20_10# 0.08fF
+C533 adder_subtractor_0/a_60_n49# gnd 0.37fF
+C534 comparator_0/a3_not gnd 0.03fF
+C535 comparator_0/check1 comparator_0/XNOR_0/a_50_n67# 0.45fF
+C536 comparator_0/w_621_n666# comparator_0/a_532_n617# 0.07fF
+C537 comparator_0/b1_not comparator_0/XNOR_1/a_50_n67# 0.01fF
+C538 aluand_0/w_10_n38# vdd 0.05fF
+C539 m1_431_497# m1_789_856# 1.08fF
+C540 comparator_0/4_OR_0/w_n30_3# comparator_0/4_OR_0/c 0.22fF
+C541 comparator_0/4_OR_0/d gnd 0.42fF
+C542 enable_out_0/a3_out enable_out_0/b3_out 0.09fF
+C543 decoder_0/m1_n34_n16# decoder_0/m1_n33_33# 0.67fF
+C544 adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/w_260_n30# 0.08fF
+C545 adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# vdd 0.02fF
+C546 aluand_0/b1 aluand_0/b0 0.19fF
+C547 enable_out_1/AND_0/w_n48_8# gnd 0.22fF
+C548 enable_out_0/a2_out gnd 0.04fF
+C549 adder_subtractor_0/full_adder_1/AND_0/w_n48_8# adder_subtractor_0/a_60_n49# 0.11fF
+C550 vdd comparator_0/a2 0.21fF
+C551 aluand_0/b1 enable_out_2/w_86_n41# 0.03fF
+C552 adder_subtractor_0/m1_794_n436# enable_out_0/a2_out 0.26fF
+C553 decoder_0/AND_0/w_n48_8# decoder_0/AND_0/a_n33_15# 0.03fF
+C554 adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/a_280_n59# 0.07fF
+C555 comparator_0/a2 comparator_0/a3 0.11fF
+C556 adder_subtractor_0/full_adder_1/2_input_OR_0/w_n23_15# vdd 0.03fF
+C557 aluand_0/b3 aluand_0/a2 0.16fF
+C558 vdd decoder_0/AND_2/a_n33_15# 0.15fF
+C559 enable_out_2/AND_0/w_n48_8# gnd 0.22fF
+C560 adder_subtractor_0/full_adder_2/XOR_0/w_20_10# vdd 0.05fF
+C561 aluand_0/a_24_n182# vdd 0.16fF
+C562 comparator_0/4_OR_0/b gnd 0.08fF
+C563 aluand_0/b2 enable_out_2/w_81_n199# 0.03fF
+C564 enable_out_1/w_n8_n196# decoder_0/d2 0.11fF
+C565 vdd enable_out_0/b1_out 0.20fF
+C566 enable_out_1/a_n9_n1160# gnd 0.18fF
+C567 comparator_0/b2 comparator_0/check4 0.41fF
+C568 adder_subtractor_0/full_adder_0/a_242_n51# vdd 0.11fF
+C569 adder_subtractor_0/XOR_1/a_2_n11# as_carry 0.09fF
+C570 enable_out_0/a3_out adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# 0.11fF
+C571 comparator_0/a2_not comparator_0/a_267_n739# 0.22fF
+C572 vdd enable_out_2/a_12_n31# 0.23fF
+C573 enable_out_0/w_n24_n1167# m1_431_497# 0.11fF
+C574 enable_out_0/a1_out adder_subtractor_0/full_adder_1/XOR_0/a_26_n11# 0.01fF
+C575 comparator_0/check3 comparator_0/w_213_n406# 0.11fF
+C576 comparator_0/a2_not comparator_0/w_252_n747# 0.11fF
+C577 vdd comparator_0/AND_0/w_n48_8# 0.05fF
+C578 aluand_0/b3 aluand_0/b0 0.19fF
+C579 adder_subtractor_0/full_adder_2/w_319_n30# vdd 0.02fF
+C580 enable_out_0/w_n22_n848# b1 0.11fF
+C581 d1_decoder_wala adder_subtractor_0/XOR_1/a_26_n11# 0.01fF
+C582 decoder_0/AND_0/a_n33_15# gnd 0.01fF
+C583 vdd enable_out_2/AND_0/a_n33_15# 0.23fF
+C584 comparator_0/a0 comparator_0/a1 1.26fF
+C585 comparator_0/AND_0/w_n48_8# comparator_0/a3 0.11fF
+C586 adder_subtractor_0/full_adder_2/a_281_n143# gnd 0.04fF
+C587 adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/XOR_0/w_79_10# 0.08fF
+C588 enable_out_0/a0_out adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# 0.06fF
+C589 enable_out_1/w_65_n1170# comparator_0/b3 0.03fF
+C590 enable_out_0/w_n3_n38# vdd 0.05fF
+C591 d1_decoder_wala adder_subtractor_0/w_16_n184# 0.06fF
+C592 b0 b3 0.68fF
+C593 comparator_0/3_AND_0/w_41_5# comparator_0/3_AND_0/a_n33_15# 0.06fF
+C594 comparator_0/5_AND_0/in comparator_0/b0_not 0.21fF
+C595 adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/a_177_n131# 0.11fF
+C596 comparator_0/b0 comparator_0/check2 0.39fF
+C597 decoder_0/d3 a0 0.50fF
+C598 d1_decoder_wala adder_subtractor_0/a_66_n57# 0.11fF
+C599 adder_subtractor_0/full_adder_3/m1_123_n251# adder_subtractor_0/full_adder_3/AND_0/w_41_5# 0.03fF
+C600 adder_subtractor_0/full_adder_2/a_194_n116# vdd 0.05fF
+C601 comparator_0/b2 gnd 0.50fF
+C602 aluand_0/a_25_n31# gnd 0.10fF
+C603 adder_subtractor_0/full_adder_0/2_input_OR_0/w_n23_15# adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# 0.03fF
+C604 vdd comparator_0/XNOR_1/w_12_n46# 0.11fF
+C605 enable_out_0/a_n2_n683# gnd 0.18fF
+C606 adder_subtractor_0/XOR_0/a_2_n11# d1_decoder_wala 0.06fF
+C607 enable_out_2/w_81_n199# enable_out_2/a_7_n189# 0.06fF
+C608 enable_out_0/AND_0/w_n48_8# a0 0.11fF
+C609 comparator_0/AND_0/w_41_5# comparator_0/4_OR_0/b 0.03fF
+C610 d1_decoder_wala adder_subtractor_0/a_67_n136# 0.11fF
+C611 adder_subtractor_0/w_46_n28# adder_subtractor_0/a_66_n57# 0.06fF
+C612 enable_out_0/w_64_n1011# enable_out_0/a_n10_n1001# 0.06fF
+C613 adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# gnd 0.03fF
+C614 aluand_0/w_99_n41# aluand_0/a_25_n31# 0.06fF
+C615 comparator_0/XNOR_2/w_12_n46# comparator_0/a2 0.06fF
+C616 comparator_0/XNOR_2/w_44_n46# comparator_0/a2_not 0.08fF
+C617 adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/w_260_n30# 0.08fF
+C618 adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# adder_subtractor_0/m1_791_n39# 0.05fF
+C619 vdd comparator_0/b1_not 0.90fF
+C620 vdd enable_out_2/a_n2_n683# 0.22fF
+C621 comparator_0/4_AND_0/w_n48_8# comparator_0/4_AND_0/a_n33_15# 0.05fF
+C622 comparator_0/4_AND_0/w_n48_8# comparator_0/check3 0.11fF
+C623 d1_decoder_wala adder_subtractor_0/a_68_n213# 0.11fF
+C624 comparator_0/a1 comparator_0/b3_not 0.12fF
+C625 comparator_0/a2 comparator_0/b2_not 0.31fF
+C626 comparator_0/XNOR_2/w_103_n46# comparator_0/check3 0.09fF
+C627 aluand_0/w_98_n192# aluand_0/a_24_n182# 0.06fF
+C628 aluand_0/b1 aluand_0/a_25_n31# 0.12fF
+C629 adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/a_280_n59# 0.07fF
+C630 adder_subtractor_0/full_adder_0/a_266_n51# gnd 0.08fF
+C631 d1_decoder_wala decoder_0/d0 0.74fF
+C632 comparator_0/4_AND_0/a_n33_15# comparator_0/check3 0.22fF
+C633 comparator_0/a1_not comparator_0/w_232_n584# 0.11fF
+C634 comparator_0/check2 comparator_0/check4 0.68fF
+C635 comparator_0/b2 comparator_0/XNOR_2/a_50_n67# 0.01fF
+C636 adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# 0.02fF
+C637 aluand_0/a_24_n333# gnd 0.12fF
+C638 adder_subtractor_0/a_61_n128# adder_subtractor_0/w_47_n107# 0.02fF
+C639 adder_subtractor_0/XOR_1/w_20_10# as_carry 0.02fF
+C640 adder_subtractor_0/m1_787_n831# vdd 0.28fF
+C641 vdd d1_decoder_wala 0.96fF
+C642 adder_subtractor_0/full_adder_2/m1_123_n251# gnd 0.50fF
+C643 comparator_0/XNOR_0/w_12_n46# comparator_0/a0 0.06fF
+C644 adder_subtractor_0/w_107_n184# adder_subtractor_0/a_68_n213# 0.03fF
+C645 vdd m1_431_497# 0.05fF
+C646 a2 a1 0.17fF
+C647 vdd comparator_0/3_AND_0/w_41_5# 0.05fF
+C648 adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/AND_0/a_n33_15# 0.12fF
+C649 adder_subtractor_0/m1_794_n436# as2 0.11fF
+C650 decoder_0/d3 enable_out_2/a_n7_n841# 0.12fF
+C651 enable_out_1/w_n11_n356# a3 0.11fF
+C652 vdd adder_subtractor_0/w_46_n28# 0.05fF
+C653 adder_subtractor_0/full_adder_0/w_260_n30# adder_subtractor_0/full_adder_0/a_242_n51# 0.08fF
+C654 adder_subtractor_0/full_adder_0/AND_0/w_41_5# adder_subtractor_0/full_adder_0/m1_123_n251# 0.03fF
+C655 comparator_0/a0 comparator_0/b0_not 0.13fF
+C656 adder_subtractor_0/a_60_n49# adder_subtractor_0/w_105_n28# 0.09fF
+C657 enable_out_0/b0_out adder_subtractor_0/XOR_0/a_40_n19# 0.07fF
+C658 adder_subtractor_0/full_adder_3/a_177_n131# adder_subtractor_0/full_adder_3/w_260_n30# 0.06fF
+C659 adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# gnd 0.15fF
+C660 adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# adder_subtractor_0/full_adder_2/a_177_n131# 0.09fF
+C661 vdd enable_out_1/a_n7_n841# 0.17fF
+C662 adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# adder_subtractor_0/m1_787_n831# 0.05fF
+C663 comparator_0/XNOR_1/w_103_n46# gnd 0.13fF
+C664 vdd adder_subtractor_0/w_107_n184# 0.02fF
+C665 adder_subtractor_0/full_adder_0/w_319_n30# as0 0.12fF
+C666 adder_subtractor_0/full_adder_0/a_242_n51# adder_subtractor_0/full_adder_0/a_280_n59# 0.02fF
+C667 a3 gnd 0.13fF
+C668 comparator_0/b0 comparator_0/XNOR_0/a_50_n67# 0.01fF
+C669 b0 decoder_0/d2 1.74fF
+C670 adder_subtractor_0/full_adder_1/XOR_0/w_79_10# adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# 0.03fF
+C671 adder_subtractor_0/full_adder_3/a_177_n131# adder_subtractor_0/full_adder_3/a_280_n59# 0.11fF
+C672 adder_subtractor_0/full_adder_3/XOR_0/w_79_10# vdd 0.02fF
+C673 comparator_0/4_OR_0/a gnd 0.41fF
+C674 adder_subtractor_0/a_61_n128# adder_subtractor_0/a_53_n128# 0.45fF
+C675 comparator_0/check2 gnd 0.10fF
+C676 adder_subtractor_0/full_adder_0/w_268_n126# adder_subtractor_0/full_adder_0/a_194_n116# 0.06fF
+C677 adder_subtractor_0/full_adder_1/a_281_n143# adder_subtractor_0/full_adder_1/2_input_OR_0/w_n23_15# 0.09fF
+C678 adder_subtractor_0/m1_787_n1256# adder_subtractor_0/XOR_1/a_40_n19# 0.11fF
+C679 adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# adder_subtractor_0/full_adder_1/XOR_0/a_26_n11# 0.01fF
+C680 adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# adder_subtractor_0/full_adder_1/a_177_n131# 0.34fF
+C681 comparator_0/5_AND_0/w_n48_8# comparator_0/b0_not 0.11fF
+C682 adder_subtractor_0/full_adder_3/a_177_n131# vdd 0.19fF
+C683 comparator_0/3_AND_0/w_41_5# comparator_0/4_OR_0/c 0.03fF
+C684 comparator_0/a1_not comparator_0/a2 1.65fF
+C685 comparator_0/a1 comparator_0/a2_not 0.08fF
+C686 adder_subtractor_0/full_adder_3/w_179_n123# vdd 0.05fF
+C687 adder_subtractor_0/full_adder_1/a_177_n131# adder_subtractor_0/full_adder_1/w_228_n30# 0.06fF
+C688 adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# 0.07fF
+C689 aluand_0/b3 aluand_0/a_24_n333# 0.12fF
+C690 comparator_0/check1 comparator_0/b1_not 0.09fF
+C691 enable_out_1/a_7_n189# gnd 0.18fF
+C692 comparator_0/b0_not comparator_0/b3_not 0.09fF
+C693 comparator_0/b1_not comparator_0/b2_not 0.12fF
+C694 adder_subtractor_0/full_adder_0/XOR_0/w_20_10# adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# 0.08fF
+C695 aluand_0/AND_0/w_n48_8# aluand_0/b0 0.11fF
+C696 enable_out_1/a_4_n349# decoder_0/d2 0.12fF
+C697 enable_out_0/w_n3_n38# a1 0.11fF
+C698 as3 adder_subtractor_0/full_adder_3/a_266_n51# 0.45fF
+C699 decoder_0/AND_3/w_n48_8# s1 0.11fF
+C700 adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# vdd 0.11fF
+C701 adder_subtractor_0/full_adder_0/XOR_0/w_79_10# adder_subtractor_0/full_adder_0/a_177_n131# 0.12fF
+C702 decoder_0/AND_1/w_n48_8# decoder_0/AND_1/a_n33_15# 0.03fF
+C703 enable_out_2/a_n10_n1001# gnd 0.18fF
+C704 and_out0 vdd 0.07fF
+C705 s0 decoder_0/m1_n33_33# 0.13fF
+C706 adder_subtractor_0/full_adder_1/a_177_n131# adder_subtractor_0/full_adder_1/a_266_n51# 0.01fF
+C707 adder_subtractor_0/full_adder_1/w_319_n30# adder_subtractor_0/full_adder_1/a_280_n59# 0.03fF
+C708 adder_subtractor_0/m2_140_53# adder_subtractor_0/XOR_0/a_26_n11# 0.45fF
+C709 vdd adder_subtractor_0/XOR_0/w_79_10# 0.02fF
+C710 vdd enable_out_2/w_n11_n356# 0.05fF
+C711 a0 b0 0.46fF
+C712 AND_0/a_n42_15# AND_0/a_n33_15# 0.05fF
+C713 comparator_0/XNOR_3/w_12_n46# comparator_0/a3_not 0.03fF
+C714 enable_out_0/w_n17_n690# enable_out_0/a_n2_n683# 0.03fF
+C715 vdd comparator_0/5_AND_0/w_130_5# 0.05fF
+C716 vdd comparator_0/b3 0.07fF
+C717 2_input_OR_0/a_n7_n12# 2_input_OR_0/w_30_15# 0.06fF
+C718 adder_subtractor_0/full_adder_3/m1_123_n251# vdd 0.07fF
+C719 enable_out_2/w_64_n1011# aluand_0/a2 0.03fF
+C720 enable_out_0/b0_out gnd 0.30fF
+C721 adder_subtractor_0/full_adder_2/AND_0/w_n48_8# enable_out_0/a2_out 0.11fF
+C722 adder_subtractor_0/full_adder_0/w_260_n30# d1_decoder_wala 0.08fF
+C723 comparator_0/XNOR_3/w_44_n46# comparator_0/check4 0.02fF
+C724 comparator_0/a3_not comparator_0/b3_not 0.13fF
+C725 comparator_0/a3 comparator_0/b3 0.11fF
+C726 vdd comparator_0/w_213_n406# 0.08fF
+C727 comparator_0/check4 comparator_0/a_228_n398# 0.17fF
+C728 b3 decoder_0/d2 1.70fF
+C729 b2 a1 14.92fF
+C730 vdd comparator_0/a_353_n895# 0.10fF
+C731 adder_subtractor_0/full_adder_0/a_280_n59# d1_decoder_wala 0.07fF
+C732 comparator_0/a_404_n386# comparator_0/a_387_n564# 0.09fF
+C733 vdd comparator_0/w_341_n733# 0.05fF
+C734 adder_subtractor_0/full_adder_1/AND_0/w_41_5# adder_subtractor_0/full_adder_1/AND_0/a_n33_15# 0.06fF
+C735 adder_subtractor_0/a_62_n205# enable_out_0/b3_out 0.11fF
+C736 comparator_0/XNOR_0/a_50_n67# gnd 0.08fF
+C737 vdd enable_out_1/w_86_n41# 0.05fF
+C738 comparator_0/XNOR_1/w_12_n46# comparator_0/a1_not 0.03fF
+C739 comparator_0/XNOR_0/w_12_n46# comparator_0/a2_not 0.03fF
+C740 adder_subtractor_0/full_adder_3/a_242_n51# gnd 0.03fF
+C741 adder_subtractor_0/a_61_n128# gnd 0.26fF
+C742 decoder_0/d3 enable_out_2/w_n22_n848# 0.11fF
+C743 comparator_0/a3_not comparator_0/w_251_n915# 0.11fF
+C744 comparator_0/check4 comparator_0/w_232_n584# 0.11fF
+C745 vdd comparator_0/4_OR_0/in 0.09fF
+C746 adder_subtractor_0/m1_794_n436# adder_subtractor_0/a_61_n128# 0.13fF
+C747 enable_out_0/w_72_n693# vdd 0.14fF
+C748 comparator_0/a_404_n386# comparator_0/a_532_n617# 0.06fF
+C749 m1_431_497# a1 1.42fF
+C750 comparator_0/w_374_n570# comparator_0/a_387_n564# 0.03fF
+C751 vdd enable_out_1/w_n22_n848# 0.05fF
+C752 adder_subtractor_0/a_28_n49# enable_out_0/b1_out 0.13fF
+C753 comparator_0/b0 comparator_0/a2 0.20fF
+C754 comparator_0/XNOR_1/w_44_n46# comparator_0/check2 0.02fF
+C755 comparator_0/a1_not comparator_0/b1_not 0.13fF
+C756 comparator_0/a1 comparator_0/b1 0.11fF
+C757 comparator_0/b0_not comparator_0/a2_not 0.13fF
+C758 adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/AND_0/a_n33_15# 0.12fF
+C759 aluand_0/b2 aluand_0/a2 0.18fF
+C760 comparator_0/5_AND_0/in comparator_0/check2 0.19fF
+C761 aluand_0/a3 gnd 0.04fF
+C762 AND_0/w_n48_8# a_315_n1959# 0.11fF
+C763 comparator_0/w_252_n747# comparator_0/a_267_n739# 0.05fF
+C764 comparator_0/w_525_n664# comparator_0/a_354_n727# 0.22fF
+C765 decoder_0/d3 enable_out_2/AND_0/w_n48_8# 0.11fF
+C766 adder_subtractor_0/a_52_n49# enable_out_0/b1_out 0.01fF
+C767 adder_subtractor_0/full_adder_1/a_280_n59# gnd 0.13fF
+C768 adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# 0.07fF
+C769 enable_out_2/w_n17_n690# gnd 0.14fF
+C770 comparator_0/a_228_n398# gnd 0.13fF
+C771 comparator_0/a_532_n617# comparator_0/less_than 0.07fF
+C772 adder_subtractor_0/full_adder_0/a_281_n143# vdd 0.08fF
+C773 b1 b2 0.52fF
+C774 vdd comparator_0/4_AND_0/w_n48_8# 0.08fF
+C775 enable_out_0/a_12_n31# gnd 0.75fF
+C776 adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/XOR_0/w_79_10# 0.08fF
+C777 vdd comparator_0/XNOR_2/w_103_n46# 0.02fF
+C778 enable_out_2/w_65_n1170# enable_out_2/a_n9_n1160# 0.06fF
+C779 aluand_0/w_98_n343# vdd 0.05fF
+C780 a0 b3 0.62fF
+C781 vdd decoder_0/NOT_0/w_n9_1# 0.07fF
+C782 comparator_0/a_387_n564# gnd 0.42fF
+C783 adder_subtractor_0/a_62_n205# adder_subtractor_0/a_30_n205# 0.09fF
+C784 vdd enable_out_0/a_4_n349# 0.23fF
+C785 comparator_0/4_OR_0/c comparator_0/4_OR_0/in 0.06fF
+C786 aluand_0/b2 aluand_0/b0 0.19fF
+C787 comparator_0/a2_not comparator_0/a3_not 0.12fF
+C788 vdd comparator_0/4_AND_0/a_n33_15# 0.18fF
+C789 enable_out_1/AND_0/a_n33_15# gnd 0.83fF
+C790 adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/a_177_n131# 0.11fF
+C791 vdd comparator_0/check3 0.16fF
+C792 adder_subtractor_0/full_adder_2/AND_0/a_n33_15# vdd 0.05fF
+C793 comparator_0/a_532_n617# gnd 0.33fF
+C794 enable_out_1/w_n3_n38# decoder_0/d2 0.11fF
+C795 comparator_0/4_OR_0/in comparator_0/greater_than 0.07fF
+C796 m1_431_497# b1 0.70fF
+C797 enable_out_0/a1_out adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# 0.06fF
+C798 adder_subtractor_0/full_adder_0/w_179_n123# vdd 0.05fF
+C799 comparator_0/a2 comparator_0/check4 0.25fF
+C800 enable_out_0/a3_out enable_out_0/b0_out 0.09fF
+C801 adder_subtractor_0/XOR_1/a_2_n11# d1_decoder_wala 0.13fF
+C802 adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# vdd 0.05fF
+C803 adder_subtractor_0/w_106_n107# enable_out_0/b2_out 0.08fF
+C804 enable_out_0/w_67_n851# enable_out_0/b1_out 0.03fF
+C805 adder_subtractor_0/full_adder_3/a_281_n143# adder_subtractor_0/full_adder_3/2_input_OR_0/w_n23_15# 0.09fF
+C806 enable_out_2/w_n3_n38# enable_out_2/a_12_n31# 0.03fF
+C807 adder_subtractor_0/m2_140_53# adder_subtractor_0/XOR_0/w_20_10# 0.02fF
+C808 adder_subtractor_0/full_adder_2/w_228_n30# vdd 0.03fF
+C809 enable_out_0/a2_out adder_subtractor_0/full_adder_2/XOR_0/w_n12_10# 0.06fF
+C810 vdd enable_out_1/w_65_n1170# 0.13fF
+C811 enable_out_0/a0_out adder_subtractor_0/full_adder_0/XOR_0/w_20_10# 0.06fF
+C812 d1_decoder_wala decoder_0/AND_1/w_41_5# 0.03fF
+C813 vdd comparator_0/AND_0/a_n33_15# 0.05fF
+C814 m1_431_497# enable_out_0/a_n9_n1160# 0.12fF
+C815 enable_out_0/a1_out vdd 0.25fF
+C816 aluand_0/b3 aluand_0/a3 0.13fF
+C817 enable_out_0/a2_out adder_subtractor_0/a_62_n205# 0.12fF
+C818 enable_out_0/w_n11_n356# a3 0.11fF
+C819 enable_out_0/a0_out vdd 0.42fF
+C820 d1_decoder_wala adder_subtractor_0/w_47_n107# 0.06fF
+C821 adder_subtractor_0/full_adder_3/AND_0/w_41_5# vdd 0.05fF
+C822 s1 decoder_0/AND_3/a_n33_15# 0.12fF
+C823 adder_subtractor_0/a_29_n128# enable_out_0/b2_out 0.13fF
+C824 and_out2 vdd 0.07fF
+C825 comparator_0/b0 comparator_0/b1_not 0.07fF
+C826 comparator_0/a0 comparator_0/check2 0.10fF
+C827 comparator_0/AND_0/a_n33_15# comparator_0/a3 0.12fF
+C828 adder_subtractor_0/full_adder_2/m1_123_n251# adder_subtractor_0/full_adder_2/AND_0/w_41_5# 0.03fF
+C829 adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# gnd 0.15fF
+C830 d1_decoder_wala adder_subtractor_0/a_28_n49# 0.06fF
+C831 comparator_0/a2 gnd 0.04fF
+C832 adder_subtractor_0/w_48_n184# enable_out_0/b3_out 0.08fF
+C833 decoder_0/AND_2/a_n33_15# decoder_0/AND_2/w_41_5# 0.06fF
+C834 adder_subtractor_0/full_adder_0/2_input_OR_0/w_n23_15# adder_subtractor_0/full_adder_0/a_281_n143# 0.09fF
+C835 s0 decoder_0/m1_n34_n16# 0.54fF
+C836 enable_out_2/w_n8_n196# m1_789_856# 0.11fF
+C837 s1 gnd 0.04fF
+C838 adder_subtractor_0/w_46_n28# adder_subtractor_0/a_28_n49# 0.08fF
+C839 d1_decoder_wala adder_subtractor_0/a_52_n49# 0.01fF
+C840 decoder_0/AND_2/a_n33_15# gnd 0.13fF
+C841 aluand_0/a_24_n182# gnd 0.12fF
+C842 enable_out_0/a1_out enable_out_0/w_86_n41# 0.03fF
+C843 aluand_0/w_10_n38# aluand_0/b1 0.11fF
+C844 enable_out_0/b1_out gnd 0.42fF
+C845 comparator_0/5_AND_0/w_n48_8# comparator_0/check2 0.11fF
+C846 enable_out_2/w_n11_n356# enable_out_2/a_4_n349# 0.03fF
+C847 comparator_0/4_AND_0/w_n48_8# comparator_0/check1 0.11fF
+C848 adder_subtractor_0/full_adder_0/a_242_n51# gnd 0.03fF
+C849 comparator_0/4_AND_1/w_n48_8# comparator_0/b1_not 0.11fF
+C850 a0 decoder_0/d2 1.76fF
+C851 d1_decoder_wala adder_subtractor_0/a_53_n128# 0.01fF
+C852 comparator_0/a1_not comparator_0/b3 0.01fF
+C853 comparator_0/b1 comparator_0/a3_not 0.18fF
+C854 comparator_0/a2_not comparator_0/b2 0.34fF
+C855 comparator_0/XNOR_2/w_103_n46# comparator_0/b2_not 0.03fF
+C856 aluand_0/w_9_n189# aluand_0/b2 0.11fF
+C857 vdd aluand_0/a1 0.07fF
+C858 enable_out_2/a_12_n31# gnd 0.75fF
+C859 adder_subtractor_0/XOR_0/a_40_n19# d1_decoder_wala 0.11fF
+C860 enable_out_2/w_72_n693# enable_out_2/a_n2_n683# 0.06fF
+C861 comparator_0/check1 comparator_0/4_AND_0/a_n33_15# 0.79fF
+C862 comparator_0/check1 comparator_0/check3 0.10fF
+C863 comparator_0/4_AND_1/a_n33_15# comparator_0/b1_not 0.23fF
+C864 d1_decoder_wala adder_subtractor_0/a_54_n205# 0.01fF
+C865 comparator_0/check2 comparator_0/b3_not 1.49fF
+C866 comparator_0/b1_not comparator_0/check4 0.30fF
+C867 comparator_0/b2_not comparator_0/check3 0.35fF
+C868 comparator_0/a2 comparator_0/XNOR_2/a_50_n67# 0.01fF
+C869 enable_out_2/AND_0/a_n33_15# gnd 0.84fF
+C870 adder_subtractor_0/full_adder_3/XOR_0/w_20_10# adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# 0.06fF
+C871 adder_subtractor_0/full_adder_3/AND_0/w_n48_8# vdd 0.05fF
+C872 adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/w_319_n30# 0.08fF
+C873 enable_out_0/a2_out enable_out_0/b2_out 0.09fF
+C874 decoder_0/d3 a3 0.66fF
+C875 vdd enable_out_0/w_n24_n1167# 0.05fF
+C876 adder_subtractor_0/XOR_1/w_20_10# d1_decoder_wala 0.08fF
+C877 enable_out_2/w_67_n851# aluand_0/a1 0.03fF
+C878 enable_out_0/w_n3_n38# gnd 0.33fF
+C879 adder_subtractor_0/w_48_n184# adder_subtractor_0/a_30_n205# 0.08fF
+C880 adder_subtractor_0/full_adder_2/XOR_0/w_n12_10# adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# 0.03fF
+C881 enable_out_1/w_86_n41# enable_out_1/a_12_n31# 0.06fF
+C882 comparator_0/XNOR_0/w_103_n46# comparator_0/b0_not 0.03fF
+C883 enable_out_0/w_n25_n1008# b2 0.11fF
+C884 adder_subtractor_0/full_adder_2/XOR_0/w_20_10# adder_subtractor_0/full_adder_2/a_177_n131# 0.02fF
+C885 adder_subtractor_0/full_adder_3/a_177_n131# adder_subtractor_0/full_adder_3/XOR_0/a_26_n11# 0.45fF
+C886 adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/a_194_n116# 0.12fF
+C887 AND_0/w_n48_8# AND_0/a_n33_15# 0.03fF
+C888 aluand_0/w_98_n192# and_out2 0.03fF
+C889 vdd adder_subtractor_0/w_16_n184# 0.03fF
+C890 adder_subtractor_0/m1_791_n39# enable_out_0/a1_out 0.25fF
+C891 adder_subtractor_0/full_adder_1/2_input_OR_0/w_n23_15# adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# 0.03fF
+C892 comparator_0/a0 comparator_0/XNOR_0/a_50_n67# 0.01fF
+C893 adder_subtractor_0/full_adder_3/XOR_0/w_n12_10# vdd 0.03fF
+C894 comparator_0/b1_not gnd 0.21fF
+C895 enable_out_1/w_n22_n848# b1 0.11fF
+C896 enable_out_0/w_n25_n1008# m1_431_497# 0.11fF
+C897 vdd adder_subtractor_0/a_66_n57# 0.05fF
+C898 enable_out_2/a_n2_n683# gnd 0.18fF
+C899 vdd comparator_0/XNOR_0/w_44_n46# 0.05fF
+C900 adder_subtractor_0/XOR_0/a_2_n11# vdd 0.11fF
+C901 adder_subtractor_0/full_adder_3/w_260_n30# adder_subtractor_0/full_adder_3/a_280_n59# 0.06fF
+C902 equal_to AND_0/a_n43_n66# 0.04fF
+C903 enable_out_1/w_n8_n196# enable_out_1/a_7_n189# 0.03fF
+C904 b2 gnd 0.01fF
+C905 vdd adder_subtractor_0/a_67_n136# 0.05fF
+C906 adder_subtractor_0/full_adder_1/AND_0/w_41_5# adder_subtractor_0/full_adder_1/m1_123_n251# 0.03fF
+C907 as0 adder_subtractor_0/full_adder_0/a_266_n51# 0.45fF
+C908 decoder_0/d3 enable_out_2/a_n10_n1001# 0.12fF
+C909 adder_subtractor_0/full_adder_3/w_260_n30# vdd 0.05fF
+C910 adder_subtractor_0/full_adder_3/a_242_n51# as3 0.09fF
+C911 adder_subtractor_0/full_adder_2/w_228_n30# adder_subtractor_0/full_adder_2/a_242_n51# 0.03fF
+C912 adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# vdd 0.11fF
+C913 vdd enable_out_1/a_n10_n1001# 0.16fF
+C914 enable_out_1/w_78_n359# enable_out_1/a_4_n349# 0.06fF
+C915 adder_subtractor_0/full_adder_2/AND_0/w_n48_8# adder_subtractor_0/a_61_n128# 0.11fF
+C916 enable_out_0/a3_out enable_out_0/b1_out 0.09fF
+C917 vdd adder_subtractor_0/a_68_n213# 0.05fF
+C918 adder_subtractor_0/m1_787_n831# gnd 0.59fF
+C919 d1_decoder_wala gnd 1.19fF
+C920 comparator_0/check2 comparator_0/a2_not 0.01fF
+C921 comparator_0/b0 comparator_0/b3 0.30fF
+C922 comparator_0/b1 comparator_0/b2 0.76fF
+C923 comparator_0/a1_not comparator_0/check3 0.34fF
+C924 enable_out_2/w_64_n1011# enable_out_2/a_n10_n1001# 0.06fF
+C925 adder_subtractor_0/full_adder_2/w_260_n30# as2 0.02fF
+C926 adder_subtractor_0/full_adder_1/a_177_n131# adder_subtractor_0/full_adder_1/a_242_n51# 0.06fF
+C927 adder_subtractor_0/full_adder_0/AND_0/w_n48_8# enable_out_0/a0_out 0.11fF
+C928 m1_431_497# gnd 0.19fF
+C929 adder_subtractor_0/XOR_0/a_40_n19# adder_subtractor_0/XOR_0/w_79_10# 0.03fF
+C930 adder_subtractor_0/full_adder_3/a_280_n59# vdd 0.05fF
+C931 vdd decoder_0/d0 0.07fF
+C932 vdd enable_out_0/w_81_n199# 0.05fF
+C933 adder_subtractor_0/full_adder_0/XOR_0/w_20_10# vdd 0.05fF
+C934 comparator_0/b0 comparator_0/w_213_n406# 0.11fF
+C935 enable_out_0/w_n8_n196# a2 0.11fF
+C936 aluand_0/b0 aluand_0/AND_0/a_n33_15# 0.12fF
+C937 2_input_OR_0/a_n7_n12# d1_decoder_wala 0.20fF
+C938 adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# 0.02fF
+C939 adder_subtractor_0/full_adder_2/a_242_n51# adder_subtractor_0/full_adder_2/a_266_n51# 0.01fF
+C940 adder_subtractor_0/full_adder_2/w_179_n123# adder_subtractor_0/full_adder_2/a_194_n116# 0.03fF
+C941 adder_subtractor_0/full_adder_2/a_280_n59# as2 0.34fF
+C942 adder_subtractor_0/full_adder_1/w_268_n126# vdd 0.05fF
+C943 m1_789_856# a1 0.50fF
+C944 vdd enable_out_2/w_n8_n196# 0.05fF
+C945 2_input_OR_0/a_n7_n12# m1_431_497# 0.05fF
+C946 enable_out_1/a_n7_n841# gnd 0.18fF
+C947 m1_431_497# enable_out_0/a_7_n189# 0.12fF
+C948 enable_out_0/w_78_n359# enable_out_0/a_4_n349# 0.06fF
+C949 adder_subtractor_0/w_107_n184# gnd 0.11fF
+C950 vdd comparator_0/a3 0.07fF
+C951 as1 vdd 0.14fF
+C952 vdd enable_out_2/w_67_n851# 0.10fF
+C953 comparator_0/XNOR_3/w_103_n46# comparator_0/b3 0.08fF
+C954 comparator_0/XNOR_3/w_44_n46# comparator_0/b3_not 0.18fF
+C955 adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# vdd 0.02fF
+C956 adder_subtractor_0/full_adder_1/a_280_n59# adder_subtractor_0/full_adder_1/a_266_n51# 0.01fF
+C957 vdd enable_out_1/AND_0/w_41_5# 0.05fF
+C958 comparator_0/3_AND_0/a_n33_15# comparator_0/b2_not 0.22fF
+C959 adder_subtractor_0/full_adder_3/a_177_n131# gnd 0.33fF
+C960 comparator_0/a3_not comparator_0/XNOR_3/a_50_n67# 0.01fF
+C961 comparator_0/b3 comparator_0/check4 0.10fF
+C962 vdd enable_out_0/w_86_n41# 0.05fF
+C963 vdd comparator_0/w_621_n666# 0.09fF
+C964 comparator_0/w_391_n392# comparator_0/a_228_n398# 0.06fF
+C965 adder_subtractor_0/w_105_n28# enable_out_0/b1_out 0.08fF
+C966 decoder_0/d3 enable_out_2/w_n17_n690# 0.11fF
+C967 comparator_0/check4 comparator_0/w_213_n406# 0.11fF
+C968 vdd comparator_0/4_OR_0/c 0.23fF
+C969 decoder_0/m1_n34_n16# decoder_0/AND_0/a_n33_15# 0.12fF
+C970 comparator_0/a_404_n386# comparator_0/a_353_n895# 0.07fF
+C971 comparator_0/check1 comparator_0/XNOR_0/w_44_n46# 0.02fF
+C972 comparator_0/a0 comparator_0/a2 0.23fF
+C973 m1_789_856# b1 0.46fF
+C974 a3 b0 15.93fF
+C975 comparator_0/w_232_n584# comparator_0/a_247_n576# 0.05fF
+C976 comparator_0/XNOR_1/w_103_n46# comparator_0/b1 0.08fF
+C977 comparator_0/XNOR_1/w_44_n46# comparator_0/b1_not 0.18fF
+C978 enable_out_2/w_n24_n1167# enable_out_2/a_n9_n1160# 0.03fF
+C979 vdd enable_out_1/w_n17_n690# 0.05fF
+C980 enable_out_0/w_n22_n848# enable_out_0/a_n7_n841# 0.03fF
+C981 adder_subtractor_0/full_adder_1/XOR_0/a_26_n11# gnd 0.08fF
+C982 vdd comparator_0/greater_than 0.03fF
+C983 adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# gnd 0.03fF
+C984 comparator_0/a_387_n564# comparator_0/a_354_n727# 0.02fF
+C985 and_out0 gnd 0.04fF
+C986 comparator_0/b0 comparator_0/check3 0.25fF
+C987 comparator_0/a1_not comparator_0/XNOR_1/a_50_n67# 0.01fF
+C988 comparator_0/b1 comparator_0/check2 0.10fF
+C989 comparator_0/XNOR_0/a_50_n67# comparator_0/a2_not 0.01fF
+C990 adder_subtractor_0/full_adder_2/2_input_OR_0/w_n23_15# vdd 0.03fF
+C991 enable_out_2/w_n11_n356# gnd 0.17fF
+C992 adder_subtractor_0/m1_787_n831# enable_out_0/a3_out 0.23fF
+C993 enable_out_0/a3_out d1_decoder_wala 0.14fF
+C994 comparator_0/a_354_n727# comparator_0/a_532_n617# 0.06fF
+C995 comparator_0/b3 gnd 0.50fF
+C996 adder_subtractor_0/full_adder_0/2_input_OR_0/w_n23_15# vdd 0.03fF
+C997 enable_out_0/AND_0/a_n33_15# enable_out_0/AND_0/w_41_5# 0.06fF
+C998 adder_subtractor_0/full_adder_3/m1_123_n251# gnd 0.34fF
+C999 vdd comparator_0/XNOR_2/w_12_n46# 0.12fF
+C1000 aluand_0/w_98_n192# vdd 0.05fF
+C1001 decoder_0/d3 enable_out_2/w_n24_n1167# 0.11fF
+C1002 enable_out_1/AND_0/w_n48_8# decoder_0/d2 0.11fF
+C1003 adder_subtractor_0/m1_791_n39# vdd 0.28fF
+C1004 comparator_0/w_251_n915# comparator_0/a_266_n907# 0.03fF
+C1005 vdd comparator_0/check1 0.02fF
+C1006 adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# adder_subtractor_0/full_adder_2/2_input_OR_0/w_n23_15# 0.03fF
+C1007 vdd comparator_0/b2_not 0.68fF
+C1008 vdd enable_out_1/w_n24_n1167# 0.05fF
+C1009 adder_subtractor_0/m2_140_53# enable_out_0/b0_out 0.11fF
+C1010 adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# adder_subtractor_0/full_adder_0/XOR_0/a_26_n11# 0.01fF
+C1011 comparator_0/a_353_n895# gnd 0.08fF
+C1012 comparator_0/a2_not comparator_0/a_228_n398# 0.21fF
+C1013 comparator_0/4_AND_1/w_n48_8# comparator_0/check3 0.11fF
+C1014 comparator_0/4_AND_0/w_n48_8# comparator_0/check4 0.11fF
+C1015 adder_subtractor_0/m1_791_n39# as1 0.11fF
+C1016 enable_out_0/a1_out adder_subtractor_0/full_adder_1/XOR_0/w_20_10# 0.06fF
+C1017 comparator_0/a2 comparator_0/b3_not 0.13fF
+C1018 adder_subtractor_0/full_adder_0/w_260_n30# vdd 0.05fF
+C1019 enable_out_1/a_n9_n1160# decoder_0/d2 0.12fF
+C1020 adder_subtractor_0/XOR_1/w_79_10# adder_subtractor_0/XOR_1/a_40_n19# 0.03fF
+C1021 adder_subtractor_0/full_adder_0/a_177_n131# adder_subtractor_0/full_adder_0/w_228_n30# 0.06fF
+C1022 comparator_0/4_OR_0/in gnd 0.33fF
+C1023 comparator_0/4_AND_1/a_n33_15# comparator_0/check3 0.21fF
+C1024 adder_subtractor_0/full_adder_0/a_280_n59# vdd 0.05fF
+C1025 decoder_0/NOT_1/w_n9_1# decoder_0/m1_n33_33# 0.03fF
+C1026 comparator_0/check3 comparator_0/check4 5.79fF
+C1027 enable_out_0/w_n8_n196# m1_431_497# 0.11fF
+C1028 enable_out_0/w_n17_n690# m1_431_497# 0.11fF
+C1029 adder_subtractor_0/XOR_1/a_2_n11# adder_subtractor_0/XOR_1/a_26_n11# 0.01fF
+C1030 adder_subtractor_0/XOR_1/a_40_n19# as_carry 0.34fF
+C1031 adder_subtractor_0/full_adder_3/2_input_OR_0/w_30_15# vdd 0.03fF
+C1032 enable_out_0/w_n24_n1167# enable_out_0/a_n9_n1160# 0.03fF
+C1033 comparator_0/b2 comparator_0/a_267_n739# 0.21fF
+C1034 comparator_0/b2 comparator_0/w_252_n747# 0.11fF
+C1035 adder_subtractor_0/full_adder_2/a_242_n51# vdd 0.11fF
+C1036 adder_subtractor_0/full_adder_0/a_177_n131# adder_subtractor_0/full_adder_0/a_266_n51# 0.01fF
+C1037 adder_subtractor_0/full_adder_0/AND_0/w_n48_8# vdd 0.05fF
+C1038 a3 b3 0.70fF
+C1039 enable_out_0/a0_out adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# 0.11fF
+C1040 decoder_0/AND_0/a_n33_15# decoder_0/AND_0/w_41_5# 0.06fF
+C1041 comparator_0/a0 comparator_0/b1_not 0.16fF
+C1042 comparator_0/AND_0/w_n48_8# comparator_0/b3_not 0.11fF
+C1043 enable_out_1/AND_0/w_n48_8# a0 0.11fF
+C1044 adder_subtractor_0/full_adder_0/a_281_n143# gnd 0.04fF
+C1045 enable_out_0/a2_out adder_subtractor_0/full_adder_2/XOR_0/a_26_n11# 0.01fF
+C1046 adder_subtractor_0/full_adder_1/a_281_n143# adder_subtractor_0/full_adder_1/w_268_n126# 0.03fF
+C1047 AND_0/a_n33_15# a_315_n1959# 0.12fF
+C1048 adder_subtractor_0/full_adder_1/a_281_n143# vdd 0.08fF
+C1049 comparator_0/XNOR_2/w_103_n46# gnd 0.09fF
+C1050 decoder_0/NOT_0/w_n9_1# gnd 0.15fF
+C1051 decoder_0/d3 enable_out_2/a_12_n31# 0.12fF
+C1052 enable_out_0/a_4_n349# gnd 0.18fF
+C1053 adder_subtractor_0/a_61_n128# enable_out_0/b2_out 0.11fF
+C1054 enable_out_2/AND_0/w_n48_8# a0 0.11fF
+C1055 comparator_0/4_AND_0/a_n33_15# gnd 0.13fF
+C1056 comparator_0/check3 gnd 0.13fF
+C1057 decoder_0/d3 enable_out_2/AND_0/a_n33_15# 0.12fF
+C1058 vdd enable_out_1/a_12_n31# 0.23fF
+C1059 adder_subtractor_0/full_adder_2/AND_0/a_n33_15# gnd 0.12fF
+C1060 adder_subtractor_0/full_adder_0/m1_123_n251# adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# 0.20fF
+C1061 vdd comparator_0/a1_not 0.51fF
+C1062 vdd enable_out_2/a_4_n349# 0.23fF
+C1063 adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# gnd 0.13fF
+C1064 comparator_0/a1_not comparator_0/a3 0.10fF
+C1065 comparator_0/XNOR_2/w_44_n46# comparator_0/b2 0.06fF
+C1066 comparator_0/a2_not comparator_0/a2 0.14fF
+C1067 vdd decoder_0/AND_3/w_n48_8# 0.05fF
+C1068 enable_out_0/w_n11_n356# m1_431_497# 0.11fF
+C1069 enable_out_2/w_n17_n690# b0 0.11fF
+C1070 adder_subtractor_0/a_28_n49# adder_subtractor_0/a_66_n57# 0.02fF
+C1071 adder_subtractor_0/w_47_n107# adder_subtractor_0/a_67_n136# 0.06fF
+C1072 comparator_0/check1 comparator_0/b2_not 0.09fF
+C1073 comparator_0/5_AND_0/w_130_5# comparator_0/5_AND_0/in 0.06fF
+C1074 comparator_0/b1_not comparator_0/b3_not 0.13fF
+C1075 adder_subtractor_0/a_30_n205# enable_out_0/b3_out 0.13fF
+C1076 adder_subtractor_0/m1_787_n831# as3 0.11fF
+C1077 vdd adder_subtractor_0/XOR_1/a_2_n11# 0.11fF
+C1078 enable_out_2/w_n22_n848# enable_out_2/a_n7_n841# 0.03fF
+C1079 enable_out_0/a1_out gnd 0.04fF
+C1080 vdd enable_out_0/w_78_n359# 0.05fF
+C1081 adder_subtractor_0/a_66_n57# adder_subtractor_0/a_52_n49# 0.01fF
+C1082 enable_out_0/a0_out gnd 0.04fF
+C1083 adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# adder_subtractor_0/full_adder_3/a_177_n131# 0.09fF
+C1084 aluand_0/b2 aluand_0/a_24_n182# 0.12fF
+C1085 s1 decoder_0/m1_n33_33# 0.17fF
+C1086 comparator_0/b1 comparator_0/w_232_n584# 0.11fF
+C1087 comparator_0/check3 comparator_0/XNOR_2/a_50_n67# 0.45fF
+C1088 and_out2 gnd 0.04fF
+C1089 adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# adder_subtractor_0/m1_787_n1256# 0.05fF
+C1090 decoder_0/d3 enable_out_2/a_n2_n683# 0.12fF
+C1091 comparator_0/XNOR_0/w_44_n46# comparator_0/b0 0.06fF
+C1092 vdd enable_out_0/a_n9_n1160# 0.15fF
+C1093 adder_subtractor_0/full_adder_2/a_266_n51# gnd 0.08fF
+C1094 vdd decoder_0/AND_1/w_41_5# 0.18fF
+C1095 adder_subtractor_0/full_adder_2/XOR_0/w_79_10# adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# 0.03fF
+C1096 vdd enable_out_1/a_n2_n683# 0.22fF
+C1097 aluand_0/w_9_n340# aluand_0/a_24_n333# 0.03fF
+C1098 adder_subtractor_0/full_adder_3/m1_123_n251# adder_subtractor_0/full_adder_3/a_281_n143# 0.52fF
+C1099 adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/a_266_n51# 0.01fF
+C1100 adder_subtractor_0/full_adder_1/AND_0/w_n48_8# enable_out_0/a1_out 0.11fF
+C1101 m1_789_856# gnd 0.10fF
+C1102 decoder_0/d3 b2 0.79fF
+C1103 vdd adder_subtractor_0/w_47_n107# 0.05fF
+C1104 adder_subtractor_0/full_adder_0/w_260_n30# adder_subtractor_0/full_adder_0/a_280_n59# 0.06fF
+C1105 a3 decoder_0/d2 1.78fF
+C1106 adder_subtractor_0/a_67_n136# adder_subtractor_0/a_53_n128# 0.01fF
+C1107 adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# adder_subtractor_0/full_adder_2/XOR_0/a_26_n11# 0.01fF
+C1108 adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# adder_subtractor_0/full_adder_2/a_177_n131# 0.34fF
+C1109 adder_subtractor_0/full_adder_1/XOR_0/w_20_10# adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# 0.08fF
+C1110 adder_subtractor_0/XOR_0/a_2_n11# adder_subtractor_0/XOR_0/a_40_n19# 0.02fF
+C1111 vdd adder_subtractor_0/a_28_n49# 0.11fF
+C1112 s1 decoder_0/AND_2/w_n48_8# 0.11fF
+C1113 adder_subtractor_0/full_adder_1/2_input_OR_0/w_n23_15# adder_subtractor_0/full_adder_1/m1_123_n251# 0.07fF
+C1114 adder_subtractor_0/full_adder_0/a_242_n51# as0 0.09fF
+C1115 enable_out_0/a2_out enable_out_0/b3_out 0.09fF
+C1116 enable_out_0/a0_out adder_subtractor_0/full_adder_0/XOR_0/a_26_n11# 0.01fF
+C1117 decoder_0/AND_2/w_n48_8# decoder_0/AND_2/a_n33_15# 0.03fF
+C1118 comparator_0/3_AND_0/a_n33_15# comparator_0/check4 0.21fF
+C1119 enable_out_2/w_n25_n1008# enable_out_2/a_n10_n1001# 0.03fF
+C1120 adder_subtractor_0/full_adder_2/a_177_n131# adder_subtractor_0/full_adder_2/w_228_n30# 0.06fF
+C1121 adder_subtractor_0/full_adder_1/XOR_0/w_79_10# adder_subtractor_0/full_adder_1/a_177_n131# 0.12fF
+C1122 comparator_0/XNOR_1/a_50_n67# gnd 0.08fF
+C1123 aluand_0/a1 gnd 0.04fF
+C1124 enable_out_2/AND_0/a_n33_15# enable_out_2/AND_0/w_41_5# 0.06fF
+C1125 vdd comparator_0/b0 0.09fF
+C1126 adder_subtractor_0/a_68_n213# adder_subtractor_0/a_54_n205# 0.01fF
+C1127 enable_out_0/AND_0/w_n48_8# m1_431_497# 0.11fF
+C1128 adder_subtractor_0/full_adder_1/XOR_0/w_20_10# vdd 0.05fF
+C1129 adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# adder_subtractor_0/full_adder_1/XOR_0/a_26_n11# 0.01fF
+C1130 adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/XOR_0/w_79_10# 0.08fF
+C1131 comparator_0/AND_0/w_41_5# comparator_0/AND_0/a_n33_15# 0.06fF
+C1132 adder_subtractor_0/full_adder_3/AND_0/w_n48_8# gnd 0.14fF
+C1133 comparator_0/b0 comparator_0/a3 0.21fF
+C1134 comparator_0/b1 comparator_0/a2 0.28fF
+C1135 enable_out_1/a_7_n189# decoder_0/d2 0.12fF
+C1136 decoder_0/m1_n34_n16# decoder_0/AND_1/w_n48_8# 0.11fF
+C1137 adder_subtractor_0/full_adder_1/a_177_n131# adder_subtractor_0/full_adder_1/w_179_n123# 0.11fF
+C1138 adder_subtractor_0/XOR_0/a_40_n19# vdd 0.05fF
+C1139 adder_subtractor_0/full_adder_2/a_177_n131# adder_subtractor_0/full_adder_2/a_266_n51# 0.01fF
+C1140 adder_subtractor_0/full_adder_2/w_319_n30# adder_subtractor_0/full_adder_2/a_280_n59# 0.03fF
+C1141 enable_out_1/w_n17_n690# enable_out_1/a_n2_n683# 0.03fF
+C1142 adder_subtractor_0/a_60_n49# adder_subtractor_0/full_adder_1/a_177_n131# 0.11fF
+C1143 comparator_0/5_AND_0/in comparator_0/check3 0.17fF
+C1144 adder_subtractor_0/XOR_1/a_26_n11# gnd 0.08fF
+C1145 aluand_0/AND_0/w_41_5# aluand_0/AND_0/a_n33_15# 0.06fF
+C1146 aluand_0/b1 aluand_0/a1 0.15fF
+C1147 adder_subtractor_0/full_adder_0/XOR_0/w_20_10# adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# 0.06fF
+C1148 aluand_0/a0 vdd 0.07fF
+C1149 adder_subtractor_0/full_adder_1/w_260_n30# adder_subtractor_0/full_adder_1/a_242_n51# 0.08fF
+C1150 adder_subtractor_0/full_adder_1/w_319_n30# vdd 0.02fF
+C1151 adder_subtractor_0/XOR_1/w_20_10# vdd 0.05fF
+C1152 a0 a3 13.91fF
+C1153 comparator_0/3_AND_0/a_n33_15# gnd 0.64fF
+C1154 vdd enable_out_2/w_n3_n38# 0.05fF
+C1155 enable_out_1/w_67_n851# enable_out_1/a_n7_n841# 0.06fF
+C1156 vdd decoder_0/AND_1/a_n33_15# 0.11fF
+C1157 adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# vdd 0.05fF
+C1158 vdd comparator_0/4_AND_1/w_n48_8# 0.08fF
+C1159 vdd comparator_0/XNOR_3/w_103_n46# 0.02fF
+C1160 enable_out_0/w_67_n851# vdd 0.10fF
+C1161 adder_subtractor_0/full_adder_1/w_319_n30# as1 0.12fF
+C1162 adder_subtractor_0/full_adder_1/a_242_n51# adder_subtractor_0/full_adder_1/a_280_n59# 0.02fF
+C1163 comparator_0/3_AND_0/w_n48_8# comparator_0/a2 0.11fF
+C1164 vdd enable_out_2/w_72_n693# 0.14fF
+C1165 equal_to AND_0/w_41_5# 0.03fF
+C1166 vdd comparator_0/a_404_n386# 0.21fF
+C1167 adder_subtractor_0/a_66_n57# gnd 0.13fF
+C1168 vdd comparator_0/check4 0.17fF
+C1169 comparator_0/4_AND_1/w_94_5# comparator_0/4_OR_0/d 0.03fF
+C1170 enable_out_2/w_n24_n1167# b3 0.11fF
+C1171 adder_subtractor_0/full_adder_1/w_268_n126# adder_subtractor_0/full_adder_1/a_194_n116# 0.06fF
+C1172 adder_subtractor_0/full_adder_1/a_194_n116# vdd 0.05fF
+C1173 adder_subtractor_0/XOR_0/a_2_n11# gnd 0.03fF
+C1174 b1 a1 0.46fF
+C1175 vdd decoder_0/AND_0/w_n48_8# 0.05fF
+C1176 comparator_0/b3 comparator_0/b3_not 0.07fF
+C1177 adder_subtractor_0/m1_787_n831# adder_subtractor_0/a_62_n205# 0.13fF
+C1178 vdd enable_out_0/w_n25_n1008# 0.05fF
+C1179 m1_431_497# enable_out_0/a_n7_n841# 0.12fF
+C1180 enable_out_0/w_65_n1170# enable_out_0/b3_out 0.03fF
+C1181 adder_subtractor_0/a_67_n136# gnd 0.13fF
+C1182 aluand_0/b3 aluand_0/a1 0.25fF
+C1183 vdd comparator_0/w_374_n570# 0.05fF
+C1184 adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# gnd 0.03fF
+C1185 decoder_0/d3 enable_out_2/w_n11_n356# 0.11fF
+C1186 vdd decoder_0/AND_3/a_n33_15# 0.05fF
+C1187 vdd comparator_0/less_than 0.03fF
+C1188 as0 d1_decoder_wala 0.11fF
+C1189 enable_out_1/a_n10_n1001# gnd 0.18fF
+C1190 adder_subtractor_0/a_68_n213# gnd 0.13fF
+C1191 aluand_0/w_9_n189# aluand_0/a2 0.11fF
+C1192 vdd enable_out_1/w_n11_n356# 0.05fF
+C1193 adder_subtractor_0/full_adder_3/a_280_n59# gnd 0.13fF
+C1194 vdd decoder_0/AND_2/w_41_5# 0.14fF
+C1195 decoder_0/d0 gnd 0.16fF
+C1196 comparator_0/b3 comparator_0/w_251_n915# 0.11fF
+C1197 adder_subtractor_0/a_62_n205# adder_subtractor_0/w_107_n184# 0.10fF
+C1198 adder_subtractor_0/m2_140_53# d1_decoder_wala 0.13fF
+C1199 comparator_0/check1 comparator_0/b0 0.10fF
+C1200 comparator_0/a0 comparator_0/check3 0.18fF
+C1201 comparator_0/b1 comparator_0/b1_not 0.07fF
+C1202 enable_out_0/w_n11_n356# enable_out_0/a_4_n349# 0.03fF
+C1203 vdd gnd 26.11fF
+C1204 enable_out_2/w_n8_n196# gnd 0.18fF
+C1205 adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/XOR_0/w_79_10# 0.08fF
+C1206 adder_subtractor_0/full_adder_3/AND_0/w_n48_8# enable_out_0/a3_out 0.11fF
+C1207 adder_subtractor_0/m1_794_n436# vdd 0.28fF
+C1208 comparator_0/a_353_n895# comparator_0/a_354_n727# 0.13fF
+C1209 comparator_0/a3 gnd 0.15fF
+C1210 enable_out_0/w_81_n199# enable_out_0/a_7_n189# 0.06fF
+C1211 b0 b2 0.52fF
+C1212 comparator_0/w_621_n666# comparator_0/less_than 0.03fF
+C1213 comparator_0/w_341_n733# comparator_0/a_354_n727# 0.03fF
+C1214 adder_subtractor_0/a_62_n205# adder_subtractor_0/full_adder_3/a_177_n131# 0.11fF
+C1215 vdd 2_input_OR_0/a_n7_n12# 0.02fF
+C1216 aluand_0/w_99_n41# vdd 0.05fF
+C1217 s1 decoder_0/m1_n34_n16# 0.02fF
+C1218 vdd enable_out_0/a_7_n189# 0.23fF
+C1219 comparator_0/4_OR_0/w_66_4# comparator_0/4_OR_0/in 0.07fF
+C1220 adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/w_319_n30# 0.08fF
+C1221 adder_subtractor_0/full_adder_1/AND_0/w_n48_8# vdd 0.05fF
+C1222 enable_out_0/AND_0/a_n33_15# m1_431_497# 0.12fF
+C1223 adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# gnd 0.15fF
+C1224 aluand_0/w_9_n340# aluand_0/a3 0.11fF
+C1225 aluand_0/b1 vdd 0.07fF
+C1226 d1_decoder_wala enable_out_0/b2_out 0.07fF
+C1227 comparator_0/5_AND_0/w_n48_8# comparator_0/check3 0.11fF
+C1228 enable_out_1/AND_0/a_n33_15# decoder_0/d2 0.12fF
+C1229 m1_431_497# b0 0.92fF
+C1230 adder_subtractor_0/full_adder_2/AND_0/w_n48_8# adder_subtractor_0/full_adder_2/AND_0/a_n33_15# 0.03fF
+C1231 comparator_0/4_OR_0/c comparator_0/4_OR_0/a_n5_9# 0.01fF
+C1232 comparator_0/a2_not comparator_0/b3 0.00fF
+C1233 comparator_0/b2 comparator_0/a3_not 0.43fF
+C1234 adder_subtractor_0/XOR_0/a_26_n11# enable_out_0/b0_out 0.01fF
+C1235 enable_out_0/a3_out adder_subtractor_0/full_adder_3/XOR_0/w_n12_10# 0.06fF
+C1236 adder_subtractor_0/full_adder_2/XOR_0/w_79_10# vdd 0.02fF
+C1237 adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/XOR_0/a_26_n11# 0.01fF
+C1238 adder_subtractor_0/full_adder_2/AND_0/w_41_5# adder_subtractor_0/full_adder_2/AND_0/a_n33_15# 0.06fF
+C1239 comparator_0/4_OR_0/c gnd 0.13fF
+C1240 comparator_0/check1 comparator_0/check4 0.22fF
+C1241 adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/a_194_n116# 0.12fF
+C1242 comparator_0/check3 comparator_0/b3_not 0.10fF
+C1243 comparator_0/a2_not comparator_0/w_213_n406# 0.11fF
+C1244 comparator_0/b2_not comparator_0/check4 0.27fF
+C1245 enable_out_0/a1_out adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# 0.11fF
+C1246 enable_out_1/w_n17_n690# gnd 0.14fF
+C1247 adder_subtractor_0/XOR_1/a_40_n19# d1_decoder_wala 0.07fF
+C1248 adder_subtractor_0/full_adder_2/a_177_n131# vdd 0.19fF
+C1249 adder_subtractor_0/full_adder_0/a_177_n131# adder_subtractor_0/full_adder_0/a_242_n51# 0.06fF
+C1250 enable_out_1/w_n25_n1008# decoder_0/d2 0.11fF
+C1251 comparator_0/check3 comparator_0/a_247_n576# 0.21fF
+C1252 comparator_0/greater_than gnd 0.05fF
+C1253 vdd comparator_0/AND_0/w_41_5# 0.05fF
+C1254 adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# vdd 0.02fF
+C1255 enable_out_2/w_n3_n38# a1 0.11fF
+C1256 adder_subtractor_0/full_adder_2/w_179_n123# vdd 0.05fF
+C1257 enable_out_0/a2_out adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# 0.06fF
+C1258 aluand_0/b3 vdd 0.07fF
+C1259 d1_decoder_wala adder_subtractor_0/w_14_n28# 0.06fF
+C1260 adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# 0.13fF
+C1261 comparator_0/b0 comparator_0/a1_not 0.10fF
+C1262 d1_decoder_wala adder_subtractor_0/w_48_n184# 0.06fF
+C1263 adder_subtractor_0/m2_140_53# adder_subtractor_0/XOR_0/w_79_10# 0.12fF
+C1264 adder_subtractor_0/full_adder_0/AND_0/a_n33_15# vdd 0.05fF
+C1265 comparator_0/b0_not comparator_0/check2 0.17fF
+C1266 adder_subtractor_0/m1_791_n39# gnd 0.59fF
+C1267 enable_out_0/a3_out vdd 0.07fF
+C1268 comparator_0/b2_not gnd 0.26fF
+C1269 b2 b3 0.42fF
+C1270 adder_subtractor_0/full_adder_0/a_281_n143# adder_subtractor_0/full_adder_0/m1_123_n251# 0.52fF
+C1271 adder_subtractor_0/full_adder_0/2_input_OR_0/w_30_15# adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# 0.06fF
+C1272 vdd comparator_0/XNOR_1/w_44_n46# 0.05fF
+C1273 adder_subtractor_0/w_105_n28# adder_subtractor_0/a_66_n57# 0.03fF
+C1274 AND_0/w_n48_8# comparator_0/equal_to 0.11fF
+C1275 comparator_0/XNOR_2/w_44_n46# comparator_0/a2 0.06fF
+C1276 adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/w_319_n30# 0.08fF
+C1277 m1_431_497# b3 0.34fF
+C1278 adder_subtractor_0/full_adder_0/a_280_n59# gnd 0.13fF
+C1279 s0 decoder_0/AND_1/w_n48_8# 0.11fF
+C1280 comparator_0/4_AND_0/w_94_5# comparator_0/4_AND_0/a_n33_15# 0.06fF
+C1281 adder_subtractor_0/w_15_n107# adder_subtractor_0/a_29_n128# 0.03fF
+C1282 comparator_0/b1 comparator_0/b3 0.07fF
+C1283 comparator_0/a1_not comparator_0/check4 0.24fF
+C1284 comparator_0/a2_not comparator_0/check3 0.36fF
+C1285 enable_out_1/w_64_n1011# comparator_0/b2 0.03fF
+C1286 adder_subtractor_0/full_adder_3/XOR_0/w_n12_10# adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# 0.03fF
+C1287 adder_subtractor_0/full_adder_2/2_input_OR_0/w_30_15# adder_subtractor_0/m1_787_n831# 0.03fF
+C1288 adder_subtractor_0/full_adder_0/a_281_n143# adder_subtractor_0/full_adder_0/w_268_n126# 0.03fF
+C1289 decoder_0/d3 m1_789_856# 0.43fF
+C1290 2_input_OR_0/w_n23_15# d1_decoder_wala 0.07fF
+C1291 adder_subtractor_0/XOR_1/w_20_10# adder_subtractor_0/XOR_1/a_2_n11# 0.08fF
+C1292 a1 gnd 0.16fF
+C1293 comparator_0/4_OR_0/a comparator_0/4_OR_0/d 0.09fF
+C1294 adder_subtractor_0/a_28_n49# adder_subtractor_0/a_52_n49# 0.01fF
+C1295 decoder_0/NOT_1/w_n9_1# s0 0.06fF
+C1296 enable_out_0/w_n8_n196# vdd 0.05fF
+C1297 vdd enable_out_0/w_n17_n690# 0.05fF
+C1298 adder_subtractor_0/full_adder_2/a_242_n51# gnd 0.03fF
+C1299 adder_subtractor_0/full_adder_0/AND_0/w_n48_8# gnd 0.14fF
+C1300 a2 a0 0.14fF
+C1301 comparator_0/b2_not comparator_0/XNOR_2/a_50_n67# 0.01fF
+C1302 adder_subtractor_0/full_adder_3/XOR_0/w_20_10# adder_subtractor_0/full_adder_3/a_177_n131# 0.02fF
+C1303 adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/a_242_n51# 0.13fF
+C1304 adder_subtractor_0/full_adder_2/a_281_n143# adder_subtractor_0/full_adder_2/w_268_n126# 0.03fF
+C1305 enable_out_1/w_n8_n196# m1_789_856# 0.11fF
+C1306 adder_subtractor_0/a_61_n128# adder_subtractor_0/w_106_n107# 0.09fF
+C1307 adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/a_194_n116# 0.12fF
+C1308 adder_subtractor_0/full_adder_3/a_281_n143# vdd 0.08fF
+C1309 enable_out_2/w_n25_n1008# b2 0.11fF
+C1310 comparator_0/XNOR_0/w_44_n46# comparator_0/a0 0.06fF
+C1311 adder_subtractor_0/full_adder_0/a_177_n131# d1_decoder_wala 0.33fF
+C1312 adder_subtractor_0/full_adder_1/AND_0/a_n33_15# vdd 0.05fF
+C1313 adder_subtractor_0/full_adder_2/m1_123_n251# adder_subtractor_0/full_adder_2/a_281_n143# 0.52fF
+C1314 adder_subtractor_0/full_adder_1/a_281_n143# gnd 0.04fF
+C1315 decoder_0/AND_1/w_41_5# decoder_0/AND_1/a_n33_15# 0.06fF
+C1316 vdd adder_subtractor_0/w_105_n28# 0.02fF
+C1317 decoder_0/AND_3/w_n48_8# decoder_0/AND_3/a_n33_15# 0.03fF
+C1318 comparator_0/4_OR_0/a comparator_0/4_OR_0/b 0.07fF
+C1319 enable_out_0/b0_out adder_subtractor_0/XOR_0/w_20_10# 0.08fF
+C1320 enable_out_1/a_12_n31# gnd 0.75fF
+C1321 aluand_0/w_98_n343# and_out3 0.03fF
+C1322 adder_subtractor_0/a_61_n128# adder_subtractor_0/a_29_n128# 0.09fF
+C1323 comparator_0/a1_not gnd 0.03fF
+C1324 enable_out_2/a_4_n349# gnd 0.18fF
+C1325 comparator_0/b0_not comparator_0/XNOR_0/a_50_n67# 0.01fF
+C1326 adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# 0.02fF
+C1327 adder_subtractor_0/full_adder_3/w_228_n30# adder_subtractor_0/full_adder_3/a_242_n51# 0.03fF
+C1328 adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# vdd 0.11fF
+C1329 b1 gnd 0.01fF
+C1330 enable_out_0/a1_out adder_subtractor_0/a_62_n205# 0.12fF
+C1331 b2 decoder_0/d2 0.99fF
+C1332 vdd comparator_0/a0 0.20fF
+C1333 adder_subtractor_0/full_adder_3/w_260_n30# as3 0.02fF
+C1334 adder_subtractor_0/full_adder_2/a_177_n131# adder_subtractor_0/full_adder_2/a_242_n51# 0.06fF
+C1335 vdd enable_out_0/w_n11_n356# 0.05fF
+C1336 comparator_0/a0 comparator_0/a3 0.12fF
+C1337 comparator_0/a1 comparator_0/a2 0.19fF
+C1338 adder_subtractor_0/XOR_1/a_2_n11# gnd 0.03fF
+C1339 vdd decoder_0/AND_3/w_41_5# 0.05fF
+C1340 enable_out_0/a2_out enable_out_0/b0_out 0.09fF
+C1341 adder_subtractor_0/full_adder_3/a_242_n51# adder_subtractor_0/full_adder_3/a_266_n51# 0.01fF
+C1342 adder_subtractor_0/full_adder_3/w_268_n126# vdd 0.05fF
+C1343 adder_subtractor_0/full_adder_3/w_179_n123# adder_subtractor_0/full_adder_3/a_194_n116# 0.03fF
+C1344 adder_subtractor_0/full_adder_3/a_280_n59# as3 0.34fF
+C1345 adder_subtractor_0/full_adder_1/a_177_n131# adder_subtractor_0/full_adder_1/w_260_n30# 0.06fF
+C1346 adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# vdd 0.05fF
+C1347 comparator_0/b0 comparator_0/check4 0.20fF
+C1348 comparator_0/b1 comparator_0/check3 0.17fF
+C1349 aluand_0/AND_0/w_n48_8# vdd 0.05fF
+C1350 enable_out_1/AND_0/w_41_5# comparator_0/a0 0.03fF
+C1351 enable_out_0/a_n9_n1160# gnd 0.18fF
+C1352 adder_subtractor_0/full_adder_1/a_177_n131# adder_subtractor_0/full_adder_1/a_280_n59# 0.11fF
+C1353 as3 vdd 0.14fF
+C1354 adder_subtractor_0/full_adder_1/w_228_n30# vdd 0.03fF
+C1355 enable_out_0/a0_out adder_subtractor_0/m2_140_53# 0.96fF
+C1356 adder_subtractor_0/full_adder_0/AND_0/w_n48_8# adder_subtractor_0/full_adder_0/AND_0/a_n33_15# 0.03fF
+C1357 vdd comparator_0/5_AND_0/w_n48_8# 0.08fF
+C1358 enable_out_1/a_n2_n683# gnd 0.18fF
+C1359 adder_subtractor_0/full_adder_2/AND_0/w_n48_8# vdd 0.05fF
+C1360 s1 s0 1.07fF
+C1361 aluand_0/b2 aluand_0/a1 0.25fF
+C1362 enable_out_1/a_n7_n841# decoder_0/d2 0.12fF
+C1363 adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# adder_subtractor_0/full_adder_0/a_177_n131# 0.09fF
+C1364 vdd comparator_0/XNOR_3/w_12_n46# 0.03fF
+C1365 vdd enable_out_2/a_n9_n1160# 0.15fF
+C1366 adder_subtractor_0/full_adder_2/a_280_n59# adder_subtractor_0/full_adder_2/a_266_n51# 0.01fF
+C1367 adder_subtractor_0/a_61_n128# enable_out_0/a2_out 1.10fF
+C1368 adder_subtractor_0/full_adder_2/AND_0/w_41_5# vdd 0.05fF
+C1369 vdd adder_subtractor_0/XOR_1/w_n12_10# 0.03fF
+C1370 vdd enable_out_2/w_78_n359# 0.05fF
+C1371 AND_0/a_n42_15# AND_0/w_41_5# 0.05fF
+C1372 comparator_0/XNOR_3/w_12_n46# comparator_0/a3 0.06fF
+C1373 comparator_0/XNOR_3/w_44_n46# comparator_0/a3_not 0.08fF
+C1374 adder_subtractor_0/a_28_n49# gnd 0.03fF
+C1375 vdd comparator_0/b3_not 0.70fF
+C1376 comparator_0/4_AND_1/w_n48_8# comparator_0/4_AND_1/a_n33_15# 0.05fF
+C1377 a0 b2 0.55fF
+C1378 comparator_0/4_AND_1/w_n48_8# comparator_0/check4 0.11fF
+C1379 enable_out_0/a1_out enable_out_0/b2_out 0.09fF
+C1380 comparator_0/a3 comparator_0/b3_not 0.13fF
+C1381 comparator_0/XNOR_3/w_103_n46# comparator_0/check4 0.09fF
+C1382 adder_subtractor_0/full_adder_0/w_319_n30# d1_decoder_wala 0.08fF
+C1383 vdd enable_out_0/w_64_n1011# 0.08fF
+C1384 adder_subtractor_0/a_52_n49# gnd 0.08fF
+C1385 adder_subtractor_0/full_adder_3/AND_0/w_n48_8# adder_subtractor_0/a_62_n205# 0.11fF
+C1386 vdd comparator_0/w_391_n392# 0.05fF
+C1387 a_315_n1959# decoder_0/d3 0.09fF
+C1388 vdd decoder_0/d3 0.07fF
+C1389 comparator_0/b0 gnd 0.37fF
+C1390 as1 adder_subtractor_0/full_adder_1/a_266_n51# 0.45fF
+C1391 adder_subtractor_0/full_adder_3/XOR_0/a_26_n11# gnd 0.08fF
+C1392 comparator_0/4_AND_1/a_n33_15# comparator_0/check4 0.21fF
+C1393 decoder_0/d3 enable_out_2/w_n8_n196# 0.11fF
+C1394 vdd comparator_0/a_354_n727# 0.23fF
+C1395 comparator_0/b3 comparator_0/XNOR_3/a_50_n67# 0.01fF
+C1396 vdd comparator_0/4_OR_0/w_66_4# 0.09fF
+C1397 adder_subtractor_0/a_53_n128# gnd 0.08fF
+C1398 vdd comparator_0/w_251_n915# 0.05fF
+C1399 m1_431_497# a0 1.72fF
+C1400 vdd enable_out_1/w_n8_n196# 0.05fF
+C1401 m1_789_856# b0 0.29fF
+C1402 comparator_0/XNOR_1/w_12_n46# comparator_0/a1 0.06fF
+C1403 comparator_0/XNOR_1/w_44_n46# comparator_0/a1_not 0.08fF
+C1404 comparator_0/XNOR_0/w_44_n46# comparator_0/a2_not 0.08fF
+C1405 vdd enable_out_0/AND_0/w_n48_8# 0.05fF
+C1406 adder_subtractor_0/XOR_0/a_40_n19# gnd 0.13fF
+C1407 vdd enable_out_2/w_64_n1011# 0.08fF
+C1408 adder_subtractor_0/full_adder_0/a_194_n116# d1_decoder_wala 0.12fF
+C1409 adder_subtractor_0/a_54_n205# gnd 0.08fF
+C1410 comparator_0/4_OR_0/d comparator_0/4_OR_0/w_n30_3# 0.07fF
+C1411 aluand_0/a0 gnd 0.13fF
+C1412 comparator_0/w_525_n664# comparator_0/a_387_n564# 0.07fF
+C1413 comparator_0/a0 comparator_0/b2_not 0.10fF
+C1414 comparator_0/a1 comparator_0/b1_not 0.12fF
+C1415 comparator_0/XNOR_1/w_103_n46# comparator_0/check2 0.09fF
+C1416 vdd enable_out_1/w_67_n851# 0.10fF
+C1417 enable_out_1/AND_0/w_n48_8# enable_out_1/AND_0/a_n33_15# 0.03fF
+C1418 enable_out_2/w_n3_n38# gnd 0.33fF
+C1419 decoder_0/AND_1/a_n33_15# gnd 0.14fF
+C1420 adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# gnd 0.13fF
+C1421 m1_431_497# enable_out_0/a_n10_n1001# 0.12fF
+C1422 adder_subtractor_0/XOR_0/a_26_n11# d1_decoder_wala 0.01fF
+C1423 decoder_0/NOT_0/w_n9_1# decoder_0/m1_n34_n16# 0.03fF
+C1424 comparator_0/XNOR_3/w_103_n46# gnd 0.09fF
+C1425 comparator_0/w_525_n664# comparator_0/a_532_n617# 0.04fF
+C1426 comparator_0/w_341_n733# comparator_0/a_267_n739# 0.06fF
+C1427 comparator_0/b1 comparator_0/XNOR_1/a_50_n67# 0.01fF
+C1428 enable_out_0/a3_out enable_out_0/w_78_n359# 0.03fF
+C1429 adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# adder_subtractor_0/full_adder_3/2_input_OR_0/w_n23_15# 0.03fF
+C1430 comparator_0/a_404_n386# gnd 0.41fF
+C1431 comparator_0/a_354_n727# comparator_0/a_550_n657# 0.01fF
+C1432 comparator_0/4_AND_1/a_n33_15# gnd 0.13fF
+C1433 comparator_0/check4 gnd 0.13fF
+C1434 comparator_0/4_OR_0/w_n30_3# comparator_0/4_OR_0/b 0.07fF
+C1435 adder_subtractor_0/full_adder_0/m1_123_n251# vdd 0.07fF
+C1436 vdd comparator_0/4_AND_0/w_94_5# 0.05fF
+C1437 adder_subtractor_0/a_61_n128# adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# 0.13fF
+C1438 vdd comparator_0/a2_not 0.45fF
+C1439 enable_out_2/w_65_n1170# aluand_0/a3 0.03fF
+C1440 adder_subtractor_0/a_62_n205# adder_subtractor_0/a_68_n213# 0.34fF
+C1441 comparator_0/4_OR_0/w_66_4# comparator_0/greater_than 0.03fF
+C1442 a_315_n1959# comparator_0/equal_to 0.29fF
+C1443 comparator_0/a2_not comparator_0/a3 0.08fF
+C1444 vdd comparator_0/equal_to 0.07fF
+C1445 aluand_0/b2 vdd 0.07fF
+C1446 adder_subtractor_0/m2_140_53# adder_subtractor_0/XOR_0/a_2_n11# 0.09fF
+C1447 adder_subtractor_0/full_adder_2/XOR_0/w_n12_10# vdd 0.03fF
+C1448 adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# adder_subtractor_0/full_adder_0/XOR_0/a_26_n11# 0.01fF
+C1449 decoder_0/AND_3/a_n33_15# gnd 0.13fF
+C1450 vdd decoder_0/m1_n33_33# 0.07fF
+C1451 comparator_0/less_than gnd 0.05fF
+C1452 vdd enable_out_0/a_n7_n841# 0.17fF
+C1453 comparator_0/check1 comparator_0/b3_not 0.10fF
+C1454 adder_subtractor_0/m1_791_n39# adder_subtractor_0/full_adder_1/a_266_n51# 0.01fF
+C1455 comparator_0/b2_not comparator_0/b3_not 0.15fF
+C1456 adder_subtractor_0/a_60_n49# enable_out_0/b1_out 0.11fF
+C1457 adder_subtractor_0/full_adder_0/w_268_n126# vdd 0.05fF
+C1458 enable_out_1/w_n11_n356# gnd 0.17fF
+C1459 adder_subtractor_0/XOR_1/w_79_10# as_carry 0.12fF
+C1460 adder_subtractor_0/a_62_n205# vdd 0.10fF
+C1461 adder_subtractor_0/full_adder_0/a_177_n131# adder_subtractor_0/full_adder_0/w_179_n123# 0.11fF
+C1462 enable_out_1/w_n22_n848# decoder_0/d2 0.11fF
+C1463 enable_out_2/w_86_n41# enable_out_2/a_12_n31# 0.06fF
+C1464 vdd enable_out_2/AND_0/w_41_5# 0.05fF
+C1465 as0 vdd 0.14fF
+C1466 enable_out_0/a2_out adder_subtractor_0/full_adder_2/XOR_0/w_20_10# 0.06fF
+C1467 adder_subtractor_0/XOR_1/a_40_n19# adder_subtractor_0/XOR_1/a_26_n11# 0.01fF
+C1468 enable_out_0/a3_out adder_subtractor_0/full_adder_3/XOR_0/a_26_n11# 0.01fF
+C1469 adder_subtractor_0/full_adder_2/w_260_n30# vdd 0.05fF
+C1470 enable_out_0/a2_out enable_out_0/b1_out 0.09fF
+C1471 m1_789_856# b3 0.63fF
+C1472 d1_decoder_wala enable_out_0/b3_out 0.09fF
+C1473 adder_subtractor_0/m1_794_n436# gnd 0.59fF
+C1474 adder_subtractor_0/m2_140_53# adder_subtractor_0/full_adder_0/XOR_0/w_20_10# 0.08fF
+C1475 vdd decoder_0/AND_2/w_n48_8# 0.05fF
+C1476 adder_subtractor_0/full_adder_1/m1_123_n251# vdd 0.07fF
+C1477 adder_subtractor_0/full_adder_2/a_280_n59# vdd 0.05fF
+C1478 adder_subtractor_0/m2_140_53# vdd 0.20fF
+C1479 adder_subtractor_0/a_67_n136# enable_out_0/b2_out 0.07fF
+C1480 and_out3 vdd 0.07fF
+C1481 comparator_0/3_AND_0/w_n48_8# comparator_0/3_AND_0/a_n33_15# 0.05fF
+C1482 2_input_OR_0/a_n7_n12# gnd 0.15fF
+C1483 comparator_0/b0_not comparator_0/b1_not 0.08fF
+C1484 enable_out_0/a_7_n189# gnd 0.18fF
+C1485 adder_subtractor_0/full_adder_1/AND_0/w_n48_8# gnd 0.14fF
+C1486 aluand_0/b1 gnd 0.04fF
+C1487 adder_subtractor_0/w_107_n184# enable_out_0/b3_out 0.08fF
+C1488 adder_subtractor_0/full_adder_0/2_input_OR_0/w_n23_15# adder_subtractor_0/full_adder_0/m1_123_n251# 0.07fF
+C1489 vdd enable_out_2/a_7_n189# 0.23fF
+C1490 decoder_0/d3 a1 0.35fF
+C1491 enable_out_2/w_n8_n196# enable_out_2/a_7_n189# 0.03fF
+C1492 adder_subtractor_0/full_adder_0/XOR_0/a_26_n11# gnd 0.08fF
+C1493 vdd enable_out_0/AND_0/a_n33_15# 0.23fF
+C1494 d1_decoder_wala adder_subtractor_0/a_29_n128# 0.06fF
+C1495 comparator_0/XNOR_2/a_50_n67# gnd 0.08fF
+C1496 enable_out_2/AND_0/w_n48_8# enable_out_2/AND_0/a_n33_15# 0.03fF
+C1497 comparator_0/XNOR_2/w_12_n46# comparator_0/a2_not 0.03fF
+C1498 enable_out_0/w_n24_n1167# b3 0.11fF
+C1499 aluand_0/w_10_n38# aluand_0/a_25_n31# 0.03fF
+C1500 vdd comparator_0/b1 0.09fF
+C1501 enable_out_2/w_78_n359# enable_out_2/a_4_n349# 0.06fF
+C1502 vdd enable_out_0/b2_out 0.21fF
+C1503 comparator_0/check1 comparator_0/a2_not 0.09fF
+C1504 d1_decoder_wala adder_subtractor_0/a_30_n205# 0.06fF
+C1505 adder_subtractor_0/full_adder_2/a_177_n131# gnd 0.35fF
+C1506 aluand_0/w_9_n189# aluand_0/a_24_n182# 0.03fF
+C1507 comparator_0/b1 comparator_0/a3 0.21fF
+C1508 comparator_0/XNOR_2/w_44_n46# comparator_0/check3 0.02fF
+C1509 comparator_0/a2_not comparator_0/b2_not 0.50fF
+C1510 comparator_0/a2 comparator_0/b2 0.11fF
+C1511 adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/a_177_n131# 0.33fF
+C1512 adder_subtractor_0/XOR_0/w_20_10# d1_decoder_wala 0.06fF
+C1513 adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# gnd 0.15fF
+C1514 comparator_0/check2 comparator_0/a_228_n398# 0.41fF
+C1515 comparator_0/5_AND_0/in comparator_0/check4 0.41fF
+C1516 aluand_0/b3 gnd 0.04fF
+C1517 adder_subtractor_0/full_adder_3/XOR_0/w_79_10# adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# 0.03fF
+C1518 adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# adder_subtractor_0/m1_794_n436# 0.05fF
+C1519 adder_subtractor_0/m1_787_n831# adder_subtractor_0/full_adder_3/a_266_n51# 0.01fF
+C1520 adder_subtractor_0/m1_794_n436# adder_subtractor_0/full_adder_2/w_179_n123# 0.11fF
+C1521 decoder_0/d3 enable_out_2/a_4_n349# 0.12fF
+C1522 adder_subtractor_0/XOR_1/w_n12_10# adder_subtractor_0/XOR_1/a_2_n11# 0.03fF
+C1523 vdd adder_subtractor_0/XOR_1/a_40_n19# 0.05fF
+C1524 adder_subtractor_0/w_48_n184# adder_subtractor_0/a_68_n213# 0.06fF
+C1525 adder_subtractor_0/full_adder_2/XOR_0/w_20_10# adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# 0.08fF
+C1526 adder_subtractor_0/full_adder_0/AND_0/a_n33_15# gnd 0.12fF
+C1527 vdd comparator_0/3_AND_0/w_n48_8# 0.05fF
+C1528 adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# adder_subtractor_0/full_adder_3/XOR_0/a_26_n11# 0.01fF
+C1529 adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# adder_subtractor_0/full_adder_3/a_177_n131# 0.34fF
+C1530 vdd enable_out_1/a_4_n349# 0.23fF
+C1531 decoder_0/d3 b1 1.12fF
+C1532 enable_out_1/w_86_n41# comparator_0/a1 0.03fF
+C1533 vdd adder_subtractor_0/w_14_n28# 0.03fF
+C1534 a1 Gnd 5.51fF
+C1535 gnd Gnd 150.74fF
+C1536 decoder_0/NOT_1/w_n9_1# Gnd 0.40fF
+C1537 decoder_0/NOT_0/w_n9_1# Gnd 0.40fF
+C1538 decoder_0/AND_3/a_n33_15# Gnd 0.61fF
+C1539 s1 Gnd 7.38fF
+C1540 s0 Gnd 9.75fF
+C1541 decoder_0/AND_3/w_41_5# Gnd 0.40fF
+C1542 decoder_0/AND_3/w_n48_8# Gnd 1.46fF
+C1543 decoder_0/d2 Gnd 37.16fF
+C1544 decoder_0/AND_2/a_n33_15# Gnd 0.61fF
+C1545 decoder_0/m1_n33_33# Gnd 1.32fF
+C1546 decoder_0/AND_2/w_41_5# Gnd 0.40fF
+C1547 decoder_0/AND_2/w_n48_8# Gnd 1.46fF
+C1548 decoder_0/AND_1/a_n33_15# Gnd 0.61fF
+C1549 decoder_0/AND_1/w_41_5# Gnd 0.40fF
+C1550 decoder_0/AND_1/w_n48_8# Gnd 1.46fF
+C1551 decoder_0/d0 Gnd 0.72fF
+C1552 decoder_0/AND_0/a_n33_15# Gnd 0.61fF
+C1553 decoder_0/AND_0/w_41_5# Gnd 0.40fF
+C1554 decoder_0/AND_0/w_n48_8# Gnd 1.46fF
+C1555 comparator_0/a_266_n907# Gnd 0.61fF
+C1556 comparator_0/less_than Gnd 0.33fF
+C1557 comparator_0/a_532_n617# Gnd 0.81fF
+C1558 comparator_0/a_354_n727# Gnd 2.75fF
+C1559 comparator_0/a_353_n895# Gnd 4.74fF
+C1560 comparator_0/a_267_n739# Gnd 0.55fF
+C1561 comparator_0/a_387_n564# Gnd 2.81fF
+C1562 comparator_0/a_247_n576# Gnd 0.76fF
+C1563 comparator_0/a_404_n386# Gnd 1.61fF
+C1564 comparator_0/a_228_n398# Gnd 0.86fF
+C1565 comparator_0/w_340_n901# Gnd 0.40fF
+C1566 comparator_0/w_251_n915# Gnd 1.46fF
+C1567 comparator_0/w_341_n733# Gnd 0.40fF
+C1568 comparator_0/w_252_n747# Gnd 2.22fF
+C1569 comparator_0/w_621_n666# Gnd 1.07fF
+C1570 comparator_0/w_525_n664# Gnd 1.02fF
+C1571 comparator_0/w_374_n570# Gnd 0.40fF
+C1572 comparator_0/w_232_n584# Gnd 2.79fF
+C1573 comparator_0/w_391_n392# Gnd 0.40fF
+C1574 comparator_0/w_213_n406# Gnd 3.01fF
+C1575 comparator_0/XNOR_3/a_50_n67# Gnd 0.25fF
+C1576 comparator_0/check4 Gnd 23.69fF
+C1577 comparator_0/b3_not Gnd 1.48fF
+C1578 comparator_0/b3 Gnd 12.68fF
+C1579 comparator_0/a3_not Gnd 7.01fF
+C1580 comparator_0/XNOR_3/w_103_n46# Gnd 0.44fF
+C1581 comparator_0/XNOR_3/w_44_n46# Gnd 0.53fF
+C1582 comparator_0/XNOR_3/w_12_n46# Gnd 0.44fF
+C1583 comparator_0/XNOR_2/a_50_n67# Gnd 0.25fF
+C1584 comparator_0/check3 Gnd 12.35fF
+C1585 comparator_0/b2_not Gnd 1.20fF
+C1586 comparator_0/b2 Gnd 8.65fF
+C1587 comparator_0/a2_not Gnd 12.68fF
+C1588 comparator_0/XNOR_2/w_103_n46# Gnd 0.44fF
+C1589 comparator_0/XNOR_2/w_44_n46# Gnd 0.53fF
+C1590 comparator_0/XNOR_2/w_12_n46# Gnd 0.44fF
+C1591 comparator_0/XNOR_1/a_50_n67# Gnd 0.25fF
+C1592 comparator_0/check2 Gnd 8.54fF
+C1593 comparator_0/b1_not Gnd 1.19fF
+C1594 comparator_0/b1 Gnd 10.09fF
+C1595 comparator_0/a1_not Gnd 6.42fF
+C1596 comparator_0/XNOR_1/w_103_n46# Gnd 0.44fF
+C1597 comparator_0/XNOR_1/w_44_n46# Gnd 0.53fF
+C1598 comparator_0/XNOR_1/w_12_n46# Gnd 0.44fF
+C1599 comparator_0/XNOR_0/a_50_n67# Gnd 0.25fF
+C1600 comparator_0/XNOR_0/w_103_n46# Gnd 0.44fF
+C1601 comparator_0/XNOR_0/w_44_n46# Gnd 0.53fF
+C1602 comparator_0/XNOR_0/w_12_n46# Gnd 0.44fF
+C1603 comparator_0/greater_than Gnd 0.22fF
+C1604 comparator_0/4_OR_0/in Gnd 0.37fF
+C1605 comparator_0/4_OR_0/c Gnd 0.67fF
+C1606 comparator_0/4_OR_0/b Gnd 0.64fF
+C1607 comparator_0/4_OR_0/w_n30_3# Gnd 1.02fF
+C1608 comparator_0/4_OR_0/w_66_4# Gnd 1.07fF
+C1609 comparator_0/AND_0/a_n33_15# Gnd 0.61fF
+C1610 comparator_0/AND_0/w_41_5# Gnd 0.40fF
+C1611 comparator_0/AND_0/w_n48_8# Gnd 1.46fF
+C1612 comparator_0/3_AND_0/a_n33_15# Gnd 0.63fF
+C1613 comparator_0/3_AND_0/w_41_5# Gnd 0.40fF
+C1614 comparator_0/3_AND_0/w_n48_8# Gnd 2.22fF
+C1615 comparator_0/4_AND_1/a_n33_15# Gnd 0.78fF
+C1616 comparator_0/4_AND_1/w_94_5# Gnd 0.40fF
+C1617 comparator_0/4_AND_1/w_n48_8# Gnd 2.79fF
+C1618 comparator_0/equal_to Gnd 1.03fF
+C1619 comparator_0/4_AND_0/a_n33_15# Gnd 0.78fF
+C1620 comparator_0/check1 Gnd 1.64fF
+C1621 comparator_0/4_AND_0/w_94_5# Gnd 0.40fF
+C1622 comparator_0/4_AND_0/w_n48_8# Gnd 2.79fF
+C1623 comparator_0/4_OR_0/a Gnd 0.51fF
+C1624 comparator_0/5_AND_0/in Gnd 0.88fF
+C1625 comparator_0/5_AND_0/w_130_5# Gnd 0.03fF
+C1626 comparator_0/5_AND_0/w_n48_8# Gnd 3.01fF
+C1627 enable_out_2/a_n9_n1160# Gnd 0.61fF
+C1628 b3 Gnd 6.25fF
+C1629 aluand_0/a2 Gnd 3.96fF
+C1630 enable_out_2/a_n10_n1001# Gnd 0.61fF
+C1631 b2 Gnd 2.16fF
+C1632 aluand_0/a1 Gnd 5.83fF
+C1633 enable_out_2/a_n7_n841# Gnd 0.61fF
+C1634 b1 Gnd 5.69fF
+C1635 enable_out_2/a_n2_n683# Gnd 0.61fF
+C1636 b0 Gnd 5.75fF
+C1637 enable_out_2/a_4_n349# Gnd 0.61fF
+C1638 a3 Gnd 5.75fF
+C1639 enable_out_2/a_7_n189# Gnd 0.61fF
+C1640 enable_out_2/a_12_n31# Gnd 0.61fF
+C1641 enable_out_2/w_65_n1170# Gnd 0.40fF
+C1642 enable_out_2/w_n24_n1167# Gnd 1.46fF
+C1643 enable_out_2/w_64_n1011# Gnd 0.40fF
+C1644 enable_out_2/w_n25_n1008# Gnd 1.46fF
+C1645 enable_out_2/w_67_n851# Gnd 0.40fF
+C1646 enable_out_2/w_n22_n848# Gnd 1.46fF
+C1647 enable_out_2/w_72_n693# Gnd 0.40fF
+C1648 enable_out_2/w_n17_n690# Gnd 1.46fF
+C1649 enable_out_2/w_78_n359# Gnd 0.40fF
+C1650 enable_out_2/w_n11_n356# Gnd 1.46fF
+C1651 enable_out_2/w_81_n199# Gnd 0.40fF
+C1652 enable_out_2/w_n8_n196# Gnd 1.46fF
+C1653 enable_out_2/w_86_n41# Gnd 0.40fF
+C1654 enable_out_2/w_n3_n38# Gnd 1.46fF
+C1655 enable_out_2/AND_0/a_n33_15# Gnd 0.61fF
+C1656 decoder_0/d3 Gnd 40.01fF
+C1657 a0 Gnd 4.67fF
+C1658 enable_out_2/AND_0/w_41_5# Gnd 0.40fF
+C1659 enable_out_2/AND_0/w_n48_8# Gnd 1.46fF
+C1660 enable_out_1/a_n9_n1160# Gnd 0.61fF
+C1661 enable_out_1/a_n10_n1001# Gnd 0.61fF
+C1662 enable_out_1/a_n7_n841# Gnd 0.61fF
+C1663 enable_out_1/a_n2_n683# Gnd 0.61fF
+C1664 enable_out_1/a_4_n349# Gnd 0.61fF
+C1665 enable_out_1/a_7_n189# Gnd 0.61fF
+C1666 enable_out_1/a_12_n31# Gnd 0.61fF
+C1667 enable_out_1/w_65_n1170# Gnd 0.40fF
+C1668 enable_out_1/w_n24_n1167# Gnd 1.46fF
+C1669 enable_out_1/w_64_n1011# Gnd 0.40fF
+C1670 enable_out_1/w_n25_n1008# Gnd 1.46fF
+C1671 enable_out_1/w_67_n851# Gnd 0.40fF
+C1672 enable_out_1/w_n22_n848# Gnd 1.46fF
+C1673 enable_out_1/w_72_n693# Gnd 0.40fF
+C1674 enable_out_1/w_n17_n690# Gnd 1.46fF
+C1675 enable_out_1/w_78_n359# Gnd 0.40fF
+C1676 enable_out_1/w_n11_n356# Gnd 1.46fF
+C1677 enable_out_1/w_81_n199# Gnd 0.40fF
+C1678 enable_out_1/w_n8_n196# Gnd 1.46fF
+C1679 enable_out_1/w_86_n41# Gnd 0.40fF
+C1680 enable_out_1/w_n3_n38# Gnd 1.46fF
+C1681 enable_out_1/AND_0/a_n33_15# Gnd 0.61fF
+C1682 enable_out_1/AND_0/w_41_5# Gnd 0.40fF
+C1683 enable_out_1/AND_0/w_n48_8# Gnd 1.46fF
+C1684 2_input_OR_0/a_n7_n12# Gnd 0.41fF
+C1685 2_input_OR_0/w_30_15# Gnd 0.60fF
+C1686 2_input_OR_0/w_n23_15# Gnd 0.73fF
+C1687 enable_out_0/b3_out Gnd 2.92fF
+C1688 enable_out_0/a_n9_n1160# Gnd 0.61fF
+C1689 enable_out_0/b2_out Gnd 2.73fF
+C1690 enable_out_0/a_n10_n1001# Gnd 0.61fF
+C1691 enable_out_0/b1_out Gnd 2.83fF
+C1692 enable_out_0/a_n7_n841# Gnd 0.61fF
+C1693 enable_out_0/a_n2_n683# Gnd 0.61fF
+C1694 enable_out_0/a_4_n349# Gnd 0.61fF
+C1695 enable_out_0/a_7_n189# Gnd 0.61fF
+C1696 a2 Gnd 2.03fF
+C1697 enable_out_0/a_12_n31# Gnd 0.61fF
+C1698 enable_out_0/w_65_n1170# Gnd 0.40fF
+C1699 enable_out_0/w_n24_n1167# Gnd 1.46fF
+C1700 enable_out_0/w_64_n1011# Gnd 0.40fF
+C1701 enable_out_0/w_n25_n1008# Gnd 1.46fF
+C1702 enable_out_0/w_67_n851# Gnd 0.40fF
+C1703 enable_out_0/w_n22_n848# Gnd 1.46fF
+C1704 enable_out_0/w_72_n693# Gnd 0.40fF
+C1705 enable_out_0/w_n17_n690# Gnd 1.46fF
+C1706 enable_out_0/w_78_n359# Gnd 0.40fF
+C1707 enable_out_0/w_n11_n356# Gnd 1.46fF
+C1708 enable_out_0/w_81_n199# Gnd 0.40fF
+C1709 enable_out_0/w_n8_n196# Gnd 1.46fF
+C1710 enable_out_0/w_86_n41# Gnd 0.40fF
+C1711 enable_out_0/w_n3_n38# Gnd 1.46fF
+C1712 enable_out_0/AND_0/a_n33_15# Gnd 0.61fF
+C1713 m1_431_497# Gnd 37.27fF
+C1714 enable_out_0/AND_0/w_41_5# Gnd 0.40fF
+C1715 enable_out_0/AND_0/w_n48_8# Gnd 1.46fF
+C1716 adder_subtractor_0/a_54_n205# Gnd 0.41fF
+C1717 adder_subtractor_0/a_68_n213# Gnd 0.59fF
+C1718 adder_subtractor_0/a_30_n205# Gnd 0.57fF
+C1719 adder_subtractor_0/a_53_n128# Gnd 0.41fF
+C1720 adder_subtractor_0/a_67_n136# Gnd 0.59fF
+C1721 adder_subtractor_0/a_29_n128# Gnd 0.57fF
+C1722 adder_subtractor_0/a_52_n49# Gnd 0.41fF
+C1723 adder_subtractor_0/a_66_n57# Gnd 0.59fF
+C1724 adder_subtractor_0/a_28_n49# Gnd 0.57fF
+C1725 adder_subtractor_0/w_107_n184# Gnd 0.44fF
+C1726 adder_subtractor_0/w_48_n184# Gnd 0.90fF
+C1727 adder_subtractor_0/w_16_n184# Gnd 0.44fF
+C1728 adder_subtractor_0/w_106_n107# Gnd 0.44fF
+C1729 adder_subtractor_0/w_47_n107# Gnd 0.90fF
+C1730 adder_subtractor_0/w_15_n107# Gnd 0.44fF
+C1731 adder_subtractor_0/w_105_n28# Gnd 0.44fF
+C1732 adder_subtractor_0/w_46_n28# Gnd 0.90fF
+C1733 adder_subtractor_0/w_14_n28# Gnd 0.44fF
+C1734 adder_subtractor_0/XOR_1/a_26_n11# Gnd 0.41fF
+C1735 as_carry Gnd 0.86fF
+C1736 d1_decoder_wala Gnd 58.57fF
+C1737 adder_subtractor_0/XOR_1/a_40_n19# Gnd 0.59fF
+C1738 adder_subtractor_0/XOR_1/a_2_n11# Gnd 0.57fF
+C1739 adder_subtractor_0/XOR_1/w_79_10# Gnd 0.44fF
+C1740 adder_subtractor_0/XOR_1/w_20_10# Gnd 0.90fF
+C1741 adder_subtractor_0/XOR_1/w_n12_10# Gnd 0.44fF
+C1742 adder_subtractor_0/XOR_0/a_26_n11# Gnd 0.41fF
+C1743 enable_out_0/b0_out Gnd 2.92fF
+C1744 adder_subtractor_0/XOR_0/a_40_n19# Gnd 0.59fF
+C1745 adder_subtractor_0/XOR_0/a_2_n11# Gnd 0.57fF
+C1746 adder_subtractor_0/XOR_0/w_79_10# Gnd 0.44fF
+C1747 adder_subtractor_0/XOR_0/w_20_10# Gnd 0.90fF
+C1748 adder_subtractor_0/XOR_0/w_n12_10# Gnd 0.44fF
+C1749 adder_subtractor_0/full_adder_3/a_194_n116# Gnd 0.61fF
+C1750 vdd Gnd 171.79fF
+C1751 adder_subtractor_0/full_adder_3/a_266_n51# Gnd 0.41fF
+C1752 as3 Gnd 1.44fF
+C1753 adder_subtractor_0/full_adder_3/a_280_n59# Gnd 0.59fF
+C1754 adder_subtractor_0/full_adder_3/a_242_n51# Gnd 0.57fF
+C1755 adder_subtractor_0/full_adder_3/w_268_n126# Gnd 0.40fF
+C1756 adder_subtractor_0/full_adder_3/w_179_n123# Gnd 1.46fF
+C1757 adder_subtractor_0/full_adder_3/w_319_n30# Gnd 0.44fF
+C1758 adder_subtractor_0/full_adder_3/w_260_n30# Gnd 0.90fF
+C1759 adder_subtractor_0/full_adder_3/w_228_n30# Gnd 0.44fF
+C1760 adder_subtractor_0/full_adder_3/XOR_0/a_26_n11# Gnd 0.41fF
+C1761 adder_subtractor_0/full_adder_3/a_177_n131# Gnd 3.99fF
+C1762 adder_subtractor_0/full_adder_3/XOR_0/a_40_n19# Gnd 0.59fF
+C1763 adder_subtractor_0/full_adder_3/XOR_0/a_2_n11# Gnd 0.57fF
+C1764 adder_subtractor_0/full_adder_3/XOR_0/w_79_10# Gnd 0.44fF
+C1765 adder_subtractor_0/full_adder_3/XOR_0/w_20_10# Gnd 0.90fF
+C1766 adder_subtractor_0/full_adder_3/XOR_0/w_n12_10# Gnd 0.44fF
+C1767 adder_subtractor_0/m1_787_n1256# Gnd 0.83fF
+C1768 adder_subtractor_0/full_adder_3/2_input_OR_0/a_n7_n12# Gnd 0.41fF
+C1769 adder_subtractor_0/full_adder_3/m1_123_n251# Gnd 1.75fF
+C1770 adder_subtractor_0/full_adder_3/a_281_n143# Gnd 0.61fF
+C1771 adder_subtractor_0/full_adder_3/2_input_OR_0/w_30_15# Gnd 0.60fF
+C1772 adder_subtractor_0/full_adder_3/2_input_OR_0/w_n23_15# Gnd 0.73fF
+C1773 adder_subtractor_0/full_adder_3/AND_0/a_n33_15# Gnd 0.61fF
+C1774 adder_subtractor_0/a_62_n205# Gnd 18.30fF
+C1775 enable_out_0/a3_out Gnd 3.98fF
+C1776 adder_subtractor_0/full_adder_3/AND_0/w_41_5# Gnd 0.40fF
+C1777 adder_subtractor_0/full_adder_3/AND_0/w_n48_8# Gnd 1.46fF
+C1778 adder_subtractor_0/full_adder_2/a_194_n116# Gnd 0.61fF
+C1779 adder_subtractor_0/full_adder_2/a_266_n51# Gnd 0.41fF
+C1780 as2 Gnd 0.96fF
+C1781 adder_subtractor_0/full_adder_2/a_280_n59# Gnd 0.59fF
+C1782 adder_subtractor_0/full_adder_2/a_242_n51# Gnd 0.57fF
+C1783 adder_subtractor_0/full_adder_2/w_268_n126# Gnd 0.40fF
+C1784 adder_subtractor_0/full_adder_2/w_179_n123# Gnd 1.46fF
+C1785 adder_subtractor_0/full_adder_2/w_319_n30# Gnd 0.44fF
+C1786 adder_subtractor_0/full_adder_2/w_260_n30# Gnd 0.90fF
+C1787 adder_subtractor_0/full_adder_2/w_228_n30# Gnd 0.44fF
+C1788 adder_subtractor_0/full_adder_2/XOR_0/a_26_n11# Gnd 0.41fF
+C1789 adder_subtractor_0/full_adder_2/a_177_n131# Gnd 3.99fF
+C1790 adder_subtractor_0/full_adder_2/XOR_0/a_40_n19# Gnd 0.59fF
+C1791 adder_subtractor_0/full_adder_2/XOR_0/a_2_n11# Gnd 0.57fF
+C1792 adder_subtractor_0/full_adder_2/XOR_0/w_79_10# Gnd 0.44fF
+C1793 adder_subtractor_0/full_adder_2/XOR_0/w_20_10# Gnd 0.90fF
+C1794 adder_subtractor_0/full_adder_2/XOR_0/w_n12_10# Gnd 0.44fF
+C1795 adder_subtractor_0/m1_787_n831# Gnd 8.27fF
+C1796 adder_subtractor_0/full_adder_2/2_input_OR_0/a_n7_n12# Gnd 0.41fF
+C1797 adder_subtractor_0/full_adder_2/m1_123_n251# Gnd 1.75fF
+C1798 adder_subtractor_0/full_adder_2/a_281_n143# Gnd 0.61fF
+C1799 adder_subtractor_0/full_adder_2/2_input_OR_0/w_30_15# Gnd 0.60fF
+C1800 adder_subtractor_0/full_adder_2/2_input_OR_0/w_n23_15# Gnd 0.73fF
+C1801 adder_subtractor_0/full_adder_2/AND_0/a_n33_15# Gnd 0.61fF
+C1802 adder_subtractor_0/a_61_n128# Gnd 14.41fF
+C1803 adder_subtractor_0/full_adder_2/AND_0/w_41_5# Gnd 0.40fF
+C1804 adder_subtractor_0/full_adder_2/AND_0/w_n48_8# Gnd 1.46fF
+C1805 adder_subtractor_0/full_adder_1/a_194_n116# Gnd 0.61fF
+C1806 adder_subtractor_0/full_adder_1/a_266_n51# Gnd 0.41fF
+C1807 as1 Gnd 0.98fF
+C1808 adder_subtractor_0/full_adder_1/a_280_n59# Gnd 0.59fF
+C1809 adder_subtractor_0/full_adder_1/a_242_n51# Gnd 0.57fF
+C1810 adder_subtractor_0/full_adder_1/w_268_n126# Gnd 0.40fF
+C1811 adder_subtractor_0/full_adder_1/w_179_n123# Gnd 1.46fF
+C1812 adder_subtractor_0/full_adder_1/w_319_n30# Gnd 0.44fF
+C1813 adder_subtractor_0/full_adder_1/w_260_n30# Gnd 0.90fF
+C1814 adder_subtractor_0/full_adder_1/w_228_n30# Gnd 0.44fF
+C1815 adder_subtractor_0/full_adder_1/XOR_0/a_26_n11# Gnd 0.41fF
+C1816 adder_subtractor_0/full_adder_1/a_177_n131# Gnd 3.99fF
+C1817 adder_subtractor_0/full_adder_1/XOR_0/a_40_n19# Gnd 0.59fF
+C1818 adder_subtractor_0/full_adder_1/XOR_0/a_2_n11# Gnd 0.57fF
+C1819 adder_subtractor_0/full_adder_1/XOR_0/w_79_10# Gnd 0.44fF
+C1820 adder_subtractor_0/full_adder_1/XOR_0/w_20_10# Gnd 0.90fF
+C1821 adder_subtractor_0/full_adder_1/XOR_0/w_n12_10# Gnd 0.44fF
+C1822 adder_subtractor_0/m1_794_n436# Gnd 8.18fF
+C1823 adder_subtractor_0/full_adder_1/2_input_OR_0/a_n7_n12# Gnd 0.41fF
+C1824 adder_subtractor_0/full_adder_1/m1_123_n251# Gnd 1.75fF
+C1825 adder_subtractor_0/full_adder_1/a_281_n143# Gnd 0.61fF
+C1826 adder_subtractor_0/full_adder_1/2_input_OR_0/w_30_15# Gnd 0.60fF
+C1827 adder_subtractor_0/full_adder_1/2_input_OR_0/w_n23_15# Gnd 0.73fF
+C1828 adder_subtractor_0/full_adder_1/AND_0/a_n33_15# Gnd 0.61fF
+C1829 adder_subtractor_0/a_60_n49# Gnd 9.18fF
+C1830 adder_subtractor_0/full_adder_1/AND_0/w_41_5# Gnd 0.40fF
+C1831 adder_subtractor_0/full_adder_1/AND_0/w_n48_8# Gnd 1.46fF
+C1832 adder_subtractor_0/full_adder_0/a_194_n116# Gnd 0.61fF
+C1833 adder_subtractor_0/full_adder_0/a_266_n51# Gnd 0.41fF
+C1834 as0 Gnd 0.96fF
+C1835 adder_subtractor_0/full_adder_0/a_280_n59# Gnd 0.59fF
+C1836 adder_subtractor_0/full_adder_0/a_242_n51# Gnd 0.57fF
+C1837 adder_subtractor_0/full_adder_0/w_268_n126# Gnd 0.40fF
+C1838 adder_subtractor_0/full_adder_0/w_179_n123# Gnd 1.46fF
+C1839 adder_subtractor_0/full_adder_0/w_319_n30# Gnd 0.44fF
+C1840 adder_subtractor_0/full_adder_0/w_260_n30# Gnd 0.90fF
+C1841 adder_subtractor_0/full_adder_0/w_228_n30# Gnd 0.44fF
+C1842 adder_subtractor_0/full_adder_0/XOR_0/a_26_n11# Gnd 0.41fF
+C1843 adder_subtractor_0/full_adder_0/a_177_n131# Gnd 3.99fF
+C1844 adder_subtractor_0/full_adder_0/XOR_0/a_40_n19# Gnd 0.59fF
+C1845 adder_subtractor_0/full_adder_0/XOR_0/a_2_n11# Gnd 0.57fF
+C1846 adder_subtractor_0/full_adder_0/XOR_0/w_79_10# Gnd 0.44fF
+C1847 adder_subtractor_0/full_adder_0/XOR_0/w_20_10# Gnd 0.90fF
+C1848 adder_subtractor_0/full_adder_0/XOR_0/w_n12_10# Gnd 0.44fF
+C1849 adder_subtractor_0/m1_791_n39# Gnd 8.20fF
+C1850 adder_subtractor_0/full_adder_0/2_input_OR_0/a_n7_n12# Gnd 0.41fF
+C1851 adder_subtractor_0/full_adder_0/m1_123_n251# Gnd 1.75fF
+C1852 adder_subtractor_0/full_adder_0/a_281_n143# Gnd 0.61fF
+C1853 adder_subtractor_0/full_adder_0/2_input_OR_0/w_30_15# Gnd 0.60fF
+C1854 adder_subtractor_0/full_adder_0/2_input_OR_0/w_n23_15# Gnd 0.73fF
+C1855 adder_subtractor_0/full_adder_0/AND_0/a_n33_15# Gnd 0.61fF
+C1856 adder_subtractor_0/m2_140_53# Gnd 6.33fF
+C1857 enable_out_0/a0_out Gnd 2.70fF
+C1858 adder_subtractor_0/full_adder_0/AND_0/w_41_5# Gnd 0.40fF
+C1859 adder_subtractor_0/full_adder_0/AND_0/w_n48_8# Gnd 1.46fF
+C1860 AND_0/a_n43_n66# Gnd 0.69fF
+C1861 equal_to Gnd 0.14fF
+C1862 AND_0/a_n33_15# Gnd 0.61fF
+C1863 AND_0/a_n42_15# Gnd 0.48fF
+C1864 a_315_n1959# Gnd 58.26fF
+C1865 AND_0/w_41_5# Gnd 0.40fF
+C1866 AND_0/w_n48_8# Gnd 1.46fF
+C1867 and_out3 Gnd 0.17fF
+C1868 and_out2 Gnd 0.18fF
+C1869 and_out1 Gnd 0.19fF
+C1870 aluand_0/a_24_n333# Gnd 0.58fF
+C1871 aluand_0/b3 Gnd 0.75fF
+C1872 aluand_0/a_24_n182# Gnd 0.58fF
+C1873 aluand_0/b2 Gnd 0.74fF
+C1874 aluand_0/a_25_n31# Gnd 0.58fF
+C1875 aluand_0/w_98_n343# Gnd 0.40fF
+C1876 aluand_0/w_9_n340# Gnd 1.46fF
+C1877 aluand_0/w_98_n192# Gnd 0.40fF
+C1878 aluand_0/w_9_n189# Gnd 1.46fF
+C1879 aluand_0/w_99_n41# Gnd 0.40fF
+C1880 aluand_0/w_10_n38# Gnd 1.46fF
+C1881 and_out0 Gnd 0.18fF
+C1882 aluand_0/AND_0/a_n33_15# Gnd 0.61fF
+C1883 aluand_0/b0 Gnd 5.48fF
+C1884 aluand_0/AND_0/w_41_5# Gnd 0.40fF
+C1885 aluand_0/AND_0/w_n48_8# Gnd 1.46fF
+.tran 1n 1000n
+*target text
+.control
+run
+
+* plot v(as0) v(as1)+2 v(as2)+4 v(as3)+6 v(as_carry)+8
+* plot v(comparator_0/equal_to) v(comparator_0/greater_than)+2 v(comparator_0/less_than)+6
+plot v(and_out0) v(and_out1)+2 v(and_out2)+4 v(and_out3)+6
+* v(and_out_carry)+8
+
+
+* plot v(enable_out_0/a0_out) v(enable_out_0/a1_out)+2 v(enable_out_0/a2_out)+4 v(enable_out_0/a3_out)+6 v(enable_out_0/b0_out)+8 v(enable_out_0/b1_out)+10 v(enable_out_0/b2_out)+12 v(enable_out_0/b3_out)+14
+
+
+* v(a2)+4 v(a3)+6 v(b0)+8 v(b1)+10 v(b2)+12 v(b3)+14  
+* v(s0)+16 v(s1)+18
+quit
+.end
+.endc
